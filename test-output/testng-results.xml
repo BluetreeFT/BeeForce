@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="104886" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:53:15Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="104886" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:53:15Z">
+      <class name="test.attest360.testCases.Verification">
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.attest360.testCases.Verification@71248c21]" name="browserSetup" is-config="true" duration-ms="6623" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:51:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="loginAsVerifier()[pri:12, instance:test.attest360.testCases.Verification@71248c21]" name="loginAsVerifier" duration-ms="1652" started-at="2022-11-24T09:51:37Z" finished-at="2022-11-24T09:51:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsVerifier -->
+        <test-method status="PASS" signature="caseSearch(java.lang.String)[pri:13, instance:test.attest360.testCases.Verification@71248c21]" name="caseSearch" duration-ms="10060" started-at="2022-11-24T09:51:41Z" data-provider="crtNum" finished-at="2022-11-24T09:51:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CRT486030]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- caseSearch -->
+        <test-method status="PASS" signature="verifierapproval(java.lang.String)[pri:14, instance:test.attest360.testCases.Verification@71248c21]" name="verifierapproval" duration-ms="83097" started-at="2022-11-24T09:51:51Z" data-provider="Authorization" finished-at="2022-11-24T09:53:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifierapproval -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.attest360.testCases.Verification@71248c21]" name="teardown" is-config="true" duration-ms="840" started-at="2022-11-24T09:53:14Z" finished-at="2022-11-24T09:53:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.attest360.testCases.Verification -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
