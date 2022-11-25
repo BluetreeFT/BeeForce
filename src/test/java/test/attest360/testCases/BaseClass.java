@@ -159,6 +159,8 @@ public class BaseClass {
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		
 	}
-
+	public static void refresh() {
+		driver.navigate().refresh();
+	}
 
 }

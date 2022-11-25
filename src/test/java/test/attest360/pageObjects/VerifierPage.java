@@ -43,7 +43,7 @@ public class VerifierPage extends BaseClass {
 	WebElement criminalAccept;
 	@FindBy(xpath="(//*[@class='span2.5']//*[@id='basicDetails4']/following::*[@class='span10']//*[@id='accordion5']//*[text()='Accept'])[1]")
 	WebElement idAccept;
-	@FindBy(xpath="(//*[@class='span2.5']//*[@id='basicDetails4']/following::*[@class='span10']//*[@id='accordion5']//*[text()='Accept'])[2]")
+	@FindBy(xpath="(//*[@class='span2.5']//*[@id='basicDetails4']/following::*[@class='span10']//*[@id='accordion5']//*[text()='Accept'])[1]")
 	WebElement aadAccept;
 	@FindBy(xpath="//*[@class='span2.5']//*[@id='basicDetails5']/following::*[@class='span10']//*[@id='accordion6']//*[text()='Accept']")
 	WebElement dtabaseAccept;
@@ -100,7 +100,7 @@ public class VerifierPage extends BaseClass {
 		driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+crtNum+"']")).click();
 	}
 	public void EductionVerification(String path) throws InterruptedException {
-		eduPage.click();
+		javaScriptExecutorClick(eduPage);
 		try {
 			if(eduAccept.isDisplayed()) {
 				javaScriptExecutorClick(eduAccept);
@@ -108,10 +108,10 @@ public class VerifierPage extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		Thread.sleep(1000);
 		eduEvidence.sendKeys(path);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		javaScriptExecutorClick(clickinternal);
-		Thread.sleep(3000);
 		javaScriptExecutorClick(internsubmit);
 		Thread.sleep(2000);
 		javaScriptExecutorClick(eduApprove);
@@ -119,23 +119,25 @@ public class VerifierPage extends BaseClass {
 		javaScriptExecutorClick(totalsubmit);
 		Set<String> childWindows = driver.getWindowHandles();
 		int size = childWindows.size();
-		if (size>1) {
-			String parentWindow = driver.getWindowHandle();
-			for (String window : childWindows) {
-				if (!parentWindow.equals(window)) {
-					driver.switchTo().window(window);
-					Thread.sleep(2000);
-					compSubmit.click();
+		try {
+			if (size>1) {
+				String parentWindow = driver.getWindowHandle();
+				for (String window : childWindows) {
+					if (!parentWindow.equals(window)) {
+						driver.switchTo().window(window);
+						compSubmit.click();
+						driver.switchTo().window(parentWindow);
+					}
 				}
 			}
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
-		Thread.sleep(2000);
-
 	}
 
 	public void AddressVerification(String path) throws InterruptedException {
-
-		AddPage.click();
+		Thread.sleep(2000);
+		javaScriptExecutorClick(AddPage);
 		try {
 			if(addAccept.isDisplayed()) {
 				javaScriptExecutorClick(addAccept);
@@ -143,33 +145,72 @@ public class VerifierPage extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		addEvidence.sendKeys(path);
 		Thread.sleep(1000);
-		javaScriptExecutorClick(clickinternal);
+		addEvidence.sendKeys(path);
 		Thread.sleep(2000);
+		javaScriptExecutorClick(clickinternal);
 		javaScriptExecutorClick(internsubmit);
 		Thread.sleep(2000);
 		javaScriptExecutorClick(addApprove);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		javaScriptExecutorClick(totalsubmit);
 		Set<String> childWindows = driver.getWindowHandles();
 		int size = childWindows.size();
-		if (size>1) {
-			String parentWindow = driver.getWindowHandle();
-			for (String window : childWindows) {
-				if (parentWindow.equals(window)) {
-					driver.switchTo().window(window);
-					compSubmit.click();
-
+		try {
+			if (size>1) {
+				String parentWindow = driver.getWindowHandle();
+				for (String window : childWindows) {
+					if (parentWindow.equals(window)) {
+						driver.switchTo().window(window);
+						compSubmit.click();
+						driver.switchTo().window(parentWindow);
+					}
 				}
 			}
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
+	public void CriminalVerification(String path) throws InterruptedException {
+		Thread.sleep(2000);
+		javaScriptExecutorClick(criPage);
+		try {
+			if(criminalAccept.isDisplayed()) {
+				javaScriptExecutorClick(criminalAccept);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		criEvidence.sendKeys(path);
+		Thread.sleep(2000);
+		javaScriptExecutorClick(clickinternal);
+		javaScriptExecutorClick(internsubmit);
+		Thread.sleep(2000);
+		javaScriptExecutorClick(criApprove);
+		Thread.sleep(1000);
+		javaScriptExecutorClick(totalsubmit);
+		Thread.sleep(1000);
+		try {
+			Set<String> childWindows = driver.getWindowHandles();
+			int size = childWindows.size();
+			if (size>1) {
+				String parentWindow = driver.getWindowHandle();
+				for (String window : childWindows) {
+					if (!parentWindow.equals(window)) {
+						driver.switchTo().window(window);
+						compSubmit.click();
+						driver.switchTo().window(parentWindow);
+					}
+				}
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	public void IdentificationVerification(String path) throws InterruptedException {
-
-		idPage.click();
+		Thread.sleep(2000);
+		javaScriptExecutorClick(idPage);
 		try {
 			if(idAccept.isDisplayed()) {
 				System.out.println("displayed");
@@ -178,9 +219,8 @@ public class VerifierPage extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		idEvidence.sendKeys(path);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		javaScriptExecutorClick(clickinternal);
 		javaScriptExecutorClick(internsubmit);
 		Thread.sleep(2000);
@@ -195,11 +235,19 @@ public class VerifierPage extends BaseClass {
 				if (!parentWindow.equals(window)) {
 					driver.switchTo().window(window);
 					compSubmit.click();
-					Thread.sleep(2000);
-
+					driver.switchTo().window(parentWindow);
 				}
 			}
 		}
+		try {
+			if(aadAccept.isDisplayed()) {
+				System.out.println("displayed");
+				javaScriptExecutorClick(aadAccept);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		Thread.sleep(1000);
 		aadEvidence.sendKeys(path);
 		Thread.sleep(2000);
 		javaScriptExecutorClick(aadApprove);
@@ -209,60 +257,24 @@ public class VerifierPage extends BaseClass {
 			e.printStackTrace();
 		}
 		Thread.sleep(1000);
-		Set<String> childWindows1 = driver.getWindowHandles();
-		int size1 = childWindows1.size();
-		if (size1>1) {
-			String parentWindow = driver.getWindowHandle();
-			for (String window : childWindows1) {
-				if (!parentWindow.equals(window)) {
-					driver.switchTo().window(window);
-					compSubmit.click();
-
+		try {
+			Set<String> childWindows1 = driver.getWindowHandles();
+			int size1 = childWindows1.size();
+			if (size1>1) {
+				String parentWindow = driver.getWindowHandle();
+				for (String window : childWindows1) {
+					if (!parentWindow.equals(window)) {
+						driver.switchTo().window(window);
+						compSubmit.click();
+						driver.switchTo().window(parentWindow);
+					}
 				}
 			}
-		}
-
-	}
-
-	public void CriminalVerification(String path) throws InterruptedException {
-
-		criPage.click();
-		try {
-			if(criminalAccept.isDisplayed()) {
-				javaScriptExecutorClick(criminalAccept);
-			}
-		} catch (Exception e) {
+		}catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		criEvidence.sendKeys(path);
-		Thread.sleep(1000);
-		javaScriptExecutorClick(clickinternal);
 		Thread.sleep(2000);
-		javaScriptExecutorClick(internsubmit);
-		Thread.sleep(2000);
-		javaScriptExecutorClick(criApprove);
-		Thread.sleep(1000);
-		javaScriptExecutorClick(totalsubmit);
-		Thread.sleep(2000);
-		Set<String> childWindows = driver.getWindowHandles();
-		int size = childWindows.size();
-		if (size>1) {
-			String parentWindow = driver.getWindowHandle();
-			for (String window : childWindows) {
-				if (!parentWindow.equals(window)) {
-					driver.switchTo().window(window);
-					compSubmit.click();
-
-				}
-			}
-		}
 	}
-	
-	
-	
-
-
 }
 
 

@@ -2,13 +2,11 @@ package test.attest360.testCases;
 
 import org.testng.annotations.Test;
 
-import test.attest360.pageObjects.CaseRegistrationPage;
 import test.attest360.pageObjects.FillDataPage;
 import test.attest360.pageObjects.HomePage;
 import test.attest360.pageObjects.LoginPage;
 import test.attest360.pageObjects.QaHomePage;
 import test.attest360.testData.DataProviders;
-import test.attest360.utilities.ExcelUtils;
 
 public class DataEntry extends BaseClass {
 

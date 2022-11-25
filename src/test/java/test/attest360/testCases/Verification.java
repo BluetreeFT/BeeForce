@@ -29,8 +29,8 @@ public class Verification extends BaseClass {
 		VerifierPage vp=new VerifierPage();
 		vp.EductionVerification(path);
 		vp.AddressVerification(path);
-//		vp.CriminalVerification(path);
-//		vp.IdentificationVerification(path);
+		vp.CriminalVerification(path);
+		vp.IdentificationVerification(path);
 
 }
 }

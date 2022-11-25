@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="18" passed="18">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="104886" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:53:15Z">
+  <suite name="Suite" duration-ms="193951" started-at="2022-11-25T08:57:43Z" finished-at="2022-11-25T09:00:57Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="104886" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:53:15Z">
-      <class name="test.attest360.testCases.Verification">
-        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.attest360.testCases.Verification@71248c21]" name="browserSetup" is-config="true" duration-ms="6623" started-at="2022-11-24T09:51:30Z" finished-at="2022-11-24T09:51:37Z">
+    <test name="Test" duration-ms="193951" started-at="2022-11-25T08:57:43Z" finished-at="2022-11-25T09:00:57Z">
+      <class name="test.attest360.testCases.QADecision">
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.attest360.testCases.QADecision@6b0c2d26]" name="browserSetup" is-config="true" duration-ms="3633" started-at="2022-11-25T09:00:19Z" finished-at="2022-11-25T09:00:23Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,371 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method status="PASS" signature="loginAsVerifier()[pri:12, instance:test.attest360.testCases.Verification@71248c21]" name="loginAsVerifier" duration-ms="1652" started-at="2022-11-24T09:51:37Z" finished-at="2022-11-24T09:51:38Z">
+        <test-method status="PASS" signature="loginAsVerifier()[pri:15, instance:test.attest360.testCases.QADecision@6b0c2d26]" name="loginAsVerifier" duration-ms="2564" started-at="2022-11-25T09:00:23Z" finished-at="2022-11-25T09:00:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsVerifier -->
-        <test-method status="PASS" signature="caseSearch(java.lang.String)[pri:13, instance:test.attest360.testCases.Verification@71248c21]" name="caseSearch" duration-ms="10060" started-at="2022-11-24T09:51:41Z" data-provider="crtNum" finished-at="2022-11-24T09:51:51Z">
+        <test-method status="PASS" signature="DecisionTacking(java.lang.String)[pri:16, instance:test.attest360.testCases.QADecision@6b0c2d26]" name="DecisionTacking" duration-ms="30131" started-at="2022-11-25T09:00:26Z" data-provider="crtNum" finished-at="2022-11-25T09:00:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CRT486030]]>
+                <![CDATA[CRT486141]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DecisionTacking -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.attest360.testCases.QADecision@6b0c2d26]" name="teardown" is-config="true" duration-ms="848" started-at="2022-11-25T09:00:56Z" finished-at="2022-11-25T09:00:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.attest360.testCases.QADecision -->
+      <class name="test.attest360.testCases.DataEntry">
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.attest360.testCases.DataEntry@49e202ad]" name="browserSetup" is-config="true" duration-ms="6045" started-at="2022-11-25T08:57:43Z" finished-at="2022-11-25T08:57:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="critirionDataEntryLogin()[pri:-1, instance:test.attest360.testCases.DataEntry@49e202ad]" name="critirionDataEntryLogin" duration-ms="1799" started-at="2022-11-25T08:57:49Z" finished-at="2022-11-25T08:57:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- critirionDataEntryLogin -->
+        <test-method status="PASS" signature="select_customer(java.lang.String)[pri:0, instance:test.attest360.testCases.DataEntry@49e202ad]" name="select_customer" duration-ms="4117" started-at="2022-11-25T08:57:53Z" data-provider="customerName" finished-at="2022-11-25T08:57:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Billing Changes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- select_customer -->
+        <test-method status="PASS" signature="enterBasicDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:test.attest360.testCases.DataEntry@49e202ad]" name="enterBasicDetails" duration-ms="16093" started-at="2022-11-25T08:57:57Z" data-provider="basicDetails" finished-at="2022-11-25T08:58:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sathis]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[18-12-1994]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Anbalgan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[9865737159]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[sathish@bluetreemail.in]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Tamilnadu]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[coimbatore]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Component]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[bcspoc]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[168]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterBasicDetails -->
+        <test-method status="PASS" signature="fillDataAuthorization(java.lang.String)[pri:2, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataAuthorization" duration-ms="4214" started-at="2022-11-25T08:58:14Z" data-provider="Authorization" finished-at="2022-11-25T08:58:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataAuthorization -->
+        <test-method status="PASS" signature="fillDataSetBasic(java.lang.String, java.lang.String)[pri:3, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataSetBasic" duration-ms="2090" started-at="2022-11-25T08:58:18Z" data-provider="FilldataBasic" finished-at="2022-11-25T08:58:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataSetBasic -->
+        <test-method status="PASS" signature="fillDataSetEducation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataSetEducation" duration-ms="9896" started-at="2022-11-25T08:58:20Z" data-provider="FilldataEducation" finished-at="2022-11-25T08:58:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Maharaja institute if technology]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Anna University]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Coimbatore]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[BE]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2017]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[7120122120]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataSetEducation -->
+        <test-method status="PASS" signature="fillDataSetEmploymet()[pri:5, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataSetEmploymet" duration-ms="448" started-at="2022-11-25T08:58:30Z" finished-at="2022-11-25T08:58:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataSetEmploymet -->
+        <test-method status="PASS" signature="fillDataSetAddress(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataSetAddress" duration-ms="4849" started-at="2022-11-25T08:58:31Z" data-provider="FillDataAddress" finished-at="2022-11-25T08:58:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[56,vengadesapuram 4th street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tamil Nadu]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12 years]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[641407]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aadhaar Card]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataSetAddress -->
+        <test-method status="PASS" signature="fillDataSetCriminalVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:7, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataSetCriminalVerification" duration-ms="4945" started-at="2022-11-25T08:58:36Z" data-provider="FillCriminalData" finished-at="2022-11-25T08:58:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Address]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Satha1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[56,vengadesapuram 4th street]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[TamilNadu]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[641407]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataSetCriminalVerification -->
+        <test-method status="PASS" signature="fillDataIdentificationVerification(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:test.attest360.testCases.DataEntry@49e202ad]" name="fillDataIdentificationVerification" duration-ms="10182" started-at="2022-11-25T08:58:41Z" data-provider="FillDataIdentification" finished-at="2022-11-25T08:58:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aadhaar Card]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Satha1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[566922875610]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillDataIdentificationVerification -->
+        <test-method status="PASS" signature="logoutAsDataEntry()[pri:9, instance:test.attest360.testCases.DataEntry@49e202ad]" name="logoutAsDataEntry" duration-ms="2898" started-at="2022-11-25T08:58:51Z" finished-at="2022-11-25T08:58:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutAsDataEntry -->
+        <test-method status="PASS" signature="critirionQaLogin()[pri:10, instance:test.attest360.testCases.DataEntry@49e202ad]" name="critirionQaLogin" duration-ms="821" started-at="2022-11-25T08:58:54Z" finished-at="2022-11-25T08:58:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- critirionQaLogin -->
+        <test-method status="PASS" signature="runAutoDeligate(java.lang.String)[pri:11, instance:test.attest360.testCases.DataEntry@49e202ad]" name="runAutoDeligate" duration-ms="6959" started-at="2022-11-25T08:58:55Z" data-provider="customerName" finished-at="2022-11-25T08:59:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Billing Changes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runAutoDeligate -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.attest360.testCases.DataEntry@49e202ad]" name="teardown" is-config="true" duration-ms="1096" started-at="2022-11-25T08:59:02Z" finished-at="2022-11-25T08:59:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.attest360.testCases.DataEntry -->
+      <class name="test.attest360.testCases.Verification">
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.attest360.testCases.Verification@1c72da34]" name="browserSetup" is-config="true" duration-ms="4265" started-at="2022-11-25T08:59:03Z" finished-at="2022-11-25T08:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserSetup -->
+        <test-method status="PASS" signature="loginAsVerifier()[pri:12, instance:test.attest360.testCases.Verification@1c72da34]" name="loginAsVerifier" duration-ms="1668" started-at="2022-11-25T08:59:07Z" finished-at="2022-11-25T08:59:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsVerifier -->
+        <test-method status="PASS" signature="caseSearch(java.lang.String)[pri:13, instance:test.attest360.testCases.Verification@1c72da34]" name="caseSearch" duration-ms="11929" started-at="2022-11-25T08:59:09Z" data-provider="crtNum" finished-at="2022-11-25T08:59:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CRT486141]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- caseSearch -->
-        <test-method status="PASS" signature="verifierapproval(java.lang.String)[pri:14, instance:test.attest360.testCases.Verification@71248c21]" name="verifierapproval" duration-ms="83097" started-at="2022-11-24T09:51:51Z" data-provider="Authorization" finished-at="2022-11-24T09:53:14Z">
+        <test-method status="PASS" signature="verifierapproval(java.lang.String)[pri:14, instance:test.attest360.testCases.Verification@1c72da34]" name="verifierapproval" duration-ms="57319" started-at="2022-11-25T08:59:21Z" data-provider="Authorization" finished-at="2022-11-25T09:00:18Z">
           <params>
             <param index="0">
               <value>
@@ -44,7 +393,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifierapproval -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:test.attest360.testCases.Verification@71248c21]" name="teardown" is-config="true" duration-ms="840" started-at="2022-11-24T09:53:14Z" finished-at="2022-11-24T09:53:15Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.attest360.testCases.Verification@1c72da34]" name="teardown" is-config="true" duration-ms="834" started-at="2022-11-25T09:00:18Z" finished-at="2022-11-25T09:00:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

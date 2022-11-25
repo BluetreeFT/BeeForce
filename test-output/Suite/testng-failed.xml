@@ -7,13 +7,13 @@
   <test thread-count="1" name="Test(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="test.attest360.testCases.Verification">
+      <class name="test.attest360.testCases.QADecision">
         <methods>
           <include name="teardown"/>
-          <include name="verifierapproval" invocation-numbers="0"/>
+          <include name="DecisionTacking" invocation-numbers="0"/>
           <include name="browserSetup"/>
         </methods>
-      </class> <!-- test.attest360.testCases.Verification -->
+      </class> <!-- test.attest360.testCases.QADecision -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

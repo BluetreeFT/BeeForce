@@ -21,7 +21,13 @@ public class QADecision extends BaseClass {
 	@Test(dataProvider= "crtNum",dataProviderClass= DataProviders.class,priority=16)
 	public void DecisionTacking(String crtNum) throws InterruptedException {
 	QaHomePage qhp=new QaHomePage();
-	qhp.desicisionTaking(crtNum);
+	qhp.clickFinalApproval(crtNum);
+	qhp.qaDecissionEducation();
+	qhp.qaDecissionAddress();
+	qhp.qaDecissionCriminal();
+	qhp.qaDecissionIdentification();
+    qhp.generateIntrimReport();
+    qhp.generateFinalReport();
 	
 	
 	}
