@@ -38,7 +38,7 @@ public class EmployeeFieldupdate extends BaseClass {
 
 		mp.selectModule(Module);
 
-//		chp.clickDataManagement();
+		chp.clickDataManagement();
 
 		chp.clickEmployeeFieldUpdateDropDown();
 
@@ -94,7 +94,7 @@ public class EmployeeFieldupdate extends BaseClass {
 
 		mp.selectModule(Module);
 
-//		chp.clickDataManagement();
+		chp.clickDataManagement();
 
 		chp.clickEmployeeFieldUpdateDropDown();
 

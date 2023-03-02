@@ -34,21 +34,21 @@ public class ChrmsHomePage extends BaseClass {
  
  
  
-// public void clickDataManagement() {
-//	 
-//	 dataManagement.click();
-//	 
-// }
-// 
-// public void clickEmployeeData() {
-//	 
-//	 employeeData.click();
-//	 
-// }
- 
- public void navigateToEmployeeViewAndEdit() {
+ public void clickDataManagement() {
 	 
-	driver.navigate().to("https://test-cems-saas.labour.tech/CEMS/dynamic/search/contractEmployee");
+	 dataManagement.click();
+	 
+ }
+ 
+ public void clickEmployeeData() {
+	 
+	 employeeData.click();
+	 
+ }
+ 
+ public void clickEmployeeViewAndEdit() {
+	 
+	 employeeViewAndEdit.click();
 	 
  }
  
