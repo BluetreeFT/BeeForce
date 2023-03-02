@@ -3,25 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.attest360.testCases.DataEntry">
+      <class name="test.beeforce.testcases.OfflineEmployeeCreation">
         <methods>
-          <include name="fillDataIdentificationVerification"/>
-          <include name="fillDataSetCriminalVerification"/>
-          <include name="fillDataAuthorization"/>
-          <include name="select_customer"/>
-          <include name="logoutAsDataEntry"/>
-          <include name="enterBasicDetails"/>
-          <include name="critirionQaLogin"/>
-          <include name="fillDataSetEducation"/>
-          <include name="fillDataSetBasic"/>
-          <include name="runAutoDeligate"/>
-          <include name="fillDataSetEmploymet"/>
-          <include name="fillDataSetAddress"/>
-          <include name="teardown"/>
-          <include name="critirionDataEntryLogin"/>
+          <include name="verifyDetailsInEattendance"/>
+          <include name="ReOnboardEmployeeStatus"/>
+          <include name="openEmployeeViewAndEditPage"/>
+          <include name="verifyDetailsInCems"/>
           <include name="browserSetup"/>
+          <include name="teardown"/>
+          <include name="OnboardedEmployeeStatus"/>
+          <include name="loginAsAdmin"/>
         </methods>
-      </class> <!-- test.attest360.testCases.DataEntry -->
+      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

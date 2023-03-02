@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test.attest360.utilities;
+package test.beeforce.utilities;
 
 import java.io.FileInputStream;
 
@@ -14,7 +14,11 @@ import java.io.FileInputStream;
 
 import java.io.FileOutputStream;
 import java.util.Calendar;
+
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -22,8 +26,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
-
-	public static String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\CandidateDetails.xlsx";
+	public static String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 	//	 	public  String path;
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut = null;
@@ -226,12 +229,20 @@ public class ExcelUtils {
 
 			cell = row.getCell(colNum);	
 			if (cell == null)
+				
 				cell = row.createCell(colNum);
 
 			// cell style
-			//CellStyle cs = workbook.createCellStyle();
-			//cs.setWrapText(true);
-			//cell.setCellStyle(cs);
+			CellStyle cs = workbook.createCellStyle();
+			cs.setWrapText(true);
+			cs.setBorderBottom(BorderStyle.THIN);
+			cs.setBorderLeft(BorderStyle.THIN);
+			cs.setBorderRight(BorderStyle.THIN);
+			cs.setBorderTop(BorderStyle.THIN);
+			cs.setAlignment(HorizontalAlignment.CENTER);
+			cs.setVerticalAlignment(org.apache.poi.ss.usermodel.VerticalAlignment.CENTER);
+	
+			cell.setCellStyle(cs);
 			cell.setCellValue(data);
 
 			fileOut = new FileOutputStream(path);
@@ -356,7 +367,7 @@ public class ExcelUtils {
 		}
 		catch(Exception e){
 			e.printStackTrace();
-			return false;
+			return false; 
 		}
 		return true;
 

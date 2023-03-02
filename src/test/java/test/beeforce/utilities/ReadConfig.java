@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test.attest360.utilities;
+package test.beeforce.utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,39 +16,69 @@ public class ReadConfig {
 	
 	public ReadConfig() {
 		File src=new File("./configuration/config.properties");
+		
 		try {
+			
 			FileInputStream fis=new FileInputStream(src);
+			
 			pro=new Properties();
+			
 			pro.load(fis);
+			
 		} catch (Exception e) {
+			
 			System.out.println("Exception Msg is :"+ e.getMessage());
 		}
 	}
 	
 	public String getAppUrl() {
+		
 		String url=pro.getProperty("Url");
+		
 		return url;
 	}
 	
-	public String getDataEntry_UserName() 
-	{
-		String username=pro.getProperty("DataEntryUN");
+	public String getTitanContractorUserName() {
+		
+		String username=pro.getProperty("TitanContractorUserName");
+		
 		return username;
 	}
-	public String getQA_UserName() 
-	{
-		String username=pro.getProperty("QaUN");
-		return username;
-	}
-	public String getVerifier_UserName() 
-	{
-		String username=pro.getProperty("VerifierUN");
-		return username;
+	
+public String getTitanPassword() {
+		
+		String password=pro.getProperty("TitanPassWord");
+		
+		return password;
 	}
 
-	public String getPassword() {
-		String pass=pro.getProperty("Password");
-		return pass;
-	}
+public String getTitanAdminUserName() {
+	
+	String username=pro.getProperty("TitanAdminUserName");
+	
+	return username;
+}
+
+public String getJkcContractorUserName() {
+	
+	String username=pro.getProperty("JkcContractorUserName");
+	
+	return username;
+}
+
+public String getJkcPassword() {
+	
+	String password=pro.getProperty("JkcPassWord");
+	
+	return password;
+}
+
+public String getJkcAdminUserName() {
+
+String username=pro.getProperty("JkcAdminUserName");
+
+return username;
+}
+	
 
 }

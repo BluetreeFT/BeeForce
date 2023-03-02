@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="test.beeforce.utilities.TestListeners"></listener>
+	</listeners>
+	<test name="Logintest">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="Module" value="onboarding"></parameter>
+		<parameter name="status" value="Approved"></parameter>
+		<parameter name="org" value="titan"></parameter>
+		<classes>
+			<class name="test.beeforce.testcases.OfflineEmployeeCreation" >
+			<methods>
+			<include name="loginAsContractor"></include>
+			<include name="selectModule"></include>
+			<include name="offlineEmployeeupload"></include>
+			<include name="fillEmployeeDetailsCorporate"></include>
+			<include name="logoutAsContractor"></include>
+			<include name="loginAsAdmin"></include>
+			<include name="openEmployeeViewAndEditPage"></include>
+			<include name="OnboardedEmployeeStatus"></include>
+			<include name="verifyDetailsInCems"></include>
+			<include name="verifyEmployeeStatus"></include>
+			<include name="verifyDetailsInEattendance"></include>
+			</methods>
+			</class>
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

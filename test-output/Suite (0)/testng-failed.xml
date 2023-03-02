@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite (0)]">
+  <listeners>
+    <listener class-name="test.attest360.utilities.TestListeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="customerName" value="Attest new build testing"/>
+    <classes>
+      <class name="test.attest360.testCases.Fresher">
+        <methods>
+          <include name="teardown"/>
+          <include name="QADecision"/>
+          <include name="verifierDecision" invocation-numbers="0"/>
+          <include name="browserSetup"/>
+        </methods>
+      </class> <!-- test.attest360.testCases.Fresher -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite (0)] -->

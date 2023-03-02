@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="test.attest360.utilities.TestListeners"/>
+    <listener class-name="test.beeforce.utilities.TestListeners"/>
   </listeners>
-  <test thread-count="1" name="Test(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="Logintest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="Module" value="onboarding"/>
+    <parameter name="status" value="Approved"/>
     <classes>
-      <class name="test.attest360.testCases.QADecision">
+      <class name="test.beeforce.testcases.OfflineEmployeeCreation">
         <methods>
-          <include name="teardown"/>
-          <include name="DecisionTacking" invocation-numbers="0"/>
+          <include name="verifyDetailsInEattendance" invocation-numbers="0"/>
+          <include name="verifyDetailsInCems"/>
           <include name="browserSetup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- test.attest360.testCases.QADecision -->
+      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Logintest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

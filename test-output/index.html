@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Durga Prasad\eclipse-workspace\Attest360\DataEntry.xml</span>
+                    <span>C:\Users\Durga Prasad\eclipse-workspace\Beeforce\Corporate.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">18 methods,   18 passed</span>
+                    <span class="method-stats">11 methods, 2 failed,   9 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="verifyDetailsInCems">verifyDetailsInCems</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="verifyDetailsInEattendance(Approved)">verifyDetailsInEattendance(Approved)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,92 +121,47 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.QADecision" hash-for-method="DecisionTacking(CRT486141)">DecisionTacking(CRT486141)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="OnboardedEmployeeStatus(Approved)">OnboardedEmployeeStatus(Approved)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.Verification" hash-for-method="caseSearch(CRT486141)">caseSearch(CRT486141)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="fillEmployeeDetailsCorporate(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applic...)">fillEmployeeDetailsCorporate(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applic...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="critirionDataEntryLogin">critirionDataEntryLogin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="loginAsAdmin">loginAsAdmin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="critirionQaLogin">critirionQaLogin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="loginAsContractor">loginAsContractor</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="enterBasicDetails(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalo...)">enterBasicDetails(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalo...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="logoutAsContractor">logoutAsContractor</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataAuthorization(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)">fillDataAuthorization(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="offlineEmployeeupload">offlineEmployeeupload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataIdentificationVerification(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\77...)">fillDataIdentificationVerification(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\77...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="openEmployeeViewAndEditPage">openEmployeeViewAndEditPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataSetAddress(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\D...)">fillDataSetAddress(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\D...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="selectModule(onboarding)">selectModule(onboarding)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataSetBasic(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg)">fillDataSetBasic(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataSetCriminalVerification(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\...)">fillDataSetCriminalVerification(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataSetEducation(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga ...)">fillDataSetEducation(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga ...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="fillDataSetEmploymet">fillDataSetEmploymet</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.Verification" hash-for-method="loginAsVerifier">loginAsVerifier</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.QADecision" hash-for-method="loginAsVerifier">loginAsVerifier</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="logoutAsDataEntry">logoutAsDataEntry</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="runAutoDeligate(Billing Changes)">runAutoDeligate(Billing Changes)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.DataEntry" hash-for-method="select_customer(Billing Changes)">select_customer(Billing Changes)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.attest360.testCases.Verification" hash-for-method="verifierapproval(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)">verifierapproval(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="test.beeforce.testcases.OfflineEmployeeCreation" hash-for-method="verifyEmployeeStatus(Approved)">verifyEmployeeStatus(Approved)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -202,164 +176,117 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.attest360.testCases.DataEntry</span>
+              <img src="failed.png"/>
+              <span class="class-name">test.beeforce.testcases.OfflineEmployeeCreation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="critirionDataEntryLogin">
-                  </a> <!-- critirionDataEntryLogin -->
-                  <span class="method-name">critirionDataEntryLogin</span>
+                  <a name="verifyDetailsInCems">
+                  </a> <!-- verifyDetailsInCems -->
+                  <span class="method-name">verifyDetailsInCems</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [Manpower] but found [],
+	expected [8866773344] but found [],
+	expected [MBS] but found [123234345456],
+	expected [NO] but found [],
+	expected [Hindu] but found [],
+	expected [123234345456] but found [],
+	expected [56,vengadesapuram 4th Street] but found [500]
+	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInCems(OfflineEmployeeCreation.java:422)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="critirionQaLogin">
-                  </a> <!-- critirionQaLogin -->
-                  <span class="method-name">critirionQaLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="enterBasicDetails(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalo...)">
-                  </a> <!-- enterBasicDetails(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalo...) -->
-                  <span class="method-name">enterBasicDetails</span>
-                  <span class="parameters">(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalore, Component, bcspoc, 168)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataAuthorization(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)">
-                  </a> <!-- fillDataAuthorization(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf) -->
-                  <span class="method-name">fillDataAuthorization</span>
-                  <span class="parameters">(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataIdentificationVerification(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\77...)">
-                  </a> <!-- fillDataIdentificationVerification(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\77...) -->
-                  <span class="method-name">fillDataIdentificationVerification</span>
-                  <span class="parameters">(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataSetAddress(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\D...)">
-                  </a> <!-- fillDataSetAddress(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\D...) -->
-                  <span class="method-name">fillDataSetAddress</span>
-                  <span class="parameters">(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataSetBasic(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg)">
-                  </a> <!-- fillDataSetBasic(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg) -->
-                  <span class="method-name">fillDataSetBasic</span>
-                  <span class="parameters">(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataSetCriminalVerification(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\...)">
-                  </a> <!-- fillDataSetCriminalVerification(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\...) -->
-                  <span class="method-name">fillDataSetCriminalVerification</span>
-                  <span class="parameters">(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataSetEducation(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga ...)">
-                  </a> <!-- fillDataSetEducation(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga ...) -->
-                  <span class="method-name">fillDataSetEducation</span>
-                  <span class="parameters">(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\7777.pdf)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="fillDataSetEmploymet">
-                  </a> <!-- fillDataSetEmploymet -->
-                  <span class="method-name">fillDataSetEmploymet</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logoutAsDataEntry">
-                  </a> <!-- logoutAsDataEntry -->
-                  <span class="method-name">logoutAsDataEntry</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runAutoDeligate(Billing Changes)">
-                  </a> <!-- runAutoDeligate(Billing Changes) -->
-                  <span class="method-name">runAutoDeligate</span>
-                  <span class="parameters">(Billing Changes)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="select_customer(Billing Changes)">
-                  </a> <!-- select_customer(Billing Changes) -->
-                  <span class="method-name">select_customer</span>
-                  <span class="parameters">(Billing Changes)</span>
+                  <a name="verifyDetailsInEattendance(Approved)">
+                  </a> <!-- verifyDetailsInEattendance(Approved) -->
+                  <span class="method-name">verifyDetailsInEattendance</span>
+                  <span class="parameters">(Approved)</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:496)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.attest360.testCases.QADecision</span>
+              <span class="class-name">test.beeforce.testcases.OfflineEmployeeCreation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="DecisionTacking(CRT486141)">
-                  </a> <!-- DecisionTacking(CRT486141) -->
-                  <span class="method-name">DecisionTacking</span>
-                  <span class="parameters">(CRT486141)</span>
+                  <a name="OnboardedEmployeeStatus(Approved)">
+                  </a> <!-- OnboardedEmployeeStatus(Approved) -->
+                  <span class="method-name">OnboardedEmployeeStatus</span>
+                  <span class="parameters">(Approved)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginAsVerifier">
-                  </a> <!-- loginAsVerifier -->
-                  <span class="method-name">loginAsVerifier</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.attest360.testCases.Verification</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="caseSearch(CRT486141)">
-                  </a> <!-- caseSearch(CRT486141) -->
-                  <span class="method-name">caseSearch</span>
-                  <span class="parameters">(CRT486141)</span>
+                  <a name="fillEmployeeDetailsCorporate(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applic...)">
+                  </a> <!-- fillEmployeeDetailsCorporate(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applic...) -->
+                  <span class="method-name">fillEmployeeDetailsCorporate</span>
+                  <span class="parameters">(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applicable, Skilled, BE, 2 years, 8866773344, MBS, NO, Hindu, 123234345456, 15000, 5000, 2000, 1200, 0, 0, 500, 500, 500, 500, 320, 56,vengadesapuram 4th Street)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginAsVerifier">
-                  </a> <!-- loginAsVerifier -->
-                  <span class="method-name">loginAsVerifier</span>
+                  <a name="loginAsAdmin">
+                  </a> <!-- loginAsAdmin -->
+                  <span class="method-name">loginAsAdmin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifierapproval(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)">
-                  </a> <!-- verifierapproval(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf) -->
-                  <span class="method-name">verifierapproval</span>
-                  <span class="parameters">(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</span>
+                  <a name="loginAsContractor">
+                  </a> <!-- loginAsContractor -->
+                  <span class="method-name">loginAsContractor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logoutAsContractor">
+                  </a> <!-- logoutAsContractor -->
+                  <span class="method-name">logoutAsContractor</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="offlineEmployeeupload">
+                  </a> <!-- offlineEmployeeupload -->
+                  <span class="method-name">offlineEmployeeupload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openEmployeeViewAndEditPage">
+                  </a> <!-- openEmployeeViewAndEditPage -->
+                  <span class="method-name">openEmployeeViewAndEditPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectModule(onboarding)">
+                  </a> <!-- selectModule(onboarding) -->
+                  <span class="method-name">selectModule</span>
+                  <span class="parameters">(onboarding)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEmployeeStatus(Approved)">
+                  </a> <!-- verifyEmployeeStatus(Approved) -->
+                  <span class="method-name">verifyEmployeeStatus</span>
+                  <span class="parameters">(Approved)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -367,7 +294,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Durga Prasad\eclipse-workspace\Attest360\DataEntry.xml</span>
+            <span class="header-content">C:\Users\Durga Prasad\eclipse-workspace\Beeforce\Corporate.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -375,16 +302,30 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;test.attest360.utilities.TestListeners&quot;/&gt;
+    &lt;listener class-name=&quot;test.beeforce.utilities.TestListeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Logintest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;Module&quot; value=&quot;onboarding&quot;/&gt;
+    &lt;parameter name=&quot;status&quot; value=&quot;Approved&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.attest360.testCases.DataEntry&quot;/&gt;
-      &lt;class name=&quot;test.attest360.testCases.Verification&quot;/&gt;
-      &lt;class name=&quot;test.attest360.testCases.QADecision&quot;/&gt;
+      &lt;class name=&quot;test.beeforce.testcases.OfflineEmployeeCreation&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;loginAsContractor&quot;/&gt;
+          &lt;include name=&quot;selectModule&quot;/&gt;
+          &lt;include name=&quot;offlineEmployeeupload&quot;/&gt;
+          &lt;include name=&quot;fillEmployeeDetailsCorporate&quot;/&gt;
+          &lt;include name=&quot;logoutAsContractor&quot;/&gt;
+          &lt;include name=&quot;loginAsAdmin&quot;/&gt;
+          &lt;include name=&quot;openEmployeeViewAndEditPage&quot;/&gt;
+          &lt;include name=&quot;OnboardedEmployeeStatus&quot;/&gt;
+          &lt;include name=&quot;verifyDetailsInCems&quot;/&gt;
+          &lt;include name=&quot;verifyEmployeeStatus&quot;/&gt;
+          &lt;include name=&quot;verifyDetailsInEattendance&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.beeforce.testcases.OfflineEmployeeCreation --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- Logintest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -396,7 +337,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (3 classes)</span>
+                <span class="test-name">Logintest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -422,79 +363,51 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(18);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifierapproval')
-data.setCell(0, 2, 'test.attest360.testCases.Verification')
-data.setCell(0, 3, 57319);
+data.setCell(0, 1, 'fillEmployeeDetailsCorporate')
+data.setCell(0, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(0, 3, 37524);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'DecisionTacking')
-data.setCell(1, 2, 'test.attest360.testCases.QADecision')
-data.setCell(1, 3, 30131);
+data.setCell(1, 1, 'verifyDetailsInEattendance')
+data.setCell(1, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(1, 3, 19594);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'enterBasicDetails')
-data.setCell(2, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(2, 3, 16093);
+data.setCell(2, 1, 'OnboardedEmployeeStatus')
+data.setCell(2, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(2, 3, 15603);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'caseSearch')
-data.setCell(3, 2, 'test.attest360.testCases.Verification')
-data.setCell(3, 3, 11929);
+data.setCell(3, 1, 'openEmployeeViewAndEditPage')
+data.setCell(3, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(3, 3, 10823);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'fillDataIdentificationVerification')
-data.setCell(4, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(4, 3, 10182);
+data.setCell(4, 1, 'verifyEmployeeStatus')
+data.setCell(4, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(4, 3, 9453);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'fillDataSetEducation')
-data.setCell(5, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(5, 3, 9896);
+data.setCell(5, 1, 'offlineEmployeeupload')
+data.setCell(5, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(5, 3, 7957);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'runAutoDeligate')
-data.setCell(6, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(6, 3, 6959);
+data.setCell(6, 1, 'verifyDetailsInCems')
+data.setCell(6, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(6, 3, 7622);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'fillDataSetCriminalVerification')
-data.setCell(7, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(7, 3, 4945);
+data.setCell(7, 1, 'selectModule')
+data.setCell(7, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(7, 3, 5226);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'fillDataSetAddress')
-data.setCell(8, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(8, 3, 4849);
+data.setCell(8, 1, 'loginAsContractor')
+data.setCell(8, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(8, 3, 4331);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'fillDataAuthorization')
-data.setCell(9, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(9, 3, 4214);
+data.setCell(9, 1, 'logoutAsContractor')
+data.setCell(9, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(9, 3, 3591);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'select_customer')
-data.setCell(10, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(10, 3, 4117);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'logoutAsDataEntry')
-data.setCell(11, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(11, 3, 2898);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'loginAsVerifier')
-data.setCell(12, 2, 'test.attest360.testCases.QADecision')
-data.setCell(12, 3, 2564);
-data.setCell(13, 0, 13)
-data.setCell(13, 1, 'fillDataSetBasic')
-data.setCell(13, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(13, 3, 2090);
-data.setCell(14, 0, 14)
-data.setCell(14, 1, 'critirionDataEntryLogin')
-data.setCell(14, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(14, 3, 1799);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'loginAsVerifier')
-data.setCell(15, 2, 'test.attest360.testCases.Verification')
-data.setCell(15, 3, 1668);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'critirionQaLogin')
-data.setCell(16, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(16, 3, 821);
-data.setCell(17, 0, 17)
-data.setCell(17, 1, 'fillDataSetEmploymet')
-data.setCell(17, 2, 'test.attest360.testCases.DataEntry')
-data.setCell(17, 3, 448);
+data.setCell(10, 1, 'loginAsAdmin')
+data.setCell(10, 2, 'test.beeforce.testcases.OfflineEmployeeCreation')
+data.setCell(10, 3, 1220);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -514,9 +427,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test.beeforce.testcases.OfflineEmployeeCreation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ReOnboardEmployeeStatus</span>
+                <br/>
+                <span class="ignored-method-name">fillEmployeeDetailsPlant</span>
+                <br/>
+                <span class="ignored-method-name">fillEmployeeDetailsRetail</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -525,108 +449,62 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.attest360.testCases.DataEntry</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.beeforce.testcases.OfflineEmployeeCreation</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">browserSetup(firefox)</span>
+                <span class="method-name">browserSetup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">critirionDataEntryLogin</span>
-                <span class="method-start">6060 ms</span>
+                <span class="method-name">loginAsContractor</span>
+                <span class="method-start">6688 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">select_customer(Billing Changes)</span>
-                <span class="method-start">10202 ms</span>
+                <span class="method-name">selectModule(onboarding)</span>
+                <span class="method-start">11059 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">enterBasicDetails(Sathis, A, 18-12-1994, Anbalgan, 9865737159, sathish@bluetreemail.in, Tamilnadu, coimbatore, Bangalo...)</span>
-                <span class="method-start">14676 ms</span>
+                <span class="method-name">offlineEmployeeupload</span>
+                <span class="method-start">16294 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataAuthorization(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</span>
-                <span class="method-start">30924 ms</span>
+                <span class="method-name">fillEmployeeDetailsCorporate(O+Ve, Manpower, Corporate, Watch, Sikkim, 1546, Human Resource, Manpower, Helper, Sabita, Not Applic...)</span>
+                <span class="method-start">26684 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataSetBasic(Male, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Candidate image.jpg)</span>
-                <span class="method-start">35268 ms</span>
+                <span class="method-name">logoutAsContractor</span>
+                <span class="method-start">64223 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataSetEducation(Maharaja institute if technology, Anna University, Coimbatore, BE, 2017, 7120122120, C:\Users\Durga ...)</span>
-                <span class="method-start">37475 ms</span>
+                <span class="method-name">loginAsAdmin</span>
+                <span class="method-start">67822 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataSetEmploymet</span>
-                <span class="method-start">47386 ms</span>
+                <span class="method-name">openEmployeeViewAndEditPage</span>
+                <span class="method-start">69042 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataSetAddress(56,vengadesapuram 4th street, Tirupur, Tamil Nadu, 12 years, India, 641407, Aadhaar Card, C:\Users\D...)</span>
-                <span class="method-start">48073 ms</span>
+                <span class="method-name">OnboardedEmployeeStatus(Approved)</span>
+                <span class="method-start">79865 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataSetCriminalVerification(Address, Satha1, 56,vengadesapuram 4th street, Tirupur, Tirupur, TamilNadu, India, 641407, C:\Users\...)</span>
-                <span class="method-start">53064 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyDetailsInCems</span>
+                <span class="method-start">95476 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">fillDataIdentificationVerification(Aadhaar Card, Satha1, 566922875610, C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\77...)</span>
-                <span class="method-start">58215 ms</span>
+                <span class="method-name">verifyEmployeeStatus(Approved)</span>
+                <span class="method-start">103301 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">logoutAsDataEntry</span>
-                <span class="method-start">68399 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">critirionQaLogin</span>
-                <span class="method-start">71302 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">runAutoDeligate(Billing Changes)</span>
-                <span class="method-start">72252 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyDetailsInEattendance(Approved)</span>
+                <span class="method-start">112754 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">79212 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.attest360.testCases.Verification</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">browserSetup(firefox)</span>
-                <span class="method-start">80308 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">loginAsVerifier</span>
-                <span class="method-start">84573 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">caseSearch(CRT486141)</span>
-                <span class="method-start">86416 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifierapproval(C:\Users\Durga Prasad\eclipse-workspace\Attest360\Attachments\Update Information _ Attest360.pdf)</span>
-                <span class="method-start">98426 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">155747 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.attest360.testCases.QADecision</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">browserSetup(firefox)</span>
-                <span class="method-start">156581 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">loginAsVerifier</span>
-                <span class="method-start">160214 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">DecisionTacking(CRT486141)</span>
-                <span class="method-start">162939 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">193072 ms</span>
+                <span class="method-start">132503 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

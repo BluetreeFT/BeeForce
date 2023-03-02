@@ -1,4 +1,4 @@
-package test.attest360.utilities;
+package test.beeforce.utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
-import test.attest360.testCases.BaseClass;
+import test.beeforce.base.BaseClass;
 
 
 public class TestListeners implements ITestListener  {

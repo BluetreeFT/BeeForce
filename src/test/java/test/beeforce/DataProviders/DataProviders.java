@@ -1,161 +1,98 @@
 /**
  * 
  */
-package test.attest360.testData;
+package test.beeforce.DataProviders;
 
 import org.testng.annotations.DataProvider;
-import test.attest360.utilities.ExcelUtils;
+
+import test.beeforce.utilities.ExcelUtils;
 
 /**
  * @author Sathish A
  *
  */
 public class DataProviders  {
+	
 	ExcelUtils obj=new ExcelUtils();
-
-	@DataProvider(name ="customerName")
-	public Object[][] set_Customer() {
+	
+	@DataProvider(name ="Corporate")
+	public Object[][] setBasicDetailsCorporate() {
 		//Totals rows count
-		int rows=obj.getRowCount("CustomerName") ;
+		int rows=obj.getRowCount("BasicDetailsCorporate") ;
 		//Total Columns
-		int column=obj.getColumnCount ("CustomerName") ;
+		int column=obj.getColumnCount ("BasicDetailsCorporate") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("CustomerName", j, i+2);
+				data[i][j]=obj.getCellData("BasicDetailsCorporate", j, i+2);
 			}
 		}
 		return data;
 	}
 	
-	@DataProvider(name ="basicDetails")
-	public Object[][] set_BasicDetails() {
+	@DataProvider(name ="Plant")
+	public Object[][] setBasicDetailsPlant() {
 		//Totals rows count
-		int rows=obj.getRowCount("Basic Details") ;
+		int rows=obj.getRowCount("BasicDetailsPlant") ;
 		//Total Columns
-		int column=obj.getColumnCount ("Basic Details") ;
+		int column=obj.getColumnCount ("BasicDetailsPlant") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("Basic Details", j, i+2);
+				data[i][j]=obj.getCellData("BasicDetailsPlant", j, i+2);
 			}
 		}
-		return data;			
-	 
+		return data;
 	}
-	@DataProvider(name ="FilldataBasic")
-	public Object[][] setFilldataBasicDetails() {
+	
+	@DataProvider(name ="Retail")
+	public Object[][] setBasicDetailsRetail() {
 		//Totals rows count
-		int rows=obj.getRowCount("FillData-BasicDetails") ;
+		int rows=obj.getRowCount("BasicDetailsRetail") ;
 		//Total Columns
-		int column=obj.getColumnCount ("FillData-BasicDetails") ;
+		int column=obj.getColumnCount ("BasicDetailsRetail") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-BasicDetails", j, i+2);
+				data[i][j]=obj.getCellData("BasicDetailsRetail", j, i+2);
 			}
 		}
-		return data;			
-	 
+		return data;
 	}
-	@DataProvider(name ="FilldataEducation")
-	public Object[][] setFilldataEducationDetails() {
+
+	@DataProvider(name ="EmployeeFieldUpdate")
+	public Object[][] set_FieldUpdate() {
 		//Totals rows count
-		int rows=obj.getRowCount("FillData-Education") ;
+		int rows=obj.getRowCount("EmployeeFieldUpdate") ;
 		//Total Columns
-		int column=obj.getColumnCount ("FillData-Education") ;
+		int column=obj.getColumnCount ("EmployeeFieldUpdate") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-Education", j, i+2);
+				data[i][j]=obj.getCellData("EmployeeFieldUpdate", j, i+2);
 			}
 		}
-		return data;			
-	 
+		return data;
 	}
-	@DataProvider(name ="FillDataAddress")
-	public Object[][] setFilldataAddress() {
+	@DataProvider(name ="FieldValidation")
+	public Object[][] FieldValidation() {
 		//Totals rows count
-		int rows=obj.getRowCount("FillData-AddressVerification") ;
+		int rows=obj.getRowCount("Fieldvalidation") ;
 		//Total Columns
-		int column=obj.getColumnCount ("FillData-AddressVerification") ;
+		int column=obj.getColumnCount ("Fieldvalidation") ;
 		int actRows=rows-1;
 		Object[][] data= new Object[actRows] [column];
 		for(int i=0;i<actRows;i++) {
 			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-AddressVerification", j, i+2);
+				data[i][j]=obj.getCellData("Fieldvalidation", j, i+2);
 			}
 		}
-		return data;			
-	 
-	}
-	@DataProvider(name ="FillCriminalData")
-	public Object[][] setFilldataCriminalVerification() {
-		//Totals rows count
-		int rows=obj.getRowCount("FillData-Criminal Verification") ;
-		//Total Columns
-		int column=obj.getColumnCount ("FillData-Criminal Verification") ;
-		int actRows=rows-1;
-		Object[][] data= new Object[actRows] [column];
-		for(int i=0;i<actRows;i++) {
-			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-Criminal Verification", j, i+2);
-			}
-		}
-		return data;			
-	 
-	}
-	@DataProvider(name ="FillDataIdentification")
-	public Object[][] setFillIdentificationVerification() {
-		//Totals rows count
-		int rows=obj.getRowCount("FillData-Identification") ;
-		//Total Columns
-		int column=obj.getColumnCount ("FillData-Identification") ;
-		int actRows=rows-1;
-		Object[][] data= new Object[actRows] [column];
-		for(int i=0;i<actRows;i++) {
-			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("FillData-Identification", j, i+2);
-			}
-		}
-		return data;			
-	 
-	}
-	@DataProvider(name ="Authorization")
-	public Object[][] setFillDataAuthorization() {
-		//Totals rows count
-		int rows=obj.getRowCount("Authorization") ;
-		//Total Columns
-		int column=obj.getColumnCount ("Authorization") ;
-		int actRows=rows-1;
-		Object[][] data= new Object[actRows] [column];
-		for(int i=0;i<actRows;i++) {
-			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("Authorization", j, i+2);
-			}
-		}
-		return data;			
-	 
-	}
-	@DataProvider(name ="crtNum")
-	public Object[][] searchCaseNum() {
-		//Totals rows count
-		int rows=obj.getRowCount("CrtNumber") ;
-		//Total Columns
-		int column=obj.getColumnCount ("CrtNumber") ;
-		int actRows=rows-1;
-		Object[][] data= new Object[actRows] [column];
-		for(int i=0;i<actRows;i++) {
-			for(int j=0; j<column;j++) {
-				data[i][j]=obj.getCellData("CrtNumber", j, i+2);
-			}
-		}
-		return data;			
-	 
+		return data;
 	}
 	
 }
+

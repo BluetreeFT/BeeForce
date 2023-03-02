@@ -1,4 +1,4 @@
-package test.attest360.utilities;
+package test.beeforce.utilities;
 
 import java.io.File;
 import java.util.Date;
@@ -18,8 +18,8 @@ public class ExtentManager {
 		String path=directory+fileName;
 		ExtentHtmlReporter htmlReporter =new ExtentHtmlReporter(path);
 		htmlReporter.config().setEncoding("utf-8");
-		htmlReporter.config().setDocumentTitle("BeeForce_Test_Report");
-		htmlReporter.config().setReportName("Functional_Test_Report");
+		htmlReporter.config().setDocumentTitle("Beeforce_Test sReport");
+		htmlReporter.config().setReportName("Functional_Test Report");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
 		extent =new ExtentReports();
