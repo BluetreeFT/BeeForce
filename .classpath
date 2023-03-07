@@ -27,7 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="Configuration/automationUtilities-pro-1.0.jar" sourcepath="Configuration/automationUtilities-pro-1.0.jar"/>
 	<classpathentry kind="src" path="/Attest360"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

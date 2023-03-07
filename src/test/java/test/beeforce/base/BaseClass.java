@@ -57,9 +57,11 @@ public class BaseClass {
 
 	public String TitanAdminUserName=readconfig.getTitanAdminUserName();
 	
-	public String JkcContractorUserName=readconfig.getTitanContractorUserName();
+	public String JkcContractorUserName=readconfig.getJkcContractorUserName();
 
-	public String JkcPassword=readconfig.getTitanPassword();
+	public String JkcPassword=readconfig.getJkcPassword();
+	
+	public String JkcAdminPassword=readconfig.getJkcAdminPassword();
 
 	public String JkcAdminUserName=readconfig.getJkcAdminUserName();
 

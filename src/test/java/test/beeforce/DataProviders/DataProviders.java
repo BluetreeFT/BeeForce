@@ -31,6 +31,22 @@ public class DataProviders  {
 		return data;
 	}
 	
+	@DataProvider(name ="jkc")
+	public Object[][] setBasicDetailsJKC() {
+		//Totals rows count
+		int rows=obj.getRowCount("BasicDetailsJKC") ;
+		//Total Columns
+		int column=obj.getColumnCount ("BasicDetailsJKC") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("BasicDetailsJKC", j, i+2);
+			}
+		}
+		return data;
+	}
+	
 	@DataProvider(name ="Plant")
 	public Object[][] setBasicDetailsPlant() {
 		//Totals rows count

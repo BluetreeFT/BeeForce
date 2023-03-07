@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import test.beeforce.base.BaseClass;
 
-public class EmployeeViewAndEditPage extends BaseClass {
+public class TitanEmployeeViewAndEditPage extends BaseClass {
 
-	public EmployeeViewAndEditPage() {
+	public TitanEmployeeViewAndEditPage() {
 
 		PageFactory.initElements(driver, this);
 
@@ -214,25 +214,25 @@ public class EmployeeViewAndEditPage extends BaseClass {
 		btnSubmit.click();
 	}
 
-	public void clickProfessionaldetailstab() {
+	private void clickProfessionaldetailstab() {
 
 		professionalDetails.click();
 
 	}
 
-	public void clickPersonaldetailstab() {
+	private void clickPersonaldetailstab() {
 
 		personalDetails.click();
 
 	}
 
-	public void clickInductiondetailstab() {
+	private void clickInductiondetailstab() {
 
 		inductionDetails.click();
 
 	}
 
-	public void clickAddresssdetailstab() {
+	private void clickAddresssdetailstab() {
 
 		AddresssDetails.click();
 
@@ -252,14 +252,14 @@ public class EmployeeViewAndEditPage extends BaseClass {
 		return ContractorType;
 	}
 
-	public String getMobileNumber() {
+	private String getMobileNumber() {
 
 
 		String MobileNumber = mobileNumber.getAttribute("value");
 		return MobileNumber;
 	}
 
-	public String getMaritalStatus() {
+	private String getMaritalStatus() {
 
 		String MaritalStatus = maritalStatus.getAttribute("value");
 		return MaritalStatus;
@@ -303,7 +303,7 @@ public class EmployeeViewAndEditPage extends BaseClass {
 
 
 	}
-	public String getDepartment()  {
+	private String getDepartment()  {
 
 		Select sel=new Select(department);
 		

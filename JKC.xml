@@ -15,12 +15,11 @@
 			<include name="loginAsContractor"></include>
 			<include name="selectModule"></include>
 			<include name="offlineEmployeeupload"></include>
-			<include name="fillEmployeeDetailsCorporate"></include>
+			<include name="fillEmployeeDetailsJKC"></include>
 			<include name="logoutAsContractor"></include>
 			<include name="loginAsAdmin"></include>
 			<include name="openEmployeeViewAndEditPage"></include>
 			<include name="OnboardedEmployeeStatus"></include>
-			<include name="verifyDetailsInCems"></include>
 			<include name="verifyEmployeeStatus"></include>
 			<include name="verifyDetailsInEattendance"></include>
 			</methods>

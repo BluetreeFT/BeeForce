@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import test.beeforce.base.BaseClass;
 
-public class OnboardingemployeeSubmissionPage extends BaseClass {
+public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
-	public OnboardingemployeeSubmissionPage() {
+	public TitanOnboardingemployeeSubmissionPage() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -134,7 +134,7 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 
 	@FindBy(id="saveFullFormId")
 	WebElement btnSubmit; 
-	
+
 	@FindBy(xpath="//div[@class='alert alert-success']/child::strong[contains(text(),'SUBMITTED')]")
 	WebElement successmessage; 
 
@@ -168,71 +168,71 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 	public void selectCategory(String Category) throws InterruptedException {
 
 		selectDropdownOption(category, Category);
-		
+
 		Thread.sleep(1000);
-		
+
 
 	}
 
 	public void selectDivision(String Division) throws InterruptedException {
 
 		selectDropdownOption(division, Division);
-		
-        Thread.sleep(1000);
+
+		Thread.sleep(1000);
 	}
 
 	public void selectLocation(String Location) throws InterruptedException {
 
 		selectDropdownOption(location, Location);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 
 	}
 
 	public void selectCostCenter(String CostCenter) throws InterruptedException {
 
 		selectDropdownOption(costCenter, CostCenter);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 
 	}
 	public void selectDepartment(String Department) throws InterruptedException {
 
 		selectDropdownOption(department, Department);
-		
-		 Thread.sleep(1500);
+
+		Thread.sleep(1500);
 
 	}
 
 	public void selectContractor(String Contractor) throws InterruptedException {
 
 		selectDropdownOption(contractor, Contractor);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 
 	}
 
 	public void selectDesignation(String Designation) throws InterruptedException {
 
 		selectDropdownOption(designation, Designation);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 
 	}
 
 	public void selectReportingManager(String ReportingManager) throws InterruptedException {
 
 		selectDropdownOption(reportingManager, ReportingManager);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 
 	}
 
 	public void selectStore(String Store) throws InterruptedException {
 
 		selectDropdownOption(store, Store);
-		
-		 Thread.sleep(1000);
+
+		Thread.sleep(1000);
 	}
 
 	public void selectWorkSkil(String Workskill) {
@@ -372,7 +372,7 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 
 	}
 
-	public void setBasicdetails(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
+	private void setBasicdetails(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
 			String Department ,String Contractor,String Designation ,String ReportingManager, String Store) throws InterruptedException {
 
 		selectBloodGroup(bloodgroup);
@@ -399,7 +399,7 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 
 	}
 
-	public void setProfessionalDetails(String Workskill,String Qualification,String yearsofexp) {
+	private void setProfessionalDetails(String Workskill,String Qualification,String yearsofexp) {
 
 		selectWorkSkil(Workskill);
 
@@ -408,7 +408,7 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 		setEmployeeNoofYearsExperience(yearsofexp);
 	}
 
-	public void setPersonalDetails(String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion) {
+	private void setPersonalDetails(String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion) {
 
 		setEmergencyContactNumber(EmergencyContactNumber);
 
@@ -420,12 +420,12 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 
 	}
 
-	public void setInductionDetails(String UAN) {
+	private void setInductionDetails(String UAN) {
 
 		setUANNumber(UAN);
 	}
 
-	public void setPayrollDetails(String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
+	private void setPayrollDetails(String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
 			String fixedWashing,String fixedattendance,String fixedCC, String fixedother  ) {
 
 		setFixedBasic(fixedbasic);
@@ -450,22 +450,39 @@ public class OnboardingemployeeSubmissionPage extends BaseClass {
 
 		setFixedOtherAllowance(fixedother);
 	}
-	
-	public void setAddressDetails(String permanentAddress) {
+
+	public void setAddressDetails(String permanentAddres) {
+
+		setPermanentAddress(permanentAddres);
+
+	}
+
+	public String getBTID() {
+
+		String SuccessMessage = successmessage.getText();
+
+		String BTID = SuccessMessage.split("Number")[1].replaceAll("[^0-9A-Za-z]","");
+
+		return BTID;
+
+	}
+
+	public void setEmployeeDetails(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
+			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
+			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
+			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
+
+		setBasicdetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store);
+		setProfessionalDetails(Workskill, Qualification, yearsofexp);
+		setPersonalDetails(EmergencyContactNumber, Community, PhysicallyChallenged, Religion);
+		setInductionDetails(UAN);
+		setPayrollDetails(fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother);
+		setAddressDetails(permanentAddres);
+		clickSubmit();
 		
-		setPermanentAddress(permanentAddress);
 		
 	}
 
-public String getBTID() {
-	
-	String SuccessMessage = successmessage.getText();
-	
-	String BTID = SuccessMessage.split("Number")[1].replaceAll("[^0-9]","");
-	
-	return BTID;
-	
-}
 
 
 

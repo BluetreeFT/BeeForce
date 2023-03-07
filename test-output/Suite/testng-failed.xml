@@ -5,6 +5,7 @@
     <listener class-name="test.beeforce.utilities.TestListeners"/>
   </listeners>
   <test thread-count="5" name="Logintest(failed)">
+    <parameter name="org" value="jkc"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="Module" value="onboarding"/>
     <parameter name="status" value="Approved"/>
@@ -12,7 +13,6 @@
       <class name="test.beeforce.testcases.OfflineEmployeeCreation">
         <methods>
           <include name="verifyDetailsInEattendance" invocation-numbers="0"/>
-          <include name="verifyDetailsInCems"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
         </methods>

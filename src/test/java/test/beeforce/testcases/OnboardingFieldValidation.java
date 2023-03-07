@@ -11,7 +11,7 @@ import test.beeforce.onboarding.pageobjects.LoginPage;
 import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
-import test.beeforce.onboarding.pageobjects.OnboardingemployeeSubmissionPage;
+import test.beeforce.onboarding.pageobjects.TitanOnboardingemployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
 import test.beeforce.utilities.ExcelUtils2;
 
@@ -88,7 +88,7 @@ public class OnboardingFieldValidation extends BaseClass{
 
 	@Test(dependsOnMethods= {"offlineEmployeeupload"},priority=4)
 	public void searchEmployee() throws InterruptedException {
-		OnboardingemployeeSubmissionPage oes=new OnboardingemployeeSubmissionPage();
+		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
 		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls");
@@ -116,27 +116,15 @@ public class OnboardingFieldValidation extends BaseClass{
 			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
 			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
 			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
-			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddress) throws InterruptedException {
+			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
 
-		OnboardingemployeeSubmissionPage oes=new OnboardingemployeeSubmissionPage();
+		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
 
 		String alertmessage= null;
 
 		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls");
 
-		oes.setBasicdetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store);
-
-		oes.setProfessionalDetails(Workskill, Qualification, yearsofexp);
-
-		oes.setPersonalDetails(EmergencyContactNumber, Community, PhysicallyChallenged, Religion);
-
-		oes.setInductionDetails(UAN);
-
-		oes.setPayrollDetails(fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother);
-
-		oes.setAddressDetails(permanentAddress);
-
-		oes.clickSubmit();
+		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
 
 		if(bloodgroup==""){
 
@@ -551,7 +539,7 @@ public class OnboardingFieldValidation extends BaseClass{
 			assertTrue(alertmessage.contains("Missing Fields:C55 Payroll Details-FIXED_OTHER_ALLOWANCE"));
 
 		}
-		if(permanentAddress==""){
+		if(permanentAddres==""){
 
 			if(isAlertPresent()) {
 
