@@ -20,7 +20,7 @@ public class ModulesPage extends BaseClass   {
 	WebElement onboardingModule;
 
 	@FindBy (xpath="//span[text()='CHRMS']")
-	WebElement chrmsModule;
+	WebElement chrmsModule;	
 
 	@FindBy(xpath ="//span[text()='Eattendance']")
 	WebElement eattendanceModule;

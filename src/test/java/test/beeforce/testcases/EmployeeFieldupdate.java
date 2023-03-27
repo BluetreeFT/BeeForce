@@ -1,10 +1,13 @@
 package test.beeforce.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.DataProviders.DataProviders;
 import test.beeforce.base.BaseClass;
 import test.beeforce.cems.pageObjects.ChrmsHomePage;
@@ -18,7 +21,7 @@ import test.beeforce.utilities.ExcelUtils2;
 public class EmployeeFieldupdate extends BaseClass {
 
 	@Test(priority=1)
-	public void loginAsContractor() {
+	public void loginAsContractor() throws IOException, InterruptedException, TesseractException {
 
 		LoginPage lp=new LoginPage();
 
@@ -73,7 +76,7 @@ public class EmployeeFieldupdate extends BaseClass {
 	}
 
 	@Test(priority=5)
-	public void loginAsAdmin() {
+	public void loginAsAdmin() throws IOException, InterruptedException, TesseractException {
 
 		LoginPage lp=new LoginPage();
 		
@@ -118,6 +121,7 @@ public class EmployeeFieldupdate extends BaseClass {
 		ExcelUtils ex1=new ExcelUtils();
 
 		String contractor = ex.getCellData("Sheet1", "CUSTOMER NAME*", 2);
+		
 
 		//		efp.selectContractor(contractor);
 

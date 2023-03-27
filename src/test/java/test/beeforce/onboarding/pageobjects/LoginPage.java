@@ -1,9 +1,12 @@
 package test.beeforce.onboarding.pageobjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.base.BaseClass;
 
 public class LoginPage extends BaseClass {
@@ -32,6 +35,7 @@ public class LoginPage extends BaseClass {
 
 	@FindBy(xpath="//a[@href='/CEMS/j_spring_security_logout']")
 	WebElement btnlogout;
+	
 
 
 	public void setUserName(String username) {
@@ -55,11 +59,13 @@ public class LoginPage extends BaseClass {
 
 	}
 
-	public void loginToApplication(String username,String password ) {
+	public void loginToApplication(String username,String password ) throws IOException, InterruptedException, TesseractException {
 
 		setUserName(username);
 
 		setPassword(password);
+		
+//		handelCapcha("captchaImage", "jcaptcha");
 
 		clickLoginButton();
 

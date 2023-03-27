@@ -2,9 +2,13 @@ package test.beeforce.testcases;
 
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.DataProviders.DataProviders;
 import test.beeforce.base.BaseClass;
 import test.beeforce.onboarding.pageobjects.LoginPage;
@@ -20,7 +24,7 @@ public class OnboardingFieldValidation extends BaseClass{
 
 
 	@Test(priority=1)
-	public void loginAsContractor() throws InterruptedException {
+	public void loginAsContractor() throws InterruptedException, IOException, TesseractException {
 
 		LoginPage lp= new LoginPage();
 

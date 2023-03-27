@@ -3,6 +3,7 @@ package test.beeforce.testcases;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,7 +12,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.DataProviders.DataProviders;
 import test.beeforce.base.BaseClass;
 import test.beeforce.cems.pageObjects.ChrmsHomePage;
@@ -22,6 +23,7 @@ import test.beeforce.onboarding.pageobjects.LoginPage;
 import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
+import test.beeforce.onboarding.pageobjects.STLModulesPage;
 import test.beeforce.onboarding.pageobjects.TitanOnboardingemployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
 import test.beeforce.utilities.ExcelUtils2;
@@ -32,13 +34,13 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 	@Test(priority=1)
 	@Parameters("org")
-	public void loginAsContractor(String org) throws InterruptedException {
+	public void loginAsContractor(String org) throws InterruptedException, IOException, TesseractException {
 
 		LoginPage lp= new LoginPage();
 
 		LanchUrl(Url);
 
-		if(org.equalsIgnoreCase("titan")){
+		if(org.equalsIgnoreCase("Titan")){
 
 			lp.loginToApplication(TitanContractorUserName, TitanContractorPassword);
 
@@ -55,12 +57,20 @@ public class OfflineEmployeeCreation extends BaseClass{
 	}
 
 	@Test(priority=2)
-	@Parameters("Module")
-	public void selectModule(String module) {
+	@Parameters({"Module","org"})
+	public void selectModule(String module,String org) {
 
-		ModulesPage mp=new ModulesPage();
-
+		
+		if(org.equalsIgnoreCase("stl")) {
+			
+		STLModulesPage mp=new STLModulesPage();
 		mp.selectModule(module);
+		
+		}else {
+			
+			ModulesPage mp=new ModulesPage();
+			mp.selectModule(module);
+		}
 
 	}
 
@@ -71,30 +81,49 @@ public class OfflineEmployeeCreation extends BaseClass{
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
 		OnboardingEmployeeOfflineCreationPage eoc=new OnboardingEmployeeOfflineCreationPage();
+//
+//				Thread.sleep(500);
+//		
+//				ohp.clickOnboardingDropdown();
+//		
+//				Thread.sleep(500);
+//		
+//				ohp.clickEmployeeDetailsDropdown();
+//		
+//				Thread.sleep(500);
+//		
+//				ohp.clickEmployeeofflineCreation();
+		
+			driver.navigate().to("https://saasuat-onboarding.labour.tech:8443/onboarding/offlineEmployeeCreation/upload");
 
-		//		Thread.sleep(500);
-		//
-		//		ohp.clickOnboardingDropdown();
-		//
-		//		Thread.sleep(500);
-		//
-		//		ohp.clickEmployeeDetailsDropdown();
-		//
-		//		Thread.sleep(500);
-		//
-		//		ohp.clickEmployeeofflineCreation();
-
-		driver.navigate().to("https://saasuat-onboarding.labour.tech:8443/onboarding/offlineEmployeeCreation/upload");
+//		driver.navigate().to("https://onboarding.labour.tech/onboarding/offlineEmployeeCreation/upload");
 
 		Thread.sleep(500); 
 		if (org.equalsIgnoreCase("titan")) {
+			
+			ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls");
+			
+			long Id = generateRandomNumber(12);
+
+			String s=String.valueOf(Id);
+
+			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
 
 			eoc.uploadBasicDetails("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls");
 
 		}else if(org.equalsIgnoreCase("jkc")) {
+			
+			ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls");
+
+			long Id = generateRandomNumber(12);
+
+			String s=String.valueOf(Id);
+
+			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
 
 			eoc.uploadBasicDetails("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls");
 		}
+		
 		eoc.clickBasicDetailsUploadButton();
 
 		String successCount = eoc.getUploadCount();
@@ -135,15 +164,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 		
 		ohp.searchEmployee(aadhar);
 
-		WebElement num = driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]"));
-		
-		num.click();
-		
-		long Id = generateRandomNumber(12);
-
-		String s=String.valueOf(Id);
-
-		ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
+	driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
 		
 		oes.setEmployeeDetails(Company, Division, SubDivision, BusinessUnit, Function, Department, Section, Location, Contractor, 
 				ReportingManager, AssociateAgencyNumber, Qualification,  Designation ,ShiftProfile, Category, EmployeeBiometricNumber, BankName, 
@@ -159,9 +180,9 @@ public class OfflineEmployeeCreation extends BaseClass{
 		ex1.setCellData("BTID", "BTID", 2, btid);
 
 	}
-
-	@Test(dataProvider ="Corporate", dataProviderClass= DataProviders.class,priority=4 ,dependsOnMethods= {"offlineEmployeeupload"})
-	public void fillEmployeeDetailsCorporate(String org,String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
+//
+	@Test(dataProvider ="Corporate", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"} )
+	public void fillEmployeeDetailsCorporate(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
 			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
 			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
 			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
@@ -171,9 +192,9 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
 
-		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls");
+		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls");
 
-		ohp.clickDashboard();
+//		ohp.clickDashboard();
 
 		ohp.clickTotalEmployees();
 
@@ -181,19 +202,13 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		ohp.searchEmployee(aadhar);
 
-		WebElement num = driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]"));
+		 driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
 
 		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation,
 				ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, 
 				Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing,
 				fixedattendance, fixedCC, fixedother, permanentAddres);
 		
-		long Id = generateRandomNumber(12);
-
-		String s=String.valueOf(Id);
-
-		ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
-
 		Thread.sleep(1500);
 
 		String btid = oes.getBTID();
@@ -203,7 +218,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 		ex1.setCellData("BTID", "BTID", 2, btid);
 
 	}
-
+//
 	@Test(dataProvider ="Plant", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"})
 	public void fillEmployeeDetailsPlant(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
 			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
@@ -215,7 +230,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
 
-		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls");
+		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls");
 
 		ohp.clickDashboard();
 
@@ -229,11 +244,6 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
 
-		long Id = generateRandomNumber(12);
-
-		String s=String.valueOf(Id);
-
-		ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
 
 		Thread.sleep(1500);
 
@@ -256,7 +266,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
 
-		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls");
+		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls");
 
 		ohp.clickDashboard();
 
@@ -270,12 +280,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
 
-		long Id = generateRandomNumber(12);
-
-		String s=String.valueOf(Id);
-
-		ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
-
+		
 		Thread.sleep(1500);
 
 		String btid = oes.getBTID();
@@ -292,7 +297,6 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		lp.clicklogoutOnboarding();
 
-
 		lp.clicklogoutCEMS();
 
 	}
@@ -300,11 +304,11 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 	@Test(priority=6)
 	@Parameters("org")
-	public void loginAsAdmin(String org) {
+	public void loginAsAdmin(String org) throws IOException, InterruptedException, TesseractException {
 
 		LoginPage lp=new LoginPage();
 
-		//		LanchUrl(Url);
+				LanchUrl(Url);
 		if(org.equalsIgnoreCase("titan")) {
 
 			lp.loginToApplication(TitanAdminUserName, TitanContractorPassword);
@@ -347,7 +351,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		evp.setEmployeeNumber(empNumber);
 
-		evp.clickSearchButton();
+		evp.clickSearchButton(); 
 
 		driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+empNumber+"']")).click();
 		Thread.sleep(3500);
@@ -359,6 +363,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 			evp.clickSubmit();
 
 			acceptAlert();
+			
+			Thread.sleep(1000);
 
 		}else if(status.equalsIgnoreCase("Terminated")) {
 
@@ -495,7 +501,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 	@Test(priority=11)
 
 	@Parameters({"status", "org"})
-	public void verifyDetailsInEattendance(String status,String org) throws InterruptedException {
+	public void verifyDetailsInEattendance(String status,String org) throws InterruptedException, IOException, TesseractException {
 
 		LoginPage lp=new LoginPage();
 
@@ -546,7 +552,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 	@Test(priority=8)
 	@Parameters({"status","org"})
-	public void ReOnboardEmployeeStatus(String status,String org) throws InterruptedException {
+	public void ReOnboardEmployeeStatus(String status,String org) throws InterruptedException, IOException, TesseractException {
 
 		LoginPage lp=new LoginPage();
 

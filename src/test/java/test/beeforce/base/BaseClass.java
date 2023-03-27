@@ -32,6 +32,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -41,6 +42,9 @@ import org.testng.annotations.Parameters;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.sourceforge.tess4j.ITesseract;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.utilities.ReadConfig;
 
 
@@ -77,8 +81,9 @@ public class BaseClass {
 		if (br.equals("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
-
-			driver=new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(options);
 
 		} else if(br.equals("firefox")) {
 
@@ -424,7 +429,7 @@ public class BaseClass {
 
 		for (int i = 1; i < length; i++) {
 
-			digits[i] = (char) (random.nextInt(10) + '0');
+ 			digits[i] = (char) (random.nextInt(10) + '0');
 
 		}
 
@@ -442,6 +447,19 @@ public class BaseClass {
 		return CDate;
 
 	} 
+	public static void handelCapcha(String capchaxpath ,String textxpath ) throws IOException, InterruptedException, TesseractException {
+		
+		WebElement capcha = driver.findElement(By.id(capchaxpath)); 	   
+		File src = capcha.getScreenshotAs(OutputType.FILE);
+		String path="E:\\Sathish A\\Automation\\BeeForce\\capcha.png";
+		org.openqa.selenium.io.FileHandler.copy(src, new File(path));
+		Thread.sleep(1000);
+		ITesseract image=new Tesseract();
+		image.setDatapath("E:\\Sathish A\\AutoTools\\Tess4J-3.4.8-src\\Tess4J\\tessdata");
+		String text = image.doOCR(new File(path));
+		System.out.println(text);
+		driver.findElement(By.name(textxpath)).sendKeys(text); 
+	}
 
 
 

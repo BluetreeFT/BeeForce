@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="5" total="15" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="128079" started-at="2023-03-07T06:52:51Z" finished-at="2023-03-07T06:54:59Z">
+  <suite name="Suite" duration-ms="161260" started-at="2023-03-26T07:46:26Z" finished-at="2023-03-26T07:49:07Z">
     <groups>
     </groups>
-    <test name="Logintest" duration-ms="128079" started-at="2023-03-07T06:52:51Z" finished-at="2023-03-07T06:54:59Z">
+    <test name="Logintest" duration-ms="161260" started-at="2023-03-26T07:46:26Z" finished-at="2023-03-26T07:49:07Z">
       <class name="test.beeforce.testcases.OfflineEmployeeCreation">
-        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="browserSetup" is-config="true" duration-ms="7267" started-at="2023-03-07T06:52:51Z" finished-at="2023-03-07T06:52:59Z">
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="browserSetup" is-config="true" duration-ms="6935" started-at="2023-03-26T07:46:26Z" finished-at="2023-03-26T07:46:33Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method status="PASS" signature="loginAsContractor(java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="loginAsContractor" duration-ms="2198" started-at="2023-03-07T06:52:59Z" finished-at="2023-03-07T06:53:01Z">
+        <test-method status="PASS" signature="loginAsContractor(java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="loginAsContractor" duration-ms="2248" started-at="2023-03-26T07:46:33Z" finished-at="2023-03-26T07:46:35Z">
           <params>
             <param index="0">
               <value>
@@ -29,18 +29,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsContractor -->
-        <test-method status="PASS" signature="selectModule(java.lang.String)[pri:2, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="selectModule" duration-ms="6494" started-at="2023-03-07T06:53:01Z" finished-at="2023-03-07T06:53:07Z">
+        <test-method status="PASS" signature="selectModule(java.lang.String, java.lang.String)[pri:2, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="selectModule" duration-ms="6733" started-at="2023-03-26T07:46:35Z" finished-at="2023-03-26T07:46:42Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[onboarding]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[jkc]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectModule -->
-        <test-method status="PASS" signature="offlineEmployeeupload(java.lang.String)[pri:3, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="offlineEmployeeupload" duration-ms="7903" started-at="2023-03-07T06:53:07Z" finished-at="2023-03-07T06:53:15Z">
+        <test-method status="PASS" signature="offlineEmployeeupload(java.lang.String)[pri:3, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="offlineEmployeeupload" duration-ms="7268" started-at="2023-03-26T07:46:42Z" finished-at="2023-03-26T07:46:49Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +56,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- offlineEmployeeupload -->
-        <test-method status="PASS" signature="fillEmployeeDetailsJKC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="fillEmployeeDetailsJKC" duration-ms="42121" started-at="2023-03-07T06:53:18Z" data-provider="jkc" depends-on-methods="test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload" finished-at="2023-03-07T06:54:00Z">
+        <test-method status="PASS" signature="fillEmployeeDetailsJKC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="fillEmployeeDetailsJKC" duration-ms="45197" started-at="2023-03-26T07:46:51Z" data-provider="jkc" depends-on-methods="test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload" finished-at="2023-03-26T07:47:36Z">
           <params>
             <param index="0">
               <value>
@@ -212,11 +217,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillEmployeeDetailsJKC -->
-        <test-method status="PASS" signature="logoutAsContractor()[pri:5, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="logoutAsContractor" duration-ms="2623" started-at="2023-03-07T06:54:00Z" finished-at="2023-03-07T06:54:03Z">
+        <test-method status="PASS" signature="logoutAsContractor()[pri:5, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="logoutAsContractor" duration-ms="3710" started-at="2023-03-26T07:47:36Z" finished-at="2023-03-26T07:47:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutAsContractor -->
-        <test-method status="PASS" signature="loginAsAdmin(java.lang.String)[pri:6, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="loginAsAdmin" duration-ms="766" started-at="2023-03-07T06:54:03Z" finished-at="2023-03-07T06:54:03Z">
+        <test-method status="PASS" signature="loginAsAdmin(java.lang.String)[pri:6, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="loginAsAdmin" duration-ms="1699" started-at="2023-03-26T07:47:40Z" finished-at="2023-03-26T07:47:42Z">
           <params>
             <param index="0">
               <value>
@@ -227,11 +232,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsAdmin -->
-        <test-method status="PASS" signature="openEmployeeViewAndEditPage()[pri:7, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="openEmployeeViewAndEditPage" duration-ms="11286" started-at="2023-03-07T06:54:03Z" finished-at="2023-03-07T06:54:15Z">
+        <test-method status="PASS" signature="openEmployeeViewAndEditPage()[pri:7, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="openEmployeeViewAndEditPage" duration-ms="17741" started-at="2023-03-26T07:47:42Z" finished-at="2023-03-26T07:48:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openEmployeeViewAndEditPage -->
-        <test-method status="PASS" signature="OnboardedEmployeeStatus(java.lang.String)[pri:8, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="OnboardedEmployeeStatus" duration-ms="15912" started-at="2023-03-07T06:54:15Z" finished-at="2023-03-07T06:54:31Z">
+        <test-method status="PASS" signature="OnboardedEmployeeStatus(java.lang.String)[pri:8, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="OnboardedEmployeeStatus" duration-ms="18934" started-at="2023-03-26T07:48:00Z" finished-at="2023-03-26T07:48:19Z">
           <params>
             <param index="0">
               <value>
@@ -242,7 +247,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OnboardedEmployeeStatus -->
-        <test-method status="PASS" signature="verifyEmployeeStatus(java.lang.String)[pri:10, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="verifyEmployeeStatus" duration-ms="19811" started-at="2023-03-07T06:54:31Z" finished-at="2023-03-07T06:54:51Z">
+        <test-method status="PASS" signature="verifyEmployeeStatus(java.lang.String)[pri:10, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="verifyEmployeeStatus" duration-ms="24641" started-at="2023-03-26T07:48:19Z" finished-at="2023-03-26T07:48:43Z">
           <params>
             <param index="0">
               <value>
@@ -253,7 +258,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmployeeStatus -->
-        <test-method status="FAIL" signature="verifyDetailsInEattendance(java.lang.String, java.lang.String)[pri:11, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="verifyDetailsInEattendance" duration-ms="7815" started-at="2023-03-07T06:54:51Z" finished-at="2023-03-07T06:54:58Z">
+        <test-method status="FAIL" signature="verifyDetailsInEattendance(java.lang.String, java.lang.String)[pri:11, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="verifyDetailsInEattendance" duration-ms="22027" started-at="2023-03-26T07:48:43Z" finished-at="2023-03-26T07:49:05Z">
           <params>
             <param index="0">
               <value>
@@ -266,48 +271,15 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Settings']"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c04697eceaad7c3dd03f338a2e5a360, findElement {using=xpath, value=//span[text()='Settings']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64348/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c04697eceaad7c3dd03f338a2e5a360]]>
+              <![CDATA[Index: 0, Size: 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Settings']"}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c04697eceaad7c3dd03f338a2e5a360, findElement {using=xpath, value=//span[text()='Settings']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64348/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c04697eceaad7c3dd03f338a2e5a360
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy15.click(Unknown Source)
-at test.beeforce.eattendance.pageobjects.EattendanceHomePage.clickSettingDropdown(EattendanceHomePage.java:37)
-at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:514)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+at java.util.ArrayList.get(ArrayList.java:433)
+at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:539)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -335,11 +307,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDetailsInEattendance -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@2ea6137]" name="teardown" is-config="true" duration-ms="836" started-at="2023-03-07T06:54:58Z" finished-at="2023-03-07T06:54:59Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="teardown" is-config="true" duration-ms="1554" started-at="2023-03-26T07:49:05Z" finished-at="2023-03-26T07:49:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

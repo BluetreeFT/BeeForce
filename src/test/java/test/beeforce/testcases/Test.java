@@ -1,5 +1,6 @@
 package test.beeforce.testcases;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.base.BaseClass;
 
 import test.beeforce.cems.pageObjects.ChrmsHomePage;
@@ -17,7 +19,7 @@ import test.beeforce.onboarding.pageobjects.ModulesPage;
 public class Test extends BaseClass {
 
 
-	public void setup() throws InterruptedException{
+	public void setup() throws InterruptedException, IOException, TesseractException{
 
 		browserSetup("chrome");
 
@@ -113,7 +115,7 @@ public class Test extends BaseClass {
 
 	}
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException, TesseractException {
 
 		Test t=new Test();
 

@@ -178,14 +178,14 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(division, Division);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 	}
 
 	public void selectLocation(String Location) throws InterruptedException {
 
 		selectDropdownOption(location, Location);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 	}
 
@@ -193,7 +193,7 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(costCenter, CostCenter);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 	}
 	public void selectDepartment(String Department) throws InterruptedException {
@@ -208,7 +208,7 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(contractor, Contractor);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 	}
 
@@ -216,7 +216,7 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(designation, Designation);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 	}
 
@@ -224,7 +224,7 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(reportingManager, ReportingManager);
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 	}
 
@@ -258,7 +258,6 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 
 		emergencyContactNumber.clear();
 		emergencyContactNumber.sendKeys(EmergencyContactNumber);
-
 
 	}
 	public void setCommunity(String Community ) {
@@ -388,11 +387,11 @@ public class TitanOnboardingemployeeSubmissionPage extends BaseClass {
 		selectCostCenter(CostCenter);
 
 		selectDepartment(Department);
-
+		
 		selectContractor(Contractor);
-
+		
 		selectDesignation(Designation);
-
+		
 		selectReportingManager(ReportingManager);
 
 		selectStore(Store);

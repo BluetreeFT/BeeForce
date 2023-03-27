@@ -24,24 +24,24 @@ public class OnboardingHomePage extends BaseClass {
 	@FindBy(xpath="//span[text()=' On-boarding']") //Onboarding dropdown
 	WebElement onboardingDropDown;
 
-	@FindBy(xpath="//a[contains(text(),'Employee Details')]")  //employee Details Dropdown
+	@FindBy(xpath="//a[contains(text(),'Employee Details') or contains(text(),'Associate Details') ]")  //employee Details Dropdown
 	WebElement Employeedetails;
 
 	@FindBy(xpath="//a[contains(text(),'Offline  creation - Bulk')]") // employee offline creation link
 	WebElement employeeOfflineCreattion;
 
-	@FindBy(xpath="//a[text()=' Employee Submission - Bulk']") // employee Submission -bulk link
+	@FindBy(xpath="//a[text()=' Employee Submission - Bulk' or text()='Associate Offline  creation - Bulk']") // employee Submission -bulk link
 	WebElement employeeBulkSubmission;
 	
-	@FindBy(xpath="//a[text()='Total Employees']") // Total Employees  
+	@FindBy(xpath="//a[text()='Total Employees' or text()='Total Associates']") // Total Employees  
 	WebElement totalEmployees;
 	
-	@FindBy(xpath="//a[text()='Dashboard']") // Total Employees  
+	@FindBy(xpath="//a[text()='Dashboard']") //dashboard
 	WebElement dashboard;
 	
 	@FindBy(id="searchName") // Total Employees search  
 	WebElement txtsearch;
-	
+			
 	
 
 	public void clickOnboardingDropdown() {

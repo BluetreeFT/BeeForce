@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 07 12:22:51 IST 2023</td>
+<td>Started on:</td><td>Sun Mar 26 13:16:26 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>128 seconds (128079 ms)</td>
+<tr><td>Total time:</td><td>161 seconds (161260 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,61 +76,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance()'><b>verifyDetailsInEattendance</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: Approved, jkc</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Settings&apos;]&quot;}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;BL084-SATHISH&apos;, ip: &apos;169.254.21.81&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c04697eceaad7c3dd03f338a2e5a360, findElement {using=xpath, value=//span[text()=&apos;Settings&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64348/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c04697eceaad7c3dd03f338a2e5a360
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at test.beeforce.eattendance.pageobjects.EattendanceHomePage.clickSettingDropdown(EattendanceHomePage.java:37)
-	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:514)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100073313", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2100073313'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Settings&apos;]&quot;}
-  (Session info: chrome=110.0.5481.178)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;BL084-SATHISH&apos;, ip: &apos;169.254.21.81&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1c04697eceaad7c3dd03f338a2e5a360, findElement {using=xpath, value=//span[text()=&apos;Settings&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.178, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64348}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64348/devtoo..., se:cdpVersion: 110.0.5481.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1c04697eceaad7c3dd03f338a2e5a360
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at test.beeforce.eattendance.pageobjects.EattendanceHomePage.clickSettingDropdown(EattendanceHomePage.java:37)
-	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:514)
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:539)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1794314439", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1794314439'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:539)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -157,8 +111,8 @@ Session ID: 1c04697eceaad7c3dd03f338a2e5a360
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
-<td>7</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>22</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -170,48 +124,48 @@ Session ID: 1c04697eceaad7c3dd03f338a2e5a360
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.OnboardedEmployeeStatus()'><b>OnboardedEmployeeStatus</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: Approved</td>
 <td></td>
-<td>15</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>18</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.fillEmployeeDetailsJKC()'><b>fillEmployeeDetailsJKC</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: JK Cement Limited, Grey Cement, Manufacturing, JK Cements Works - Nimbhara, TECHNICAL, PACKING PLANT, PACKING PLANT, Nimbhara, A TO Z ENGINEERING SERVICES, Pankaj Trivedi-2101214, 61480, Graduate, AC SUPERVISOR, Shift B, Plant, 1590, UCO BANK, 4640110084145, IFSC000, Daily, Monthly, Rupee, NAA, 9876543210, VPO - Gotan, Gotan, Merta City, Nagaur, Rajasthan, India, 342902</td>
 <td></td>
-<td>42</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>45</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.loginAsAdmin()'><b>loginAsAdmin</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: jkc</td>
 <td></td>
-<td>0</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>1</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.loginAsContractor()'><b>loginAsContractor</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: jkc</td>
 <td></td>
 <td>2</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.logoutAsContractor()'><b>logoutAsContractor</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation</td>
 <td></td>
-<td>2</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>3</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload()'><b>offlineEmployeeupload</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: jkc</td>
 <td></td>
 <td>7</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.openEmployeeViewAndEditPage()'><b>openEmployeeViewAndEditPage</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation</td>
 <td></td>
-<td>11</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>17</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
-<td title='test.beeforce.testcases.OfflineEmployeeCreation.selectModule()'><b>selectModule</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: onboarding</td>
+<td title='test.beeforce.testcases.OfflineEmployeeCreation.selectModule()'><b>selectModule</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: onboarding, jkc</td>
 <td></td>
 <td>6</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 <tr>
 <td title='test.beeforce.testcases.OfflineEmployeeCreation.verifyEmployeeStatus()'><b>verifyEmployeeStatus</b><br>Test class: test.beeforce.testcases.OfflineEmployeeCreation<br>Parameters: Approved</td>
 <td></td>
-<td>19</td>
-<td>test.beeforce.testcases.OfflineEmployeeCreation@2ea6137</td></tr>
+<td>24</td>
+<td>test.beeforce.testcases.OfflineEmployeeCreation@161b062a</td></tr>
 </table><p>
 </body>
 </html>

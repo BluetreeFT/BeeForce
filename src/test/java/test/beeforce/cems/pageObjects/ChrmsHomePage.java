@@ -32,6 +32,12 @@ public class ChrmsHomePage extends BaseClass {
  @FindBy (xpath="//li/child::a[contains(text(),'Employee') and contains(text(),'Field Status')]")
  WebElement employeeFieldStatus;
  
+ @FindBy (xpath="//li/child::a/i/following-sibling::span[contains(text(),'Employee') and contains(text(),'Reports')]")
+ WebElement employeeReportsDropdown;
+ 
+ @FindBy (xpath="//li/child::a[contains(text(),'Employee Full List')]")
+ WebElement employeeFullList;
+ 
  
  
  public void clickDataManagement() {
@@ -67,6 +73,18 @@ public void clickEmployeeFieldUpdate() {
 public void clickEmployeeFieldStatus() {
 	
 	employeeFieldStatus.click();
+	
+}
+
+public void clickEmployeeReportsDropdown() {
+	
+	employeeReportsDropdown.click();
+	
+}
+
+public void clickEmployeefullList() {
+	
+	employeeFullList.click();
 	
 }
 

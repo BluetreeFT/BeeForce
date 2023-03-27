@@ -8,20 +8,23 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="Module" value="onboarding"></parameter>
 		<parameter name="status" value="Approved"></parameter>
+		<parameter name="org" value="titan"></parameter>
+
 		<classes>
-			<class name="test.beeforce.testcases.OfflineEmployeeCreation" >
-			<methods>
-			<include name="loginAsContractor"></include>
-			<include name="selectModule"></include>
-			<include name="offlineEmployeeupload"></include>
-			<include name="fillEmployeeDetailsRetail"></include>
-			<include name="logoutAsContractor"></include>
-			<include name="loginAsAdmin"></include>
-			<include name="openEmployeeViewAndEditPage"></include>
-			<include name="OnboardedEmployeeStatus"></include>
-			</methods>
+			<class name="test.beeforce.testcases.OfflineEmployeeCreation">
+				<methods>
+					<include name="loginAsContractor"></include>
+					<include name="selectModule"></include>
+					<include name="offlineEmployeeupload"></include>
+					<include name="fillEmployeeDetailsRetail"></include>
+					<include name="logoutAsContractor"></include>
+					<include name="loginAsAdmin"></include>
+					<include name="openEmployeeViewAndEditPage"></include>
+					<include name="OnboardedEmployeeStatus"></include>
+					<include name="verifyEmployeeStatus"></include>
+				</methods>
 			</class>
-			
+
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

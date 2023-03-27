@@ -78,6 +78,7 @@ public String getJkcAdminUserName() {
 String username=pro.getProperty("JkcAdminUserName");
 
 return username;
+
 }
 
 public String getJkcAdminPassword() {
