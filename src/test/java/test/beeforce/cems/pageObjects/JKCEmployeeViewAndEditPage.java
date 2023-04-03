@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import test.beeforce.base.BaseClass;
 
-public class TitanEmployeeViewAndEditPage extends BaseClass {
+public class JKCEmployeeViewAndEditPage extends BaseClass {
 
-	public TitanEmployeeViewAndEditPage() {
+	public JKCEmployeeViewAndEditPage() {
 
 		PageFactory.initElements(driver, this);
 

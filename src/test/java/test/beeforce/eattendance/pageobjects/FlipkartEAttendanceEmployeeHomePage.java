@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import test.beeforce.base.BaseClass;
 
-public class FlipkartEAttendanceHomePage extends BaseClass {
+public class FlipkartEAttendanceEmployeeHomePage extends BaseClass {
 
-	public FlipkartEAttendanceHomePage() {
+	public FlipkartEAttendanceEmployeeHomePage() {
 
 		PageFactory.initElements(driver, this);
 

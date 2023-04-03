@@ -68,6 +68,9 @@ public class BaseClass {
 	public String JkcAdminPassword=readconfig.getJkcAdminPassword();
 
 	public String JkcAdminUserName=readconfig.getJkcAdminUserName();
+	
+	
+	
 
 
 	public static Logger log;
