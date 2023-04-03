@@ -15,6 +15,7 @@ public class ReadConfig {
 	Properties pro;
 	
 	public ReadConfig() {
+		
 		File src=new File("./configuration/config.properties");
 		
 		try {
@@ -34,6 +35,7 @@ public class ReadConfig {
 	public String getAppUrl() {
 		
 		String url=pro.getProperty("Url");
+		
 		
 		return url;
 	}

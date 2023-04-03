@@ -6,9 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import test.beeforce.base.BaseClass;
 
-public class STLOnboardingemployeeSubmissionPage extends BaseClass {
+public class STLEmployeeSubmissionPage extends BaseClass {
 
-	public STLOnboardingemployeeSubmissionPage() {
+	public STLEmployeeSubmissionPage() {
 
 		PageFactory.initElements(driver, this);
 

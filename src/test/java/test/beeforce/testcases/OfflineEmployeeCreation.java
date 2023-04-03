@@ -31,7 +31,6 @@ import test.beeforce.utilities.ExcelUtils2;
 public class OfflineEmployeeCreation extends BaseClass{
 
 
-
 	@Test(priority=1)
 	@Parameters("org")
 	public void loginAsContractor(String org) throws InterruptedException, IOException, TesseractException {
@@ -96,7 +95,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 		
 			driver.navigate().to("https://saasuat-onboarding.labour.tech:8443/onboarding/offlineEmployeeCreation/upload");
 
-//		driver.navigate().to("https://onboarding.labour.tech/onboarding/offlineEmployeeCreation/upload");
+//driver.navigate().to("https://onboarding.labour.tech/onboarding/offlineEmployeeCreation/upload");
 
 		Thread.sleep(500); 
 		if (org.equalsIgnoreCase("titan")) {
@@ -112,10 +111,11 @@ public class OfflineEmployeeCreation extends BaseClass{
 			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
 
 			eoc.uploadBasicDetails(path);
-			
+
+
 		}else if(org.equalsIgnoreCase("jkc")) {
 			
-			String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
+			String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
 			
 			ExcelUtils2 ex =new ExcelUtils2(path);
 
@@ -154,11 +154,12 @@ public class OfflineEmployeeCreation extends BaseClass{
 			String PermanentAddress ,String PermanentVillage ,String PermanentTaluk,String PermanentDistrict,String PermanentState,String Country,String PermanentPincode) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
+		
 		TitanEmployeeSubmissionPage oe=new TitanEmployeeSubmissionPage();
 
 		JKCEmployeeSubmissionPage oes=new JKCEmployeeSubmissionPage();
 		
-		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
 
@@ -181,7 +182,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oe.getBTID();
 		
-		String path1 = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
 
@@ -198,13 +200,14 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
+
 		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
-		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
 
-//		ohp.clickDashboard();
+		ohp.clickDashboard();
 
 		ohp.clickTotalEmployees();
 
@@ -223,7 +226,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oes.getBTID();
 		
-		String path1 = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
 
@@ -242,7 +246,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
-		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
 
@@ -263,7 +267,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oes.getBTID();
 		
-		String path1 = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
 
@@ -279,10 +283,10 @@ public class OfflineEmployeeCreation extends BaseClass{
 			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
-
+		
 		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
-		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
 
@@ -303,7 +307,46 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oes.getBTID();
 		
-		String path1 = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+
+		ExcelUtils ex1=new ExcelUtils(path1);
+
+		ex1.setCellData("BTID", "BTID", 2, btid);
+
+	}
+	@Test(dataProvider ="STL", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"})
+	public void fillEmployeeDetailsSterlite(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
+			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
+			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
+			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
+			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
+
+		OnboardingHomePage ohp=new OnboardingHomePage();
+
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
+		
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+
+		ExcelUtils2 ex =new ExcelUtils2(path);
+
+		ohp.clickDashboard();
+
+		ohp.clickTotalEmployees();
+
+		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
+
+		ohp.searchEmployee(aadhar);
+
+		driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
+
+		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
+
+		
+		Thread.sleep(1500);
+
+		String btid = oes.getBTID();
+		
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
 
@@ -361,7 +404,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 	@Test(priority=8)
 	@Parameters("status")
-	public void OnboardedEmployeeStatus(String status) throws InterruptedException {
+	public void onboardedEmployeeStatus(String status) throws InterruptedException {
 
 		ExcelUtils ex=new ExcelUtils();
 
@@ -624,7 +667,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		openEmployeeViewAndEditPage();
 
-		OnboardedEmployeeStatus("approve");
+		onboardedEmployeeStatus("approve");
 
 	}
 
