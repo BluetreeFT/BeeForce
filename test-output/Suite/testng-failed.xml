@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="test.beeforce.utilities.TestListeners"/>
-  </listeners>
-  <test thread-count="5" name="Logintest(failed)">
-    <parameter name="org" value="jkc"/>
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
-    <parameter name="Module" value="onboarding"/>
-    <parameter name="status" value="Approved"/>
     <classes>
-      <class name="test.beeforce.testcases.OfflineEmployeeCreation">
+      <class name="test.beeforce.testcases.FlipkartEAttendanceVendorSpoc">
         <methods>
-          <include name="verifyDetailsInEattendance" invocation-numbers="0"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
+          <include name="loginAsFTC"/>
         </methods>
-      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
+      </class> <!-- test.beeforce.testcases.FlipkartEAttendanceVendorSpoc -->
     </classes>
-  </test> <!-- Logintest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

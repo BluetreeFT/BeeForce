@@ -87,5 +87,46 @@ public String getJkcAdminPassword() {
 	
 	return password;
 }
-
+public String getFlipkartEattendanceUrl() {
+	
+	String url=pro.getProperty("FlipkartEattendanceURL");
+	
+	return url;
 }
+public String getFlipkartFTC() {
+	
+	String username=pro.getProperty("FlipkartFTC");
+	
+	return username;
+}
+public String getFlipkartFTCpassword() {
+	
+	String password=pro.getProperty("FTCPassword");
+	
+	return password;
+}
+public String getFlipkartFTEUsername() {
+	
+	String username=pro.getProperty("TestFTE");
+	
+	return username;
+	
+}
+public String getFTEPassword() {
+	
+	String password=pro.getProperty("TestFTE");
+	
+	return password;
+}
+public String getFlipkartVendorUsername() {
+	
+	String username=pro.getProperty("FlipkartVendorSpoc");
+	
+	return username;
+}
+public String getVendorPassword() {
+	String password=pro.getProperty("FlipkartVendorSpocPassword");
+	return password;
+}
+}
+
