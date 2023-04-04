@@ -15,8 +15,7 @@ public class OnboardingHomePage extends BaseClass {
 		PageFactory.initElements(driver, this);
 
 	}
-
-
+ 
 	//All HomePage
 
 	// Contractor HomePage 
@@ -42,6 +41,18 @@ public class OnboardingHomePage extends BaseClass {
 	@FindBy(id="searchName") // Total Employees search  
 	WebElement txtsearch;
 			
+	@FindBy(xpath="//span[text()='Budgeting']") // budgeting Dropdown
+	WebElement budgeting;
+	
+	@FindBy(xpath="//a[text()='Budgets']")   // budgets link
+	WebElement budgets;
+	
+	@FindBy(xpath="//span[text()='Sourcing']") // sourcing Dropdown
+	WebElement sourcing;
+	
+	@FindBy(xpath="//a[text()='Sourcing Requests']")   // budgets link
+	WebElement sourcingRequests;
+	
 	
 
 	public void clickOnboardingDropdown() {
