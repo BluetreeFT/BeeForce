@@ -347,7 +347,7 @@ public class STLEmployeeSubmissionPage extends BaseClass {
 
 	private void setProfessionalDetails(String AssociateAgencyNumber,String Qualification ,String  Designation,String ShiftProfile ,String Category ,String EmployeeBiometricNumber  ) {
 
-		TitanOnboardingemployeeSubmissionPage oes= new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes= new TitanEmployeeSubmissionPage();
 		setAssociateAgencyNumber(AssociateAgencyNumber);
 		oes.setQualification(Qualification);
 		selectDesignation(Designation);
@@ -395,7 +395,7 @@ public class STLEmployeeSubmissionPage extends BaseClass {
 			String Department,String Section,String Location,String Contractor,String ReportingManager,String AssociateAgencyNumber,String Qualification ,String  Designation,String ShiftProfile ,String Category ,String EmployeeBiometricNumber
 			,String BankName,String BankAccountNo,String IFSCCode,String MonthlyorDailyGross,String Frequency, String Currency,String EmergencyContactName,String EmergencyContactNumberone,
 			String PermanentAddress ,String PermanentVillage ,String PermanentTaluk,String PermanentDistrict,String PermanentState,String Country,String PermanentPincode) {
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 //		setBasicDetails(Company, Division, SubDivision, BusinessUnit, Function, Department, Section, Location, Contractor, ReportingManager);
 		setProfessionalDetails(AssociateAgencyNumber, Qualification, Designation, ShiftProfile, Category, EmployeeBiometricNumber);
 		setBankDetails(BankName, BankAccountNo, IFSCCode);

@@ -15,7 +15,7 @@ import test.beeforce.onboarding.pageobjects.LoginPage;
 import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
-import test.beeforce.onboarding.pageobjects.TitanOnboardingemployeeSubmissionPage;
+import test.beeforce.onboarding.pageobjects.TitanEmployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
 import test.beeforce.utilities.ExcelUtils2;
 
@@ -92,7 +92,7 @@ public class OnboardingFieldValidation extends BaseClass{
 
 	@Test(dependsOnMethods= {"offlineEmployeeupload"},priority=4)
 	public void searchEmployee() throws InterruptedException {
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
 		ExcelUtils2 ex =new ExcelUtils2("C:\\Users\\Durga Prasad\\eclipse-workspace\\Beeforce\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls");
@@ -122,7 +122,7 @@ public class OnboardingFieldValidation extends BaseClass{
 			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
 			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
 
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 
 		String alertmessage= null;
 

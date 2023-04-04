@@ -24,7 +24,7 @@ import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
 import test.beeforce.onboarding.pageobjects.STLModulesPage;
-import test.beeforce.onboarding.pageobjects.TitanOnboardingemployeeSubmissionPage;
+import test.beeforce.onboarding.pageobjects.TitanEmployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
 import test.beeforce.utilities.ExcelUtils2;
 
@@ -100,7 +100,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 		Thread.sleep(500); 
 		if (org.equalsIgnoreCase("titan")) {
 			
-			String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+			String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 			
 			ExcelUtils2 ex =new ExcelUtils2(path);
 			
@@ -111,6 +111,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
 
 			eoc.uploadBasicDetails(path);
+
 
 		}else if(org.equalsIgnoreCase("jkc")) {
 			
@@ -153,7 +154,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 			String PermanentAddress ,String PermanentVillage ,String PermanentTaluk,String PermanentDistrict,String PermanentState,String Country,String PermanentPincode) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
-		TitanOnboardingemployeeSubmissionPage oe=new TitanOnboardingemployeeSubmissionPage();
+		
+		TitanEmployeeSubmissionPage oe=new TitanEmployeeSubmissionPage();
 
 		JKCEmployeeSubmissionPage oes=new JKCEmployeeSubmissionPage();
 		
@@ -180,6 +182,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oe.getBTID();
 		
+
 		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
@@ -197,7 +200,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
 		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
@@ -222,6 +226,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		String btid = oes.getBTID();
 		
+
 		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
@@ -239,7 +244,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
 		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
@@ -278,8 +283,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
-
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
 		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
@@ -318,7 +323,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 		
 		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
 
@@ -618,7 +623,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
-		TitanOnboardingemployeeSubmissionPage oes=new TitanOnboardingemployeeSubmissionPage();
+		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
 
 		ExcelUtils ex=new ExcelUtils();
 
