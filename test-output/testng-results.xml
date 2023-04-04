@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-30T07:55:10Z" name="Suite" finished-at="2023-03-30T07:55:15Z" duration-ms="4809">
+    <groups>
+    </groups>
+    <test started-at="2023-03-30T07:55:10Z" name="Test" finished-at="2023-03-30T07:55:15Z" duration-ms="4809">
+      <class name="test.beeforce.testcases.FlipkartEAttendanceVendorSpoc">
+        <test-method is-config="true" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:10Z" name="browserSetup" finished-at="2023-03-30T07:55:12Z" duration-ms="2002" status="PASS">
+=======
 <testng-results skipped="0" failed="5" ignored="4" total="15" passed="6">
   <reporter-output>
   </reporter-output>
@@ -8,6 +19,7 @@
     <test name="Logintest" duration-ms="100573" started-at="2023-03-28T13:02:13Z" finished-at="2023-03-28T13:03:54Z">
       <class name="test.beeforce.testcases.OfflineEmployeeCreation">
         <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="browserSetup" is-config="true" duration-ms="23103" started-at="2023-03-28T13:02:13Z" finished-at="2023-03-28T13:02:36Z">
+>>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
           <params>
             <param index="0">
               <value>
@@ -18,6 +30,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
+<<<<<<< HEAD
+        <test-method signature="loginAsFTC()[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:12Z" name="loginAsFTC" finished-at="2023-03-30T07:55:15Z" duration-ms="2604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsFTC -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:15Z" name="teardown" finished-at="2023-03-30T07:55:15Z" duration-ms="191" status="PASS">
+=======
         <test-method status="PASS" signature="loginAsContractor(java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="loginAsContractor" duration-ms="3244" started-at="2023-03-28T13:02:36Z" finished-at="2023-03-28T13:02:40Z">
           <params>
             <param index="0">
@@ -622,10 +641,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           </reporter-output>
         </test-method> <!-- verifyDetailsInEattendance -->
         <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="teardown" is-config="true" duration-ms="1260" started-at="2023-03-28T13:03:52Z" finished-at="2023-03-28T13:03:54Z">
+>>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
-    </test> <!-- Logintest -->
+      </class> <!-- test.beeforce.testcases.FlipkartEAttendanceVendorSpoc -->
+    </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -72,6 +72,19 @@ public class BaseClass {
 	
 	
 
+	public String FlipkartEURL = readconfig.getFlipkartEattendanceUrl();
+	
+	public String FlipkartFTCUsername = readconfig.getFlipkartFTC();
+	
+	public String FlipkartFTCPassword = readconfig.getFlipkartFTCpassword();
+	
+	public String FlipkartFTEUserbane = readconfig.getFlipkartFTEUsername();
+	
+	public String FlipkartFTEpassword = readconfig.getFTEPassword();
+	
+	public String FlipkartVendorusername = readconfig.getFlipkartVendorUsername();
+	
+	public String FlipkartVendorpassword = readconfig.getVendorPassword();
 
 	public static Logger log;
 
