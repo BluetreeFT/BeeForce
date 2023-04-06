@@ -23,6 +23,7 @@ import test.beeforce.onboarding.pageobjects.LoginPage;
 import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
+import test.beeforce.onboarding.pageobjects.STLBudgectingAndSourcing;
 import test.beeforce.onboarding.pageobjects.STLModulesPage;
 import test.beeforce.onboarding.pageobjects.TitanEmployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
@@ -71,6 +72,22 @@ public class OfflineEmployeeCreation extends BaseClass{
 			mp.selectModule(module);
 		}
 
+	}
+	@Test
+	public void employeeUploadThroughBugectingAndSourcingSTL(String BU,String OU,String Location,String Month,String CostCenter,String AssociateType,String Name,
+			String Comments,String HeadCount,String BudgetAmount) {
+		
+		OnboardingHomePage ohp=new OnboardingHomePage();
+		
+		STLBudgectingAndSourcing sbs=new STLBudgectingAndSourcing();
+	
+		ohp.clickBudgetingDropdown();
+	
+		ohp.clickBudgets();
+		
+		sbs.CreateBudget(BU, OU, Location, Month, CostCenter, AssociateType, Name, Comments, HeadCount, BudgetAmount);
+		 
+		
 	}
 
 	@Test(priority=3)
