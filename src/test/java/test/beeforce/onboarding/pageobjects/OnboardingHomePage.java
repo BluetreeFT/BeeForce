@@ -95,6 +95,28 @@ public class OnboardingHomePage extends BaseClass {
 
 	}
 	
+	public void clickBudgetingDropdown() {
+		
+		budgeting.click();
+	}
+	
+public void clickBudgets() {
+		
+		budgets.click();
+	}
+
+public void clickSourcingDropdown() {
+	
+	sourcing.click();
+}
+
+public void clickSourcingRequest() {
+	
+	sourcingRequests.click();
+}
+
+
+	
 
 
 
