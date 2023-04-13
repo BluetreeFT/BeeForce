@@ -9,6 +9,7 @@
 		<parameter name="Module" value="onboarding"></parameter>
 		<parameter name="status" value="Approved"></parameter>
 		<parameter name="org" value="titan"></parameter>
+		<parameter name="Category" value="Corporate"></parameter>
 		<classes>
 			<class name="test.beeforce.testcases.OfflineEmployeeCreation" >
 			<methods>
@@ -19,7 +20,7 @@
 			<include name="logoutAsContractor"></include>
 			<include name="loginAsAdmin"></include>
 			<include name="openEmployeeViewAndEditPage"></include>
-			<include name="OnboardedEmployeeStatus"></include>
+			<include name="onboardedEmployeeStatus"></include>
 			<include name="verifyDetailsInCems"></include>
 			<include name="verifyEmployeeStatus"></include>
 			<include name="verifyDetailsInEattendance"></include>

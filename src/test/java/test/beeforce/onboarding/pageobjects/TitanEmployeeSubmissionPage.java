@@ -1,5 +1,6 @@
 package test.beeforce.onboarding.pageobjects;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -453,6 +454,14 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 	public void setAddressDetails(String permanentAddres) {
 
 		setPermanentAddress(permanentAddres);
+
+	}
+	
+	public boolean isSuccessMessageDisplayed() {
+	
+			boolean displayed = successmessage.isDisplayed();
+			
+			return displayed; 
 
 	}
 

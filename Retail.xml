@@ -9,7 +9,7 @@
 		<parameter name="Module" value="onboarding"></parameter>
 		<parameter name="status" value="Approved"></parameter>
 		<parameter name="org" value="titan"></parameter>
-
+		<parameter name="Category" value="Retail"></parameter>
 		<classes>
 			<class name="test.beeforce.testcases.OfflineEmployeeCreation">
 				<methods>

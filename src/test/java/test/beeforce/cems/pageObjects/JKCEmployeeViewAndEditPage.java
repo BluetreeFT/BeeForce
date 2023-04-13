@@ -426,8 +426,6 @@ public class JKCEmployeeViewAndEditPage extends BaseClass {
 		return perAddress;
 	}
 
-
-
 	public String getSuccessmessasge() {
 
 		String messageSuccess = success.getText();

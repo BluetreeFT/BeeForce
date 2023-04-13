@@ -130,5 +130,28 @@ public String getVendorPassword() {
 	String password=pro.getProperty("FlipkartVendorSpocPassword");
 	return password;
 }
+
+public String getSTLContractorPassword() {
+	String password=pro.getProperty("STLContractorPassword");
+	return password;
+}
+
+public String getSTLAdminPassword() {
+	String password=pro.getProperty("STLAdminPassWord");
+	return password;
+}
+public String getAdminUsername() {
+	
+	String username=pro.getProperty("STLAdminUsername");
+	
+	return username;
+}
+public String getContractorUsername() {
+	
+	String username=pro.getProperty("STLContractorUserName");
+	
+	return username;
+}
+
 }
 

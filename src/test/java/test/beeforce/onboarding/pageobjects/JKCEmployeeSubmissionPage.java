@@ -66,8 +66,9 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Agency Number')]/following-sibling::div/child::div/input") // Store 
 	WebElement associateAgencyNumber;
+	//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::select" 
 
-	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::select") // Store 
+	@FindBy(xpath= "//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::div/child::div/input")
 	WebElement designation;
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Shift Profile')]/following-sibling::select") // Store 
@@ -94,7 +95,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 	//Compensation Benefits
 
-	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Monthly or Daily Gross')]/following-sibling::div/child::div/input") // Store 
+	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Monthly or Daily')]/following-sibling::div/child::div/input") // Store 
 	WebElement monthlyorDailyGross;
 
 	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Frequency')]/following-sibling::select") // Store 
@@ -196,8 +197,10 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 	}
 
 	private void selectDesignation(String Designation) {
+		
+		designation.sendKeys(Designation);
 
-		selectDropdownOption(designation,Designation );
+//		selectDropdownOption(designation,Designation );
 
 	}
 
@@ -340,12 +343,12 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 	private void setProfessionalDetails(String AssociateAgencyNumber,String Qualification ,String  Designation,String ShiftProfile ,String Category ,String EmployeeBiometricNumber  ) {
 
 		TitanEmployeeSubmissionPage oes= new TitanEmployeeSubmissionPage();
-		setAssociateAgencyNumber(AssociateAgencyNumber);
-		oes.setQualification(Qualification);
+//		setAssociateAgencyNumber(AssociateAgencyNumber);
+//		oes.setQualification(Qualification);
 		selectDesignation(Designation);
-		selectShiftProfile(ShiftProfile);
+//		selectShiftProfile(ShiftProfile);
 		selectCategory(Category);
-		setEmployeeBiometricRefNumber(EmployeeBiometricNumber);
+//		setEmployeeBiometricRefNumber(EmployeeBiometricNumber);
 
 	}
 
@@ -361,7 +364,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 		setMonthlyorDailyGross(MonthlyorDailyGross);
 		selectFrequency(Frequency);
-		selectCurrency(Currency);
+//		selectCurrency(Currency);
 	}
 
 	private void setEmergencyDetails(String EmergencyContactName,String EmergencyContactNumberone  ) {
@@ -378,7 +381,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 		setPermanentTaluk(PermanentTaluk);
 		setPermanentDistrict(PermanentDistrict);
 		setPermanentState(PermanentState);
-		setPermanentCountry(Country);
+//		setPermanentCountry(Country);
 		setPermanentPincode(PermanentPincode);
 
 	}

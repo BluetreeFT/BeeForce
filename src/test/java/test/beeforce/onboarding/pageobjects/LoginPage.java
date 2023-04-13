@@ -15,10 +15,10 @@ public class LoginPage extends BaseClass {
 
 	}
 
-	@FindBy(id ="userName")
+	@FindBy(xpath="//label[text()='Username']/following-sibling::input")
 	WebElement txtuserName;
 
-	@FindBy(id="password")
+	@FindBy(xpath="//label[text()='Password']/following-sibling::div/input")
 	WebElement txtpassword;
 
 	@FindBy(xpath="//button[text()='Login']")
