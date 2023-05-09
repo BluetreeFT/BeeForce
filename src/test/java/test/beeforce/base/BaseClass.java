@@ -10,7 +10,9 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
@@ -38,6 +40,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 
@@ -69,9 +72,9 @@ public class BaseClass {
 
 	public String JkcAdminUserName=readconfig.getJkcAdminUserName();
 
-	public String STLAdminUserName=readconfig.getAdminUsername();	
+	public String STLAdminUserName=readconfig.getSTLAdminUsername();	
 
-	public String STLContractorUserName=readconfig.getContractorUsername();
+	public String STLContractorUserName=readconfig.getSTLContractorUsername();
 
 	public String STLAdminPassword=readconfig.getSTLAdminPassword();
 
@@ -90,6 +93,24 @@ public class BaseClass {
 	public String FlipkartVendorusername = readconfig.getFlipkartVendorUsername();
 
 	public String FlipkartVendorpassword = readconfig.getVendorPassword();
+	
+	public String AutoLivAdminUserName = readconfig.getAutoLivAdminUsername();
+	
+	public String AutoLivAdminPassword = readconfig.getAutoLivAdminPassword();
+	
+    public String AutoLivContractorUserName = readconfig.getAutoLivContractorUsername();
+	
+	public String AutoLivContractorPassword = readconfig.getAutoLivContractorPassword();
+	
+	public String JKCBudgetCreaterUserName = readconfig.getJKCBudgetCreaterUserName();
+	
+	public String JKCBudgetReviewerUserName = readconfig.getJKCBudgetReviewerUserName();
+	
+	public String JKCPayrollAdmin=readconfig.getJKCPayrollAdminUserName();
+	
+	
+	
+	final String downloadLocation= System.getProperty("user.dir") + "/Downloads/";
 
 	public static Logger log;
 
@@ -102,8 +123,15 @@ public class BaseClass {
 		if (br.equals("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
+			
 			ChromeOptions options = new ChromeOptions();
+			
+			Map<String, Object> prefs=new HashMap<>();
+			
+			prefs.put("download.default_directory", downloadLocation);
+			
 			options.addArguments("--remote-allow-origins=*");
+			
 			driver = new ChromeDriver(options);
 
 		} else if(br.equals("firefox")) {
@@ -123,6 +151,14 @@ public class BaseClass {
 		log = Logger.getLogger("BeeForce");
 
 		PropertyConfigurator.configure("log4j.properties");
+	}
+	
+	@BeforeTest
+	public void cleanFolder() throws IOException {
+
+		File directory=new File(downloadLocation);
+		
+		FileUtils.cleanDirectory(directory);
 	}
 
 	@AfterClass
@@ -150,7 +186,7 @@ public class BaseClass {
 		}
 	}
 
-	public static void LanchUrl(String url) {
+	public static void LaunchUrl(String url) {
 
 		driver.get(url);
 

@@ -114,12 +114,14 @@ public void clickBudgets() {
 
 public void clickSourcingDropdown() {
 	
-	sourcing.click();
+	javaScriptExecutorClick(sourcing);
+
 }
 
 public void clickSourcingRequest() {
 	
-	sourcingRequests.click();
+	javaScriptExecutorClick(sourcingRequests);
+	
 }
 
 

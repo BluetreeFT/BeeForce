@@ -28,7 +28,7 @@ public class OnboardingFieldValidation extends BaseClass{
 
 		LoginPage lp= new LoginPage();
 
-		LanchUrl(Url);
+		LaunchUrl(Url);
 
 		lp.loginToApplication(TitanContractorUserName, TitanContractorPassword);
 

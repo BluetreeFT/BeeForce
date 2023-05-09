@@ -53,16 +53,20 @@ public class JKCEmployeeViewAndEditPage extends BaseClass {
 
 
 	//tabs 
-	@FindBy(xpath="//span[text()='Professional Details']")
+	
+	@FindBy(xpath="//span[contains(text(),'Employee Details')]")
+	WebElement employeeDetails;
+
+	@FindBy(xpath="//span[contains(text(),'Professional Details')]")
 	WebElement professionalDetails;
 
-	@FindBy(xpath="//span[text()='Personal Details']")
+	@FindBy(xpath="//span[contains(text(),'Personal Details')]")
 	WebElement personalDetails;
 
-	@FindBy(xpath="//span[text()='Induction Details']")
+	@FindBy(xpath="//span[contains(text(),'Induction Details')]")
 	WebElement inductionDetails;
 
-	@FindBy(xpath="//span[text()='Addresss Details']")
+	@FindBy(xpath="//span[contains(text()'Addresss Details')]")
 	WebElement AddresssDetails;
 
 	//Basic Details
@@ -118,6 +122,9 @@ public class JKCEmployeeViewAndEditPage extends BaseClass {
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/parent::fieldset/child::div/child::div/child::div/label[contains(text(),'Employee No of Years Experience')]/following-sibling::div/input") // Store 
 	WebElement employeeYearsExperience;
+
+	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/parent::fieldset/child::div/child::div/child::div/label[contains(text(),'Employee Biometric Ref Number')]/following-sibling::div/input") // Store 
+	WebElement EmployeeBiometricRefNumber;
 
 	//Emergency Details
 
@@ -236,6 +243,8 @@ public class JKCEmployeeViewAndEditPage extends BaseClass {
 		AddresssDetails.click();
 
 	}
+	
+	
 
 	public String getBloodGroup() {
 
@@ -434,6 +443,15 @@ public class JKCEmployeeViewAndEditPage extends BaseClass {
 
 	}
 
+	
+	public void setEmployeeBiometricRefNumber(String empNum) {
+
+		clickProfessionaldetailstab();
+		
+		EmployeeBiometricRefNumber.sendKeys(empNum);
+		
+		
+	}
 
 
 

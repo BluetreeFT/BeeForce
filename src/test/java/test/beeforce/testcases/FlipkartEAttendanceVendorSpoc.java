@@ -10,7 +10,7 @@ public class FlipkartEAttendanceVendorSpoc extends BaseClass{
 	public void loginAsFTC() {
 		// TODO Auto-generated method stub
 FlipkartEAttendanceLoginPage Lgpg = new FlipkartEAttendanceLoginPage();
-LanchUrl(FlipkartEURL);
+LaunchUrl(FlipkartEURL);
 Lgpg.setUserName(FlipkartVendorusername);
 Lgpg.setPassword(FlipkartVendorpassword);
 Lgpg.clickLoginButton();

@@ -31,31 +31,31 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 
 	// Basic Details-org hierarchy
 
-	@FindBy(id="level1")   // Category  
+	@FindBy(xpath="//label[contains(text(),'Category')]/following-sibling::select")   // Category  
 	WebElement category;
 
-	@FindBy(id="level2") // Division
+	@FindBy(xpath="//label[contains(text(),'Division')]/following-sibling::select") // Division
 	WebElement division;
 
-	@FindBy(id="level3") // Location 
+	@FindBy(xpath="//label[contains(text(),'Location')]/following-sibling::select") // Location 
 	WebElement location;
 
-	@FindBy(id="level4") //CostCenter 
+	@FindBy(xpath="//label[contains(text(),'Cost Center')]/following-sibling::select") //CostCenter 
 	WebElement costCenter;
 
-	@FindBy(id="level5") //Department 
+	@FindBy(xpath="//label[contains(text(),'Department')]/following-sibling::select") //Department 
 	WebElement department;
 
-	@FindBy(id="level6") //Contractor 
+	@FindBy(xpath="//label[contains(text(),'Contractor')]/following-sibling::select[@class='form-select select2-hidden-accessible']") //Contractor 
 	WebElement contractor;
 
-	@FindBy(id="level7") //Designation 
+	@FindBy(xpath="//label[contains(text(),'Designation')]/following-sibling::select") //Designation 
 	WebElement designation;
 
-	@FindBy(id="level8") //ReportingManager
+	@FindBy(xpath="//label[contains(text(),'Reporting Manager')]/following-sibling::select") //ReportingManager
 	WebElement reportingManager;
 
-	@FindBy(id="level9") // Store 
+	@FindBy(xpath="//label[contains(text(),'Store')]/following-sibling::select") // Store 
 	WebElement store;
 
 	//professional Details
@@ -194,12 +194,14 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 
 		selectDropdownOption(costCenter, CostCenter);
 
-		Thread.sleep(1500);
+		Thread.sleep(2000);
 
 	}
 	public void selectDepartment(String Department) throws InterruptedException {
 
 		selectDropdownOption(department, Department);
+		
+		System.out.println(Department);
 
 		Thread.sleep(1500);
 
@@ -216,7 +218,7 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 	public void selectDesignation(String Designation) throws InterruptedException {
 
 		selectDropdownOption(designation, Designation);
-
+		
 		Thread.sleep(1500);
 
 	}
@@ -373,7 +375,7 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 	}
 
 	private void setBasicdetails(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
-			String Department ,String Contractor,String Designation ,String ReportingManager, String Store) throws InterruptedException {
+			String Department ,String Designation,String Contractor ,String ReportingManager, String Store) throws InterruptedException {
 
 		selectBloodGroup(bloodgroup);
 
@@ -386,12 +388,12 @@ public class TitanEmployeeSubmissionPage extends BaseClass {
 		selectLocation(Location);
 
 		selectCostCenter(CostCenter);
-
+		
 		selectDepartment(Department);
 		
-		selectContractor(Contractor);
-		
 		selectDesignation(Designation);
+
+		selectContractor(Contractor);
 		
 		selectReportingManager(ReportingManager);
 

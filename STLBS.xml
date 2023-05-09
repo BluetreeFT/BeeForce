@@ -7,7 +7,23 @@
 		<parameter name="status" value="Approved"></parameter>
 		<parameter name="org" value="STL"></parameter>
     <classes>
-      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing"/>
+    
+      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL">
+      <methods>
+      <include name="LoginAsBudgetCreater"></include>
+      <include name="createAndApproveBudget"></include>
+      <include name="ApproveBudget"></include>
+      <include name="createSourcingrequest"></include>
+      <include name="logoutAsAdminAndLoginAsContractor"></include>
+      <include name="uploadcandidatedetails"></include>
+      <include name="fillEmployeeDetailsSterlite"></include>
+      <include name="logoutAsContractorAndLoginAsAdmin"></include>
+      <include name="fillDetailsinCems"></include>
+      <include name="onboardedEmployeeStatus"></include>
+      <include name="verifyDetailsInEattendance"></include>
+      </methods>
+      </class>
+    
     </classes> 
   </test> <!-- Test -->
 </suite> <!-- Suite -->

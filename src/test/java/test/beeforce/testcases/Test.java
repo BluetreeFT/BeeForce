@@ -18,7 +18,14 @@ import test.beeforce.onboarding.pageobjects.ModulesPage;
 
 public class Test extends BaseClass {
 
-//
+
+	public void downloadtest() {
+		
+		browserSetup("chrome");
+		
+		
+	}
+	
 //	public void setup() throws InterruptedException, IOException, TesseractException{
 //
 //		browserSetup("chrome");
@@ -116,24 +123,25 @@ public class Test extends BaseClass {
 //	}
 	
 	
-	public void Add(int a,int b) {
-		
-		int c =a+b;
-		
-		System.out.println(c);
-	}
+//	public void Add(int a,int b) {
+//		
+//		int c =a+b;
+//		
+//		System.out.println(c);
+//	}
+//	
 	
+
+//	public static void main(String[] args) throws InterruptedException, IOException, TesseractException {
+//
+//		Test t=new Test();
+//
+////		t.setup();add
+//t.Add(10, 20);
+//
+//	}
+
 	
-
-	public static void main(String[] args) throws InterruptedException, IOException, TesseractException {
-
-		Test t=new Test();
-
-//		t.setup();add
-t.Add(10, 20);
-
-	}
-
 
 
 

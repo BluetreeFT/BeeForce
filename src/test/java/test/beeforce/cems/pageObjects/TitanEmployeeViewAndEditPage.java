@@ -99,12 +99,12 @@ public class TitanEmployeeViewAndEditPage extends BaseClass {
 	@FindBy(id="level5") //Department 
 	WebElement department;
 
-	@FindBy(id="level6") //Contractor 
-	WebElement contractor;
-
-	@FindBy(id="level7") //Designation 
+	@FindBy(id="level6") //Designation 
 	WebElement designation;
-
+	
+	@FindBy(id="level7") //Contractor 
+	WebElement contractor;
+	
 	@FindBy(id="level8") //ReportingManager
 	WebElement reportingManager;
 
@@ -132,7 +132,7 @@ public class TitanEmployeeViewAndEditPage extends BaseClass {
 	@FindBy(xpath="//legend[contains(text(),'Personal Details')]/parent::fieldset/child::div/child::div/child::div/label[contains(text(),'Religion')]/following-sibling::div/input") // Store 
 	WebElement religion;
 
-	@FindBy(xpath="//legend[contains(text(),'Personal Details')]/parent::fieldset/child::div/child::div/child::div/label[contains(text(),'Physically Challenged')]/following-sibling::div/input") // Store 
+	@FindBy(xpath="//legend[contains(text(),'Personal Details')]/parent::fieldset/child::div/child::div/child::div/label[contains(text(),'Physically Challenged')]/following-sibling::div/select") // Store 
 	WebElement physicallyChallenged;
 
 	// Compliance Details
@@ -215,7 +215,7 @@ public class TitanEmployeeViewAndEditPage extends BaseClass {
 
 	private void clickProfessionaldetailstab() {
 
-		professionalDetails.click();
+		javaScriptExecutorClick(professionalDetails);
 
 	}
 

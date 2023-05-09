@@ -7,13 +7,14 @@
     <parameter name="Module" value="onboarding"/>
     <parameter name="status" value="Approved"/>
     <classes>
-      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing">
+      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL">
         <methods>
+          <include name="cleanFolder"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
-          <include name="uploadcandidatedetails" invocation-numbers="0"/>
+          <include name="verifyDetailsInEattendance" invocation-numbers="0"/>
         </methods>
-      </class> <!-- test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing -->
+      </class> <!-- test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

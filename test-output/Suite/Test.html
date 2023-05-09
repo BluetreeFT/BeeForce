@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 12 18:49:44 IST 2023</td>
+<td>Started on:</td><td>Tue May 09 10:56:56 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>74 seconds (74484 ms)</td>
+<tr><td>Total time:</td><td>177 seconds (177626 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,53 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.verifyDetailsInEattendance()'><b>verifyDetailsInEattendance</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Approved</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.verifyDetailsInEattendance(EmployeeCreationThroughBudgetingAndSourcingSTL.java:455)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1605144446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1605144446'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.verifyDetailsInEattendance(EmployeeCreationThroughBudgetingAndSourcingSTL.java:455)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>20</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,35 +122,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.ApproveBudget()'><b>ApproveBudget</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.ApproveBudget()'><b>ApproveBudget</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL</td>
 <td></td>
-<td>7</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>6</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.LoginAsBudgetCreater()'><b>LoginAsBudgetCreater</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.LoginAsBudgetCreater()'><b>LoginAsBudgetCreater</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL</td>
 <td></td>
-<td>7</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>5</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.createAndApproveBudget()'><b>createAndApproveBudget</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing<br>Parameters: Access Solutions, Access Solutions, Bangalore, June-2023, Vnf And Orchestration Pune, Contract, Testss, Test, 54, 1200000</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.createAndApproveBudget()'><b>createAndApproveBudget</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Access Solutions, Access Solutions, Gurgaon, June-2023, Vnf And Orchestration Pune, Contract, Testss, Test, 54, 1200000</td>
 <td></td>
-<td>9</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>8</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.createSourcingrequest()'><b>createSourcingrequest</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing<br>Parameters: Access Solutions, Access Solutions, June-2023, Bangalore, Vnf And Orchestration Pune, Contract, Skilled, Sterlite Technologies Limited, Test, 40</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.createSourcingrequest()'><b>createSourcingrequest</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Access Solutions, Access Solutions, June-2023, Gurgaon, Vnf And Orchestration Pune, Contract, Skilled, Sterlite Technologies Limited, Test, 40</td>
 <td></td>
-<td>9</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>10</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.logoutAsAdminAndLoginAsContractor()'><b>logoutAsAdminAndLoginAsContractor</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.fillDetailsinCems()'><b>fillDetailsinCems</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Sathu@bluetree.in, Indrani Roy-24904203, Contract, ROLE EMPLOYEE, EMPLOYEE - No Edit, YES</td>
 <td></td>
-<td>11</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>19</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 <tr>
-<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing.uploadcandidatedetails()'><b>uploadcandidatedetails</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing<br>Parameters: Access Solutions, Access Solutions, June-2023, 15000</td>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.fillEmployeeDetailsSterlite()'><b>fillEmployeeDetailsSterlite</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Covishield, Yes, 13-04-2022, Test, NAA, Brother, 9876543210, VPO - Gotan, Gotan, Merta City, Nagaur, Rajasthan, India, 342902, Degree, GZQPS1165J, 5432, HR, 08 hours Shift, Sathish, sathi@bletree.in, 10-03-2023, 10-03-2023, 10-03-2024, rachael.kshlerin@gmail.com, India, Indian, IOC Bank, 4640110084145, IFSC000, 15000, Monthly, Rupee</td>
+<td></td>
+<td>67</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
+<tr>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.logoutAsAdminAndLoginAsContractor()'><b>logoutAsAdminAndLoginAsContractor</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL</td>
+<td></td>
+<td>2</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
+<tr>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.logoutAsContractorAndLoginAsAdmin()'><b>logoutAsContractorAndLoginAsAdmin</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL</td>
+<td></td>
+<td>2</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
+<tr>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.onboardedEmployeeStatus()'><b>onboardedEmployeeStatus</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Approved</td>
+<td></td>
+<td>5</td>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
+<tr>
+<td title='test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL.uploadcandidatedetails()'><b>uploadcandidatedetails</b><br>Test class: test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL<br>Parameters: Access Solutions, Access Solutions, June-2023, 15000</td>
 <td></td>
 <td>18</td>
-<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156</td></tr>
+<td>test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL@5e853265</td></tr>
 </table><p>
 </body>
 </html>

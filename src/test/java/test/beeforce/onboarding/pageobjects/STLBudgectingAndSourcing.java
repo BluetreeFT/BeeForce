@@ -1,6 +1,5 @@
 package test.beeforce.onboarding.pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -97,10 +96,10 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 	@FindBy(id="saveCandidates")
 	WebElement saveCandidates;
 
-	@FindBy(id="btnSelect0")
+	@FindBy(xpath="//button[text()='Select']")
 	WebElement selectCandidate;
 
-	@FindBy(id="nth0")
+	@FindBy(xpath="//button[text()='Selected']/parent::td/following-sibling::td/input[contains(@id,'nth')]")
 	WebElement nth;
 
 	@FindBy(xpath="//button[text()='Update']")
@@ -258,11 +257,13 @@ private void saveUploadedCandaidate() {
 
 	}
 
-private void submitUploadedCandaidate(String NTH) {
+private void submitUploadedCandaidate(String NTH) throws InterruptedException {
 	
 	javaScriptExecutorClick(selectCandidate);
 	javaScriptExecutorSendKeys(NTH, nth);
 	javaScriptExecutorClick(update);
+	Thread.sleep(1000);
+	clickOKButton();
 	
 }
 
@@ -320,7 +321,7 @@ private void submitUploadedCandaidate(String NTH) {
 		clickSearchButton();
 	}
 	
-	public void uploadCandiadteDetails(String path,String NTH) {
+	public void uploadCandiadteDetails(String path,String NTH) throws InterruptedException {
 		
 		clickSearchButton();
 		
@@ -332,11 +333,13 @@ private void submitUploadedCandaidate(String NTH) {
 		
 		saveUploadedCandaidate();
 		
-		submitUploadedCandaidate(NTH);
+		Thread.sleep(2000);	
 		
+		submitUploadedCandaidate(NTH);
 		
 
 	}
+	
 	
 	
 

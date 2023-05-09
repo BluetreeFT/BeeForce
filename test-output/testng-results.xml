@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="5" total="15" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="74484" started-at="2023-04-12T13:19:44Z" finished-at="2023-04-12T13:20:59Z">
+  <suite name="Suite" duration-ms="131028" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:26:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="74484" started-at="2023-04-12T13:19:44Z" finished-at="2023-04-12T13:20:59Z">
-      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing">
-        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="browserSetup" is-config="true" duration-ms="7053" started-at="2023-04-12T13:19:44Z" finished-at="2023-04-12T13:19:51Z">
+    <test name="Logintest" duration-ms="131028" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:26:26Z">
+      <class name="test.beeforce.testcases.OfflineEmployeeCreation">
+        <test-method status="PASS" signature="cleanFolder()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="cleanFolder" is-config="true" duration-ms="44" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:24:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanFolder -->
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="browserSetup" is-config="true" duration-ms="15980" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:24:31Z">
           <params>
             <param index="0">
               <value>
@@ -18,161 +22,337 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method status="PASS" signature="LoginAsBudgetCreater()[pri:1, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="LoginAsBudgetCreater" duration-ms="7846" started-at="2023-04-12T13:19:51Z" finished-at="2023-04-12T13:19:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginAsBudgetCreater -->
-        <test-method status="PASS" signature="createAndApproveBudget(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="createAndApproveBudget" duration-ms="9787" started-at="2023-04-12T13:20:01Z" data-provider="StlBudget" finished-at="2023-04-12T13:20:10Z">
+        <test-method status="PASS" signature="loginAsContractor(java.lang.String, java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="loginAsContractor" duration-ms="4275" started-at="2023-05-09T06:24:31Z" finished-at="2023-05-09T06:24:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Access Solutions]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Access Solutions]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Bangalore]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[June-2023]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Vnf And Orchestration Pune]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Contract]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Testss]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Test]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[54]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[1200000]]>
+                <![CDATA[Autoliv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAndApproveBudget -->
-        <test-method status="PASS" signature="ApproveBudget()[pri:3, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="ApproveBudget" duration-ms="7436" started-at="2023-04-12T13:20:10Z" finished-at="2023-04-12T13:20:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ApproveBudget -->
-        <test-method status="PASS" signature="createSourcingrequest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="createSourcingrequest" duration-ms="9654" started-at="2023-04-12T13:20:18Z" data-provider="StlSourcing" finished-at="2023-04-12T13:20:28Z">
+        </test-method> <!-- loginAsContractor -->
+        <test-method status="PASS" signature="selectModule(java.lang.String, java.lang.String)[pri:2, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="selectModule" duration-ms="2220" started-at="2023-05-09T06:24:36Z" finished-at="2023-05-09T06:24:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Access Solutions]]>
+                <![CDATA[onboarding]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Access Solutions]]>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectModule -->
+        <test-method status="PASS" signature="offlineEmployeeupload(java.lang.String)[pri:3, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="offlineEmployeeupload" duration-ms="8850" started-at="2023-05-09T06:24:38Z" finished-at="2023-05-09T06:24:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- offlineEmployeeupload -->
+        <test-method status="PASS" signature="fillEmployeeDetailsAutoLiv(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="fillEmployeeDetailsAutoLiv" duration-ms="41244" started-at="2023-05-09T06:24:51Z" data-provider="AutoLiv" depends-on-methods="test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload" finished-at="2023-05-09T06:25:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[O+Ve]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sathish@bluetree.in]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[June-2023]]>
+                <![CDATA[Engineering]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Bangalore]]>
+                <![CDATA[58837]]>
               </value>
             </param>
             <param index="4">
-              <value>
-                <![CDATA[Vnf And Orchestration Pune]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Contract]]>
-              </value>
-            </param>
-            <param index="6">
               <value>
                 <![CDATA[Skilled]]>
               </value>
             </param>
+            <param index="5">
+              <value>
+                <![CDATA[Supervisor]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[DL - AB]]>
+              </value>
+            </param>
             <param index="7">
               <value>
-                <![CDATA[Sterlite Technologies Limited]]>
+                <![CDATA[DL Production - AB]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[Test]]>
+                <![CDATA[DL]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[40]]>
+                <![CDATA[Degree]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Indian]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1245134314]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[5266964642]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Banglore]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Banglore]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[700735031957]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[RandD]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[AIM]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[2 years]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Quality]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[TPC01]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[Contractor]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[SOUTH]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[AIBSBAB]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[INS6576354]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[A Shift]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[56,vengadesapura]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[TamilNadu]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[56,vengadesapura]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[TamilNadu]]>
+              </value>
+            </param>
+            <param index="38">
+              <value>
+                <![CDATA[Bhattarahalli K R Puram]]>
+              </value>
+            </param>
+            <param index="39">
+              <value>
+                <![CDATA[Bhattarahalli Kr Puram]]>
+              </value>
+            </param>
+            <param index="40">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="41">
+              <value>
+                <![CDATA[5664773221]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createSourcingrequest -->
-        <test-method status="PASS" signature="logoutAsAdminAndLoginAsContractor()[pri:5, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="logoutAsAdminAndLoginAsContractor" duration-ms="11230" started-at="2023-04-12T13:20:28Z" finished-at="2023-04-12T13:20:39Z">
+        </test-method> <!-- fillEmployeeDetailsAutoLiv -->
+        <test-method status="PASS" signature="logoutAsContractor()[pri:5, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="logoutAsContractor" duration-ms="1214" started-at="2023-05-09T06:25:32Z" finished-at="2023-05-09T06:25:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutAsAdminAndLoginAsContractor -->
-        <test-method status="PASS" signature="uploadcandidatedetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="uploadcandidatedetails" duration-ms="18459" started-at="2023-04-12T13:20:39Z" data-provider="STLBSCanidateUpload" finished-at="2023-04-12T13:20:58Z">
+        </test-method> <!-- logoutAsContractor -->
+        <test-method status="PASS" signature="loginAsAdmin(java.lang.String)[pri:6, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="loginAsAdmin" duration-ms="2440" started-at="2023-05-09T06:25:33Z" finished-at="2023-05-09T06:25:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Access Solutions]]>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsAdmin -->
+        <test-method status="PASS" signature="openEmployeeViewAndEditPage()[pri:7, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="openEmployeeViewAndEditPage" duration-ms="5575" started-at="2023-05-09T06:25:36Z" finished-at="2023-05-09T06:25:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openEmployeeViewAndEditPage -->
+        <test-method status="PASS" signature="onboardedEmployeeStatus(java.lang.String, java.lang.String)[pri:8, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="onboardedEmployeeStatus" duration-ms="12390" started-at="2023-05-09T06:25:41Z" finished-at="2023-05-09T06:25:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Approved]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Access Solutions]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[June-2023]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[15000]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadcandidatedetails -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing@1efed156]" name="teardown" is-config="true" duration-ms="902" started-at="2023-04-12T13:20:58Z" finished-at="2023-04-12T13:20:59Z">
+        </test-method> <!-- onboardedEmployeeStatus -->
+        <test-method status="PASS" signature="verifyEmployeeStatus(java.lang.String, java.lang.String)[pri:10, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="verifyEmployeeStatus" duration-ms="11390" started-at="2023-05-09T06:25:54Z" finished-at="2023-05-09T06:26:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Approved]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmployeeStatus -->
+        <test-method status="PASS" signature="verifyDetailsInEattendance(java.lang.String, java.lang.String)[pri:11, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="verifyDetailsInEattendance" duration-ms="20054" started-at="2023-05-09T06:26:05Z" finished-at="2023-05-09T06:26:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Approved]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDetailsInEattendance -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="teardown" is-config="true" duration-ms="1218" started-at="2023-05-09T06:26:25Z" finished-at="2023-05-09T06:26:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcing -->
-    </test> <!-- Test -->
+      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
+    </test> <!-- Logintest -->
   </suite> <!-- Suite -->
 </testng-results>

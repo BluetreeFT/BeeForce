@@ -19,6 +19,7 @@ public class DataProviders  {
 	public Object[][] setBasicDetailsCorporate() {
 		//Totals rows count
 		int rows=obj.getRowCount("BasicDetailsCorporate") ;
+		System.out.println(rows);
 		//Total Columns
 		int column=obj.getColumnCount ("BasicDetailsCorporate") ;
 		int actRows=rows-1;
@@ -156,6 +157,105 @@ public class DataProviders  {
 		}
 		return data;
 	}
+	@DataProvider(name ="STLBasicDetails")
+	public Object[][] STLBasicDetails() {
+		//Totals rows count
+		int rows=obj.getRowCount("BasicDetailsSTL") ;
+		//Total Columns
+		int column=obj.getColumnCount ("BasicDetailsSTL") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("BasicDetailsSTL", j, i+2);
+			}
+		}
+		return data;
+	}
 	
+	@DataProvider(name ="STLChrmsDetails")
+	public Object[][] STLChrmsDeatils() {
+		//Totals rows count
+		int rows=obj.getRowCount("STLChrmsDetails") ;
+		//Total Columns
+		int column=obj.getColumnCount ("STLChrmsDetails") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("STLChrmsDetails", j, i+2);
+			}
+		}
+		return data;
+	}
+	
+	
+	@DataProvider(name ="AutoLiv")
+	public Object[][] AutoLivBasicDeatils() {
+		//Totals rows count
+		int rows=obj.getRowCount("BasicDetailsAutoLiv") ;
+		//Total Columns
+		int column=obj.getColumnCount ("BasicDetailsAutoLiv") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("BasicDetailsAutoLiv", j, i+2);
+			}
+		}
+		return data;
+	}
+	
+	@DataProvider(name ="JKCBudget")
+	public Object[][] JKCBudgets() {
+		//Totals rows count
+		int rows=obj.getRowCount("JKCBudget") ;
+		//Total Columns
+		int column=obj.getColumnCount ("JKCBudget") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("JKCBudget", j, i+2);
+			}
+		}
+		return data;
+	}
+	
+	
+	@DataProvider(name ="JKCSourcing")
+	public Object[][] JKCSourcing() {
+		//Totals rows count
+		int rows=obj.getRowCount("JKCSourcing") ;
+		//Total Columns
+		int column=obj.getColumnCount ("JKCSourcing") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("JKCSourcing", j, i+2);
+			}
+		}
+		return data;
+	}
+	
+//	
+	
+	
+	@DataProvider(name ="JKCBSCanidateUpload")
+	public Object[][] JKCBSCanidateUpload() {
+		//Totals rows count
+		int rows=obj.getRowCount("JKCBSCanidateUpload") ;
+		//Total Columns
+		int column=obj.getColumnCount ("JKCBSCanidateUpload") ;
+		int actRows=rows-1;
+		Object[][] data= new Object[actRows] [column];
+		for(int i=0;i<actRows;i++) {
+			for(int j=0; j<column;j++) {
+				data[i][j]=obj.getCellData("JKCBSCanidateUpload", j, i+2);
+			}
+		}
+		return data;
+	}
 }
 
