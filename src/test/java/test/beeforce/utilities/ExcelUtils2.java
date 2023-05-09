@@ -26,7 +26,7 @@ import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
 
 public class ExcelUtils2 {
-	public static String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload.xls";
+	public static String path = System.getProperty("user.dir");
 	//	 	public  String path;
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut = null;

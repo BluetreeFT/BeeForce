@@ -9,9 +9,9 @@
 		<parameter name="Module" value="onboarding"></parameter>
 		<parameter name="status" value="Approved"></parameter>
 		<parameter name="org" value="titan"></parameter>
-
+		<parameter name="Category" value="Plant"></parameter>
 		<classes>
-			<class name="test.beeforce.testcases.OfflineEmployeeCreation">
+			<class name="test.beeforce.testcases.OfflineEmployeeCreationTitan">
 				<methods>
 					<include name="loginAsContractor"></include>
 					<include name="selectModule"></include>

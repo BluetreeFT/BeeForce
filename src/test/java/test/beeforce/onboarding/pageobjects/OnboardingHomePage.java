@@ -53,8 +53,10 @@ public class OnboardingHomePage extends BaseClass {
 	@FindBy(xpath="//a[text()='Sourcing Requests']")   // budgets link
 	WebElement sourcingRequests;
 	
+	@FindBy(xpath="//a[text()='Sourcing Requests']")   // budgets link
+	WebElement onboardinglogo;
 	
-
+	
 	public void clickOnboardingDropdown() {
 		
 //		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -64,26 +66,31 @@ public class OnboardingHomePage extends BaseClass {
 		onboardingDropDown.click();
 
 	}
+	
 	public void clickEmployeeDetailsDropdown() {
 
 		Employeedetails.click();
 
 	}
+	
 	public void clickEmployeeofflineCreation() {
 
 		employeeOfflineCreattion.click();
 
 	}
+	
 	public void clickEmployeebulkSubmission() {
 
 		employeeBulkSubmission.click();
 
 	}
+	
 	public void clickTotalEmployees() {
 
 		totalEmployees.click();
 
 	}
+	
 	public void clickDashboard() {
 		
 		dashboard.click();
@@ -107,12 +114,14 @@ public void clickBudgets() {
 
 public void clickSourcingDropdown() {
 	
-	sourcing.click();
+	javaScriptExecutorClick(sourcing);
+
 }
 
 public void clickSourcingRequest() {
 	
-	sourcingRequests.click();
+	javaScriptExecutorClick(sourcingRequests);
+	
 }
 
 

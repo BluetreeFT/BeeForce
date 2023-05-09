@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="5" total="15" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-30T07:55:10Z" name="Suite" finished-at="2023-03-30T07:55:15Z" duration-ms="4809">
+  <suite name="Suite" duration-ms="131028" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:26:26Z">
     <groups>
     </groups>
-    <test started-at="2023-03-30T07:55:10Z" name="Test" finished-at="2023-03-30T07:55:15Z" duration-ms="4809">
-      <class name="test.beeforce.testcases.FlipkartEAttendanceVendorSpoc">
-        <test-method is-config="true" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:10Z" name="browserSetup" finished-at="2023-03-30T07:55:12Z" duration-ms="2002" status="PASS">
-=======
-<testng-results skipped="0" failed="5" ignored="4" total="15" passed="6">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Suite" duration-ms="100573" started-at="2023-03-28T13:02:13Z" finished-at="2023-03-28T13:03:54Z">
-    <groups>
-    </groups>
-    <test name="Logintest" duration-ms="100573" started-at="2023-03-28T13:02:13Z" finished-at="2023-03-28T13:03:54Z">
+    <test name="Logintest" duration-ms="131028" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:26:26Z">
       <class name="test.beeforce.testcases.OfflineEmployeeCreation">
-        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="browserSetup" is-config="true" duration-ms="23103" started-at="2023-03-28T13:02:13Z" finished-at="2023-03-28T13:02:36Z">
->>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
+        <test-method status="PASS" signature="cleanFolder()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="cleanFolder" is-config="true" duration-ms="44" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:24:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanFolder -->
+        <test-method status="PASS" signature="browserSetup(java.lang.String)[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="browserSetup" is-config="true" duration-ms="15980" started-at="2023-05-09T06:24:15Z" finished-at="2023-05-09T06:24:31Z">
           <params>
             <param index="0">
               <value>
@@ -30,25 +22,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-<<<<<<< HEAD
-        <test-method signature="loginAsFTC()[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:12Z" name="loginAsFTC" finished-at="2023-03-30T07:55:15Z" duration-ms="2604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAsFTC -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.beeforce.testcases.FlipkartEAttendanceVendorSpoc@32c726ee]" started-at="2023-03-30T07:55:15Z" name="teardown" finished-at="2023-03-30T07:55:15Z" duration-ms="191" status="PASS">
-=======
-        <test-method status="PASS" signature="loginAsContractor(java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="loginAsContractor" duration-ms="3244" started-at="2023-03-28T13:02:36Z" finished-at="2023-03-28T13:02:40Z">
+        <test-method status="PASS" signature="loginAsContractor(java.lang.String, java.lang.String)[pri:1, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="loginAsContractor" duration-ms="4275" started-at="2023-05-09T06:24:31Z" finished-at="2023-05-09T06:24:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[titan]]>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Autoliv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsContractor -->
-        <test-method status="PASS" signature="selectModule(java.lang.String, java.lang.String)[pri:2, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="selectModule" duration-ms="6378" started-at="2023-03-28T13:02:40Z" finished-at="2023-03-28T13:02:46Z">
+        <test-method status="PASS" signature="selectModule(java.lang.String, java.lang.String)[pri:2, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="selectModule" duration-ms="2220" started-at="2023-05-09T06:24:36Z" finished-at="2023-05-09T06:24:38Z">
           <params>
             <param index="0">
               <value>
@@ -57,25 +47,25 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[titan]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectModule -->
-        <test-method status="PASS" signature="offlineEmployeeupload(java.lang.String)[pri:3, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="offlineEmployeeupload" duration-ms="10807" started-at="2023-03-28T13:02:46Z" finished-at="2023-03-28T13:02:57Z">
+        <test-method status="PASS" signature="offlineEmployeeupload(java.lang.String)[pri:3, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="offlineEmployeeupload" duration-ms="8850" started-at="2023-05-09T06:24:38Z" finished-at="2023-05-09T06:24:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[titan]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- offlineEmployeeupload -->
-        <test-method status="FAIL" signature="fillEmployeeDetailsCorporate(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="fillEmployeeDetailsCorporate" duration-ms="2084" started-at="2023-03-28T13:03:01Z" data-provider="Corporate" depends-on-methods="test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload" finished-at="2023-03-28T13:03:03Z">
+        <test-method status="PASS" signature="fillEmployeeDetailsAutoLiv(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="fillEmployeeDetailsAutoLiv" duration-ms="41244" started-at="2023-05-09T06:24:51Z" data-provider="AutoLiv" depends-on-methods="test.beeforce.testcases.OfflineEmployeeCreation.offlineEmployeeupload" finished-at="2023-05-09T06:25:32Z">
           <params>
             <param index="0">
               <value>
@@ -84,476 +74,233 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[Manpower]]>
+                <![CDATA[Sathish@bluetree.in]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Corporate]]>
+                <![CDATA[Engineering]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Watch]]>
+                <![CDATA[58837]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[Sikkim]]>
+                <![CDATA[Skilled]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[1546]]>
+                <![CDATA[Supervisor]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[Human Resource]]>
+                <![CDATA[DL - AB]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[Manpower]]>
+                <![CDATA[DL Production - AB]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[Helper]]>
+                <![CDATA[DL]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[Sabita]]>
+                <![CDATA[Degree]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[Not Applicable]]>
+                <![CDATA[Indian]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[Skilled]]>
+                <![CDATA[1245134314]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[BE]]>
+                <![CDATA[5266964642]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[2 years]]>
+                <![CDATA[Banglore]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[8866773344]]>
+                <![CDATA[Banglore]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[MBS]]>
+                <![CDATA[700735031957]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[NO]]>
+                <![CDATA[20000]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[Hindu]]>
+                <![CDATA[RandD]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[123234345456]]>
+                <![CDATA[AIM]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[15000]]>
+                <![CDATA[2 years]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[Quality]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[2000]]>
+                <![CDATA[TPC01]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[1200]]>
+                <![CDATA[Contractor]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[SOUTH]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[AIBSBAB]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[INS6576354]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[A Shift]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[56,vengadesapura]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[Tirupur]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[320]]>
+                <![CDATA[Tirupur]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[56,vengadesapuram 4th Street]]>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[TamilNadu]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[56,vengadesapura]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[Tirupur]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[TamilNadu]]>
+              </value>
+            </param>
+            <param index="38">
+              <value>
+                <![CDATA[Bhattarahalli K R Puram]]>
+              </value>
+            </param>
+            <param index="39">
+              <value>
+                <![CDATA[Bhattarahalli Kr Puram]]>
+              </value>
+            </param>
+            <param index="40">
+              <value>
+                <![CDATA[Sathish]]>
+              </value>
+            </param>
+            <param index="41">
+              <value>
+                <![CDATA[5664773221]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Total Employees' or text()='Total Associates']"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//a[text()='Total Employees' or text()='Total Associates']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Total Employees' or text()='Total Associates']"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//a[text()='Total Employees' or text()='Total Associates']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy15.click(Unknown Source)
-at test.beeforce.onboarding.pageobjects.OnboardingHomePage.clickTotalEmployees(OnboardingHomePage.java:73)
-at test.beeforce.testcases.OfflineEmployeeCreation.fillEmployeeDetailsCorporate(OfflineEmployeeCreation.java:199)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fillEmployeeDetailsCorporate -->
-        <test-method status="PASS" signature="logoutAsContractor()[pri:5, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="logoutAsContractor" duration-ms="9179" started-at="2023-03-28T13:03:04Z" finished-at="2023-03-28T13:03:13Z">
+        </test-method> <!-- fillEmployeeDetailsAutoLiv -->
+        <test-method status="PASS" signature="logoutAsContractor()[pri:5, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="logoutAsContractor" duration-ms="1214" started-at="2023-05-09T06:25:32Z" finished-at="2023-05-09T06:25:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutAsContractor -->
-        <test-method status="PASS" signature="loginAsAdmin(java.lang.String)[pri:6, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="loginAsAdmin" duration-ms="5105" started-at="2023-03-28T13:03:13Z" finished-at="2023-03-28T13:03:18Z">
+        <test-method status="PASS" signature="loginAsAdmin(java.lang.String)[pri:6, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="loginAsAdmin" duration-ms="2440" started-at="2023-05-09T06:25:33Z" finished-at="2023-05-09T06:25:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[titan]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsAdmin -->
-        <test-method status="PASS" signature="openEmployeeViewAndEditPage()[pri:7, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="openEmployeeViewAndEditPage" duration-ms="12884" started-at="2023-03-28T13:03:18Z" finished-at="2023-03-28T13:03:31Z">
+        <test-method status="PASS" signature="openEmployeeViewAndEditPage()[pri:7, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="openEmployeeViewAndEditPage" duration-ms="5575" started-at="2023-05-09T06:25:36Z" finished-at="2023-05-09T06:25:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openEmployeeViewAndEditPage -->
-        <test-method status="FAIL" signature="OnboardedEmployeeStatus(java.lang.String)[pri:8, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="OnboardedEmployeeStatus" duration-ms="5263" started-at="2023-03-28T13:03:31Z" finished-at="2023-03-28T13:03:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Approved]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/a[text()='NIM000006']"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//table/tbody/tr/td/a[text()='NIM000006']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/a[text()='NIM000006']"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//table/tbody/tr/td/a[text()='NIM000006']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at test.beeforce.testcases.OfflineEmployeeCreation.OnboardedEmployeeStatus(OfflineEmployeeCreation.java:356)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OnboardedEmployeeStatus -->
-        <test-method status="FAIL" signature="verifyDetailsInCems()[pri:9, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="verifyDetailsInCems" duration-ms="2244" started-at="2023-03-28T13:03:37Z" finished-at="2023-03-28T13:03:39Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#bloodGroupId"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=id, value=bloodGroupId}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#bloodGroupId"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=id, value=bloodGroupId}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy15.getAttribute(Unknown Source)
-at test.beeforce.cems.pageObjects.TitanEmployeeViewAndEditPage.getBloodGroup(TitanEmployeeViewAndEditPage.java:243)
-at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInCems(OfflineEmployeeCreation.java:446)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDetailsInCems -->
-        <test-method status="FAIL" signature="verifyEmployeeStatus(java.lang.String)[pri:10, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="verifyEmployeeStatus" duration-ms="10227" started-at="2023-03-28T13:03:39Z" finished-at="2023-03-28T13:03:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Approved]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/a[text()='NIM000006']/parent::td/following-sibling::td[5]"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//table/tbody/tr/td/a[text()='NIM000006']/parent::td/following-sibling::td[5]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/a[text()='NIM000006']/parent::td/following-sibling::td[5]"}
-  (Session info: chrome=111.0.5563.146)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//table/tbody/tr/td/a[text()='NIM000006']/parent::td/following-sibling::td[5]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at test.beeforce.testcases.OfflineEmployeeCreation.verifyEmployeeStatus(OfflineEmployeeCreation.java:496)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmployeeStatus -->
-        <test-method status="FAIL" signature="verifyDetailsInEattendance(java.lang.String, java.lang.String)[pri:11, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="verifyDetailsInEattendance" duration-ms="2802" started-at="2023-03-28T13:03:50Z" finished-at="2023-03-28T13:03:52Z">
+        <test-method status="PASS" signature="onboardedEmployeeStatus(java.lang.String, java.lang.String)[pri:8, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="onboardedEmployeeStatus" duration-ms="12390" started-at="2023-05-09T06:25:41Z" finished-at="2023-05-09T06:25:54Z">
           <params>
             <param index="0">
               <value>
@@ -562,90 +309,50 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
             </param>
             <param index="1">
               <value>
-                <![CDATA[titan]]>
+                <![CDATA[AutoLiv]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[target frame detached
-  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
-  (Session info: chrome=111.0.5563.146)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//ul/child::li/a[@class='nav-link dropdown-toggle arrow-none waves-effect waves-light']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: target frame detached
-  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
-  (Session info: chrome=111.0.5563.146)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'BL084-SATHISH', ip: '169.254.21.81', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8715defdcd00a6b9521f8f7e71839d35, findElement {using=xpath, value=//ul/child::li/a[@class='nav-link dropdown-toggle arrow-none waves-effect waves-light']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.146, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DURGAP~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64569}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64569/devtoo..., se:cdpVersion: 111.0.5563.146, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8715defdcd00a6b9521f8f7e71839d35
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at com.sun.proxy.$Proxy15.click(Unknown Source)
-at test.beeforce.onboarding.pageobjects.ModulesPage.clickNavigationMenu(ModulesPage.java:35)
-at test.beeforce.onboarding.pageobjects.ModulesPage.selectModule(ModulesPage.java:85)
-at test.beeforce.testcases.OfflineEmployeeCreation.verifyDetailsInEattendance(OfflineEmployeeCreation.java:516)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onboardedEmployeeStatus -->
+        <test-method status="PASS" signature="verifyEmployeeStatus(java.lang.String, java.lang.String)[pri:10, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="verifyEmployeeStatus" duration-ms="11390" started-at="2023-05-09T06:25:54Z" finished-at="2023-05-09T06:26:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Approved]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmployeeStatus -->
+        <test-method status="PASS" signature="verifyDetailsInEattendance(java.lang.String, java.lang.String)[pri:11, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="verifyDetailsInEattendance" duration-ms="20054" started-at="2023-05-09T06:26:05Z" finished-at="2023-05-09T06:26:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Approved]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AutoLiv]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDetailsInEattendance -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@161b062a]" name="teardown" is-config="true" duration-ms="1260" started-at="2023-03-28T13:03:52Z" finished-at="2023-03-28T13:03:54Z">
->>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.beeforce.testcases.OfflineEmployeeCreation@51931956]" name="teardown" is-config="true" duration-ms="1218" started-at="2023-05-09T06:26:25Z" finished-at="2023-05-09T06:26:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- test.beeforce.testcases.FlipkartEAttendanceVendorSpoc -->
-    </test> <!-- Test -->
+      </class> <!-- test.beeforce.testcases.OfflineEmployeeCreation -->
+    </test> <!-- Logintest -->
   </suite> <!-- Suite -->
 </testng-results>

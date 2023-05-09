@@ -1,5 +1,6 @@
 package test.beeforce.onboarding.pageobjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -66,12 +67,18 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Agency Number')]/following-sibling::div/child::div/input") // Store 
 	WebElement associateAgencyNumber;
+	
+	//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::select" 
 
-	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::select") // Store 
+	@FindBy(xpath= "//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Designation')]/following-sibling::div/child::div/input")
 	WebElement designation;
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div[contains(text(),'Shift Profile')]/following-sibling::select") // Store 
 	WebElement shiftProfile;
+
+	
+	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div/child::div[contains(text(),'Date of Joining')]/following-sibling::div/child::div/input") // Store 
+	WebElement DateofJoining;
 
 	@FindBy(xpath="//legend[contains(text(),'Professional Details')]/following-sibling::div/child::div/div/child::div/child::div[contains(text(),'Category')]/following-sibling::div/child::select") // Store 
 	WebElement category;
@@ -94,7 +101,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 	//Compensation Benefits
 
-	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Monthly or Daily Gross')]/following-sibling::div/child::div/input") // Store 
+	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Monthly or Daily')]/following-sibling::div/child::div/input") // Store 
 	WebElement monthlyorDailyGross;
 
 	@FindBy(xpath="//legend[contains(text(),'Compensation Benefits')]/following-sibling::div/child::div/div/child::div[contains(text(),'Frequency')]/following-sibling::select") // Store 
@@ -188,6 +195,12 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 		selectDropdownOption(reportingManager, ReportingManager);
 	}
 
+	private void setDateOfJoining(String DOJ) {
+		
+		DateofJoining.sendKeys(DOJ);
+		
+	}
+
 	private void setAssociateAgencyNumber(String AssociateAgencyNumber) {
 
 		associateAgencyNumber.clear();
@@ -196,8 +209,10 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 	}
 
 	private void selectDesignation(String Designation) {
+		
+		designation.sendKeys(Designation);
 
-		selectDropdownOption(designation,Designation );
+//		selectDropdownOption(designation,Designation );
 
 	}
 
@@ -340,12 +355,20 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 	private void setProfessionalDetails(String AssociateAgencyNumber,String Qualification ,String  Designation,String ShiftProfile ,String Category ,String EmployeeBiometricNumber  ) {
 
 		TitanEmployeeSubmissionPage oes= new TitanEmployeeSubmissionPage();
-		setAssociateAgencyNumber(AssociateAgencyNumber);
-		oes.setQualification(Qualification);
+//		setAssociateAgencyNumber(AssociateAgencyNumber);
+//		oes.setQualification(Qualification);
 		selectDesignation(Designation);
-		selectShiftProfile(ShiftProfile);
+		
+		String doj = DateofJoining.getAttribute("value");
+		
+		if (doj.isEmpty()) {
+			
+		setDateOfJoining(CurrentDate());
+		
+		}
+//		selectShiftProfile(ShiftProfile);
 		selectCategory(Category);
-		setEmployeeBiometricRefNumber(EmployeeBiometricNumber);
+//		setEmployeeBiometricRefNumber(EmployeeBiometricNumber);
 
 	}
 
@@ -361,7 +384,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 
 		setMonthlyorDailyGross(MonthlyorDailyGross);
 		selectFrequency(Frequency);
-		selectCurrency(Currency);
+//		selectCurrency(Currency);
 	}
 
 	private void setEmergencyDetails(String EmergencyContactName,String EmergencyContactNumberone  ) {
@@ -378,7 +401,7 @@ public class JKCEmployeeSubmissionPage extends BaseClass {
 		setPermanentTaluk(PermanentTaluk);
 		setPermanentDistrict(PermanentDistrict);
 		setPermanentState(PermanentState);
-		setPermanentCountry(Country);
+//		setPermanentCountry(Country);
 		setPermanentPincode(PermanentPincode);
 
 	}

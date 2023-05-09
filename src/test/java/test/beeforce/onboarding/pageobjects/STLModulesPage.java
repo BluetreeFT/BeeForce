@@ -64,7 +64,7 @@ public class STLModulesPage extends BaseClass   {
 
 			break;
 
-		case "CHRMS":  
+		case "chrms":  
 			
 			clickCHRMSModule();
 

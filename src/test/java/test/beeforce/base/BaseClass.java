@@ -10,7 +10,9 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
@@ -38,6 +40,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 
@@ -60,31 +63,54 @@ public class BaseClass {
 	public String TitanContractorPassword=readconfig.getTitanPassword();
 
 	public String TitanAdminUserName=readconfig.getTitanAdminUserName();
-	
+
 	public String JkcContractorUserName=readconfig.getJkcContractorUserName();
 
 	public String JkcPassword=readconfig.getJkcPassword();
-	
+
 	public String JkcAdminPassword=readconfig.getJkcAdminPassword();
 
 	public String JkcAdminUserName=readconfig.getJkcAdminUserName();
-	
-	
-	
+
+	public String STLAdminUserName=readconfig.getSTLAdminUsername();	
+
+	public String STLContractorUserName=readconfig.getSTLContractorUsername();
+
+	public String STLAdminPassword=readconfig.getSTLAdminPassword();
+
+	public String STLContractorPassword=readconfig.getSTLContractorPassword();
 
 	public String FlipkartEURL = readconfig.getFlipkartEattendanceUrl();
-	
+
 	public String FlipkartFTCUsername = readconfig.getFlipkartFTC();
-	
+
 	public String FlipkartFTCPassword = readconfig.getFlipkartFTCpassword();
-	
+
 	public String FlipkartFTEUserbane = readconfig.getFlipkartFTEUsername();
-	
+
 	public String FlipkartFTEpassword = readconfig.getFTEPassword();
-	
+
 	public String FlipkartVendorusername = readconfig.getFlipkartVendorUsername();
-	
+
 	public String FlipkartVendorpassword = readconfig.getVendorPassword();
+	
+	public String AutoLivAdminUserName = readconfig.getAutoLivAdminUsername();
+	
+	public String AutoLivAdminPassword = readconfig.getAutoLivAdminPassword();
+	
+    public String AutoLivContractorUserName = readconfig.getAutoLivContractorUsername();
+	
+	public String AutoLivContractorPassword = readconfig.getAutoLivContractorPassword();
+	
+	public String JKCBudgetCreaterUserName = readconfig.getJKCBudgetCreaterUserName();
+	
+	public String JKCBudgetReviewerUserName = readconfig.getJKCBudgetReviewerUserName();
+	
+	public String JKCPayrollAdmin=readconfig.getJKCPayrollAdminUserName();
+	
+	
+	
+	final String downloadLocation= System.getProperty("user.dir") + "/Downloads/";
 
 	public static Logger log;
 
@@ -97,8 +123,15 @@ public class BaseClass {
 		if (br.equals("chrome")) {
 
 			WebDriverManager.chromedriver().setup();
+			
 			ChromeOptions options = new ChromeOptions();
+			
+			Map<String, Object> prefs=new HashMap<>();
+			
+			prefs.put("download.default_directory", downloadLocation);
+			
 			options.addArguments("--remote-allow-origins=*");
+			
 			driver = new ChromeDriver(options);
 
 		} else if(br.equals("firefox")) {
@@ -118,6 +151,14 @@ public class BaseClass {
 		log = Logger.getLogger("BeeForce");
 
 		PropertyConfigurator.configure("log4j.properties");
+	}
+	
+	@BeforeTest
+	public void cleanFolder() throws IOException {
+
+		File directory=new File(downloadLocation);
+		
+		FileUtils.cleanDirectory(directory);
 	}
 
 	@AfterClass
@@ -140,11 +181,12 @@ public class BaseClass {
 				option.click();
 
 				break;
+
 			}
 		}
 	}
 
-	public static void LanchUrl(String url) {
+	public static void LaunchUrl(String url) {
 
 		driver.get(url);
 
@@ -228,9 +270,9 @@ public class BaseClass {
 		Alert alert=driver.switchTo().alert();
 
 		String Alretmessage = alert.getText();
-		
+
 		alert.accept();
-		
+
 		return Alretmessage;
 	}
 
@@ -281,6 +323,7 @@ public class BaseClass {
 
 			return false; 
 		}  
+
 	}
 
 	public boolean isElementPresent(String id) {
@@ -445,7 +488,7 @@ public class BaseClass {
 
 		for (int i = 1; i < length; i++) {
 
- 			digits[i] = (char) (random.nextInt(10) + '0');
+			digits[i] = (char) (random.nextInt(10) + '0');
 
 		}
 
@@ -455,16 +498,16 @@ public class BaseClass {
 	public String CurrentDate() {
 
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");  
-		
+
 		LocalDateTime now = LocalDateTime.now();  
-		
+
 		String CDate = dtf.format(now).toString();
 
 		return CDate;
 
 	} 
 	public static void handelCapcha(String capchaxpath ,String textxpath ) throws IOException, InterruptedException, TesseractException {
-		
+
 		WebElement capcha = driver.findElement(By.id(capchaxpath)); 	   
 		File src = capcha.getScreenshotAs(OutputType.FILE);
 		String path="E:\\Sathish A\\Automation\\BeeForce\\capcha.png";

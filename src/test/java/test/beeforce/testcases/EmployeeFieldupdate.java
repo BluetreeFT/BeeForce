@@ -27,6 +27,8 @@ public class EmployeeFieldupdate extends BaseClass {
 	public void loginAsContractor() throws IOException, InterruptedException, TesseractException {
 
 		LoginPage lp=new LoginPage();
+		
+		LaunchUrl(Url);
 
 		lp.loginToApplication(TitanContractorUserName, TitanContractorPassword);
 
@@ -74,7 +76,7 @@ public class EmployeeFieldupdate extends BaseClass {
 
 		LoginPage lp=new LoginPage();
 
-		lp.clicklogoutCEMS();
+		lp.clickProfilelogoutCEMSSTL();
 
 	}
 
@@ -83,7 +85,7 @@ public class EmployeeFieldupdate extends BaseClass {
 
 		LoginPage lp=new LoginPage();
 		
-		LanchUrl(Url);
+		//LaunchUrl(Url);
 
 		lp.loginToApplication(TitanAdminUserName, TitanContractorPassword);
 
@@ -119,11 +121,11 @@ public class EmployeeFieldupdate extends BaseClass {
 		String fieldname = null;
 		String Filed = null;
 
-		ExcelUtils2 ex=new ExcelUtils2();
+//		ExcelUtils2 ex=new ExcelUtils2();
 
 		ExcelUtils ex1=new ExcelUtils();
-
-		String contractor = ex.getCellData("Sheet1", "CUSTOMER NAME*", 2);
+//
+//		String contractor = ex.getCellData("Sheet1", "CUSTOMER NAME*", 2);
 		
 
 		//		efp.selectContractor(contractor);
@@ -188,13 +190,20 @@ public class EmployeeFieldupdate extends BaseClass {
 		Thread.sleep(1000);
 	}	
 
+	public void verifyUpdatedField() throws InterruptedException {
+		
+		ChrmsHomePage ch=new ChrmsHomePage();
+		
+		ch.openEmployeeViewAndEditPage();
+		
+		
+
+	}
+		
+	
 
 
 }		
-
-
-
-
 
 
 

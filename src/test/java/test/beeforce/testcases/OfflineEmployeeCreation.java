@@ -12,18 +12,25 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.github.javafaker.Faker;
+
 import net.sourceforge.tess4j.TesseractException;
 import test.beeforce.DataProviders.DataProviders;
 import test.beeforce.base.BaseClass;
 import test.beeforce.cems.pageObjects.ChrmsHomePage;
+import test.beeforce.cems.pageObjects.JKCEmployeeViewAndEditPage;
+import test.beeforce.cems.pageObjects.STLEmployeeViewAndEditpage;
 import test.beeforce.cems.pageObjects.TitanEmployeeViewAndEditPage;
+import test.beeforce.eattendance.pageobjects.AutoLivEattendanceHomePage;
 import test.beeforce.eattendance.pageobjects.EattendanceHomePage;
+import test.beeforce.onboarding.pageobjects.AutoLivEmployeeSubmissionPage;
 import test.beeforce.onboarding.pageobjects.JKCEmployeeSubmissionPage;
 import test.beeforce.onboarding.pageobjects.LoginPage;
 import test.beeforce.onboarding.pageobjects.ModulesPage;
 import test.beeforce.onboarding.pageobjects.OnboardingEmployeeOfflineCreationPage;
 import test.beeforce.onboarding.pageobjects.OnboardingHomePage;
 import test.beeforce.onboarding.pageobjects.STLBudgectingAndSourcing;
+import test.beeforce.onboarding.pageobjects.STLEmployeeSubmissionPage;
 import test.beeforce.onboarding.pageobjects.STLModulesPage;
 import test.beeforce.onboarding.pageobjects.TitanEmployeeSubmissionPage;
 import test.beeforce.utilities.ExcelUtils;
@@ -33,24 +40,60 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 
 	@Test(priority=1)
-	@Parameters("org")
-	public void loginAsContractor(String org) throws InterruptedException, IOException, TesseractException {
+	@Parameters({"org","Category"})
+	public void loginAsContractor(String org,String Category) throws InterruptedException, IOException, TesseractException {
 
 		LoginPage lp= new LoginPage();
 
-		LanchUrl(Url);
+		LaunchUrl(Url);
 
 		if(org.equalsIgnoreCase("Titan")){
 
 			lp.loginToApplication(TitanContractorUserName, TitanContractorPassword);
 
+			String title = driver.getTitle();
+
+			String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestCases\\TitanTestCases.xlsx";
+
+			if(title.equals("LOGIN | BEEFORCE")) {
+
+				if(Category.equalsIgnoreCase("Corporate")) {
+
+					ExcelUtils ex=new ExcelUtils(path);
+					ex.setCellData("CORPORATE", "Actual Result", 7, "Invalid Username/Password");
+					ex.setCellData("CORPORATE", "Status", 7, "Fail");
+
+				}else if(Category.equalsIgnoreCase("Plant")){
+
+					ExcelUtils ex=new ExcelUtils(path);
+					ex.setCellData("PLANT", "Actual Result", 9, "Invalid Username/Password");
+					ex.setCellData("PLANT", "Status", 9, "Fail");
+
+				}else if(Category.equalsIgnoreCase("Retail")) {
+
+					ExcelUtils ex=new ExcelUtils(path);
+					ex.setCellData("Retail", "Actual Result", 7, "Invalid Username/Password");
+					ex.setCellData("Reil", "Status", 7, "Fail");
+
+				}
+
+			}else if(title.equals("Bluetree Products")) {
+
+				ExcelUtils ex=new ExcelUtils(path);
+
+				ex.setCellData("CORPORATE", "Actual Result", 7, "Home page is displayed");
+				ex.setCellData("CORPORATE", "Status", 7, "Pass");
+
+			}
+
+
 		}else if(org.equalsIgnoreCase("jkc")) {
 
 			lp.loginToApplication(JkcContractorUserName, JkcPassword);
 
-		}else if(org.equalsIgnoreCase("Stl")){
+		}else if(org.equalsIgnoreCase("AutoLiv")){
 
-			lp.loginToApplication("", "");
+			lp.loginToApplication(AutoLivContractorUserName,AutoLivAdminPassword );
 
 		}
 
@@ -60,34 +103,18 @@ public class OfflineEmployeeCreation extends BaseClass{
 	@Parameters({"Module","org"})
 	public void selectModule(String module,String org) {
 
-		
+
 		if(org.equalsIgnoreCase("stl")) {
-			
-		STLModulesPage mp=new STLModulesPage();
-		mp.selectModule(module);
-		
+
+			STLModulesPage mp=new STLModulesPage();
+			mp.selectModule(module);
+
 		}else {
-			
+
 			ModulesPage mp=new ModulesPage();
 			mp.selectModule(module);
 		}
 
-	}
-	@Test
-	public void employeeUploadThroughBugectingAndSourcingSTL(String BU,String OU,String Location,String Month,String CostCenter,String AssociateType,String Name,
-			String Comments,String HeadCount,String BudgetAmount) {
-		
-		OnboardingHomePage ohp=new OnboardingHomePage();
-		
-		STLBudgectingAndSourcing sbs=new STLBudgectingAndSourcing();
-	
-		ohp.clickBudgetingDropdown();
-	
-		ohp.clickBudgets();
-		
-		sbs.CreateBudget(BU, OU, Location, Month, CostCenter, AssociateType, Name, Comments, HeadCount, BudgetAmount);
-		 
-		
 	}
 
 	@Test(priority=3)
@@ -97,54 +124,95 @@ public class OfflineEmployeeCreation extends BaseClass{
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
 		OnboardingEmployeeOfflineCreationPage eoc=new OnboardingEmployeeOfflineCreationPage();
-//
-//				Thread.sleep(500);
-//		
-//				ohp.clickOnboardingDropdown();
-//		
-//				Thread.sleep(500);
-//		
-//				ohp.clickEmployeeDetailsDropdown();
-//		
-//				Thread.sleep(500);
-//		
-//				ohp.clickEmployeeofflineCreation();
-		
-			driver.navigate().to("https://saasuat-onboarding.labour.tech:8443/onboarding/offlineEmployeeCreation/upload");
+		//
+		//				Thread.sleep(500);
+		//		
+		//				ohp.clickOnboardingDropdown();
+		//		
+		//				Thread.sleep(500);
+		//		
+		//				ohp.clickEmployeeDetailsDropdown();
+		//		
+		//				Thread.sleep(500);
+		//		
+		//				ohp.clickEmployeeofflineCreation();
 
-//driver.navigate().to("https://onboarding.labour.tech/onboarding/offlineEmployeeCreation/upload");
+		driver.navigate().to("http://connect.bluetree.in:7081/onboarding/offlineEmployeeCreation/upload");
+
+		//		driver.navigate().to("https://saasuat-onboarding.labour.tech:8443/onboarding/offlineEmployeeCreation/upload");
+
+		//driver.navigate().to("https://onboarding.labour.tech/onboarding/offlineEmployeeCreation/upload");
 
 		Thread.sleep(500); 
+
 		if (org.equalsIgnoreCase("titan")) {
-			
+
 			String path = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
-			
+
 			ExcelUtils2 ex =new ExcelUtils2(path);
-			
+
 			long Id = generateRandomNumber(12);
 
 			String s=String.valueOf(Id);
 
+			Faker fake=new Faker();
+
+			String firstName = fake.name().firstName();
+
 			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
+
+			ex.setCellData("Sheet1", "FIRST NAME*", 2, firstName);
 
 			eoc.uploadBasicDetails(path);
 
 
 		}else if(org.equalsIgnoreCase("jkc")) {
-			
+
 			String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
-			
+
 			ExcelUtils2 ex =new ExcelUtils2(path);
 
 			long Id = generateRandomNumber(12);
 
 			String s=String.valueOf(Id);
 
+			Faker fake=new Faker();
+
+			String firstName = fake.name().firstName();
+
 			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
+
+			ex.setCellData("Sheet1", "FIRST NAME*", 2, firstName);
+
+			eoc.uploadBasicDetails(path);
+
+		}else if(org.equalsIgnoreCase("AutoLiv")) {
+
+			String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-AutoLiv.xls";
+
+			ExcelUtils2 ex =new ExcelUtils2(path);
+
+			long Id = generateRandomNumber(12);
+
+			long mobile = generateRandomNumber(10);
+
+			String s=String.valueOf(Id);
+
+			String mob=String.valueOf(mobile);
+
+			Faker fake=new Faker();
+
+			String firstName = fake.name().firstName();
+
+			ex.setCellData("Sheet1", "ID NUMBER*", 2, s);
+
+			ex.setCellData("Sheet1", "FIRST NAME*", 2, firstName);
+
+			ex.setCellData("Sheet1", "MOBILE NO*", 2, mob);
 
 			eoc.uploadBasicDetails(path);
 		}
-		
+
 		eoc.clickBasicDetailsUploadButton();
 
 		String successCount = eoc.getUploadCount();
@@ -163,19 +231,20 @@ public class OfflineEmployeeCreation extends BaseClass{
 		}
 
 	}
+//	//   
 
-	@Test(dataProvider ="jkc", dataProviderClass= DataProviders.class,priority=4 ,dependsOnMethods= {"offlineEmployeeupload"})
+	@Test(dataProvider ="jkc", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"} )
 	public void fillEmployeeDetailsJKC(String Company,String Division,String SubDivision,String BusinessUnit,String Function,
 			String Department,String Section,String Location,String Contractor,String ReportingManager,String AssociateAgencyNumber,String Qualification ,String  Designation,String ShiftProfile ,String Category ,String EmployeeBiometricNumber
 			,String BankName,String BankAccountNo,String IFSCCode,String MonthlyorDailyGross,String Frequency, String Currency,String EmergencyContactName,String EmergencyContactNumberone,
 			String PermanentAddress ,String PermanentVillage ,String PermanentTaluk,String PermanentDistrict,String PermanentState,String Country,String PermanentPincode) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
-		
+
 		TitanEmployeeSubmissionPage oe=new TitanEmployeeSubmissionPage();
 
 		JKCEmployeeSubmissionPage oes=new JKCEmployeeSubmissionPage();
-		
+
 		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-JKC.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
@@ -183,13 +252,17 @@ public class OfflineEmployeeCreation extends BaseClass{
 		ohp.clickDashboard();
 
 		ohp.clickTotalEmployees();
-	
+
 		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
-		
+
 		ohp.searchEmployee(aadhar);
 
-	driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
-		
+		driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
+
+		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
+
+		ExcelUtils ex1=new ExcelUtils(path1);
+
 		oes.setEmployeeDetails(Company, Division, SubDivision, BusinessUnit, Function, Department, Section, Location, Contractor, 
 				ReportingManager, AssociateAgencyNumber, Qualification,  Designation ,ShiftProfile, Category, EmployeeBiometricNumber, BankName, 
 				BankAccountNo, IFSCCode, MonthlyorDailyGross, Frequency, Currency, EmergencyContactName, EmergencyContactNumberone, 
@@ -198,31 +271,28 @@ public class OfflineEmployeeCreation extends BaseClass{
 		Thread.sleep(1500);
 
 		String btid = oe.getBTID();
-		
-
-		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
-
-		ExcelUtils ex1=new ExcelUtils(path1);
 
 		ex1.setCellData("BTID", "BTID", 2, btid);
 
 	}
-//
-	@Test(dataProvider ="Corporate", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"} )
-	public void fillEmployeeDetailsCorporate(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
-			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
-			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
-			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
-			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
+
+	@Test(dataProvider ="AutoLiv", dataProviderClass= DataProviders.class,priority=4 ,dependsOnMethods= {"offlineEmployeeupload"} )
+	public void fillEmployeeDetailsAutoLiv(String BloodGroup,String CandidateEmail,String Division,String EmpId,String Skill,String Designation,String Department,String Subdepartment,String Category,String EmployeQualification,String Nationality,String PF
+			,String ESINO,String ESICLocal,String ESICDispensary,String UANNO,String Gross,String Product,String Unit,String EmployeeNoofExperience,String Team,String Line,String ContractorEmployeeType,String Region,String Entity,String InsuranceNumber,String ShiftProfile
+			,String PermanentAddress,String PermanentVillage,String PermanentTaluk,String PermanentDistrict,String PermanentState,String Country,String TemporaryAddress,String TemporaryVillage
+			,String TemporaryTaluk,String TemporaryDistrict,String TemporaryState,String TransportationRoute,String PickupPoint,String EmergencyContactName,String EmergencyContactNo) throws InterruptedException {
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
+		TitanEmployeeSubmissionPage oe=new TitanEmployeeSubmissionPage();
 
-		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
-		
-		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+		AutoLivEmployeeSubmissionPage oes=new AutoLivEmployeeSubmissionPage();
+
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-AutoLiv.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
+
+		ohp.clickOnboardingDropdown();
 
 		ohp.clickDashboard();
 
@@ -231,107 +301,48 @@ public class OfflineEmployeeCreation extends BaseClass{
 		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
 
 		ohp.searchEmployee(aadhar);
-
-		 driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
-
-		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation,
-				ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, 
-				Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing,
-				fixedattendance, fixedCC, fixedother, permanentAddres);
 		
-		Thread.sleep(1500);
-
-		String btid = oes.getBTID();
-		
-
-		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
-
-		ExcelUtils ex1=new ExcelUtils(path1);
-
-		ex1.setCellData("BTID", "BTID", 2, btid);
-
-	}
-//
-	@Test(dataProvider ="Plant", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"})
-	public void fillEmployeeDetailsPlant(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
-			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
-			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
-			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
-			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
-
-		OnboardingHomePage ohp=new OnboardingHomePage();
-
-		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
-		
-		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
-
-		ExcelUtils2 ex =new ExcelUtils2(path);
-
-		ohp.clickDashboard();
-
-		ohp.clickTotalEmployees();
-
-		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
-
-		ohp.searchEmployee(aadhar);
+		Thread.sleep(500);
 
 		driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
 
-		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
-
-
-		Thread.sleep(1500);
-
-		String btid = oes.getBTID();
-		
 		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
+
+		long id = generateRandomNumber(5);
+
+		long uan = generateRandomNumber(12);
+
+		long esi = generateRandomNumber(10);
+
+		String s=String.valueOf(id);
+
+		String Uan=String.valueOf(uan);
+
+		String Esi=String.valueOf(esi);
+
+		ex1.setCellData("BasicDetailsAutoLiv", "EmpId", 2, s);
+
+		ex1.setCellData("BasicDetailsAutoLiv", "UANNO", 2, Uan);
+
+		ex1.setCellData("BasicDetailsAutoLiv", "ESINO", 2, Esi);
+
+		oes.setEmployeeDetails(BloodGroup, CandidateEmail, Division, EmpId, Skill, Designation, Department, Subdepartment, Category, EmployeQualification, Nationality, PF, ESINO, ESICLocal, ESICDispensary, 
+				UANNO, Gross, Product, Unit, EmployeeNoofExperience, Team, Line, ContractorEmployeeType, Region, Entity, 
+				InsuranceNumber, ShiftProfile, PermanentAddress, PermanentVillage, PermanentTaluk, PermanentDistrict, PermanentState, 
+				Country, TemporaryAddress, TemporaryVillage, TemporaryTaluk, TemporaryDistrict, TemporaryState, TransportationRoute, PickupPoint, EmergencyContactName, EmergencyContactNo);
+
+		Thread.sleep(1500);
+
+		String btid = oe.getBTID();
 
 		ex1.setCellData("BTID", "BTID", 2, btid);
 
 	}
 
-	@Test(dataProvider ="Retail", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"})
-	public void fillEmployeeDetailsRetail(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
-			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
-			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
-			String fixedbasic,String fixedda,String fixedHRA,String fixedconveyance,String fixedsupplimentary,String fixedmedical,String fixedSpecial,
-			String fixedWashing,String fixedattendance,String fixedCC, String fixedother,String permanentAddres) throws InterruptedException {
 
-		OnboardingHomePage ohp=new OnboardingHomePage();
-		
-		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
-		
-		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
-
-		ExcelUtils2 ex =new ExcelUtils2(path);
-
-		ohp.clickDashboard();
-
-		ohp.clickTotalEmployees();
-
-		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
-
-		ohp.searchEmployee(aadhar);
-
-		driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
-
-		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
-
-		
-		Thread.sleep(1500);
-
-		String btid = oes.getBTID();
-		
-		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
-
-		ExcelUtils ex1=new ExcelUtils(path1);
-
-		ex1.setCellData("BTID", "BTID", 2, btid);
-
-	}
-	@Test(dataProvider ="STL", dataProviderClass= DataProviders.class,priority=4,dependsOnMethods= {"offlineEmployeeupload"})
+	@Test(dataProvider ="STL", dataProviderClass= DataProviders.class,priority=4)
 	public void fillEmployeeDetailsSterlite(String bloodgroup,String contractortype,String Category,String Division,String Location,String CostCenter,
 			String Department ,String Contractor,String Designation ,String ReportingManager, String Store,String Workskill,String Qualification,String yearsofexp,
 			String EmergencyContactNumber,String Community,String PhysicallyChallenged,String Religion,String UAN,
@@ -340,36 +351,66 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		OnboardingHomePage ohp=new OnboardingHomePage();
 
-		TitanEmployeeSubmissionPage oes=new TitanEmployeeSubmissionPage();
-		
-		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\offlineEmployeeUpload-Titan.xls";
+		STLEmployeeSubmissionPage oes=new STLEmployeeSubmissionPage();
+
+		String path= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\CandidateUploadTemplate-STL.xls";
 
 		ExcelUtils2 ex =new ExcelUtils2(path);
+
+		ohp.clickOnboardingDropdown();
 
 		ohp.clickDashboard();
 
 		ohp.clickTotalEmployees();
 
-		String aadhar = ex.getCellData("Sheet1", "ID NUMBER*", 2);
+		String aadhar = ex.getCellData("Employees", "Aadhar Number*", 2);
 
 		ohp.searchEmployee(aadhar);
 
 		driver.findElement(By.xpath("//table/tbody/tr/td/a[contains(text(),'"+aadhar+"')]")).click();
 
-		oes.setEmployeeDetails(bloodgroup, contractortype, Category, Division, Location, CostCenter, Department, Contractor, Designation, ReportingManager, Store, Workskill, Qualification, yearsofexp, EmergencyContactNumber, Community, PhysicallyChallenged, Religion, UAN, fixedbasic, fixedda, fixedHRA, fixedconveyance, fixedsupplimentary, fixedmedical, fixedSpecial, fixedWashing, fixedattendance, fixedCC, fixedother, permanentAddres);
 
-		
+
 		Thread.sleep(1500);
 
-		String btid = oes.getBTID();
-		
+		//		String btid = oes.getBTID();
+
 		String path1= System.getProperty("user.dir") + "\\src\\test\\resources\\TestData\\EmployeeDetails.xlsx";
 
 		ExcelUtils ex1=new ExcelUtils(path1);
 
-		ex1.setCellData("BTID", "BTID", 2, btid);
+		//		ex1.setCellData("BTID", "BTID", 2, btid);
 
 	}
+
+	@Test(priority=5)
+	public void contractorActionInCEMS() {
+
+		ChrmsHomePage ch=new ChrmsHomePage();
+
+		selectModule("CHRMS", "Titan");
+
+		driver.navigate().to("https://test-cems-saas.labour.tech/CEMS/dynamic/search/contractEmployee");
+
+		ExcelUtils ex=new ExcelUtils();
+
+		TitanEmployeeViewAndEditPage evp=new TitanEmployeeViewAndEditPage();
+
+		String empNumber = ex.getCellData("BTID", "BTID", 2);
+
+		evp.setEmployeeNumber(empNumber);
+
+		evp.clickSearchButton(); 
+
+		WebElement employee = driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+empNumber+"']"));
+
+		if(employee.isDisplayed()) {
+
+
+		}
+
+	}
+
 	@Test(priority=5)
 	public void logoutAsContractor() throws InterruptedException {
 
@@ -377,7 +418,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		lp.clicklogoutOnboarding();
 
-		lp.clicklogoutCEMS();
+		//		lp.clicklogoutCEMS();
 
 	}
 
@@ -388,20 +429,22 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		LoginPage lp=new LoginPage();
 
-				LanchUrl(Url);
-		if(org.equalsIgnoreCase("titan")) {
+		LaunchUrl(Url);
 
-			lp.loginToApplication(TitanAdminUserName, TitanContractorPassword);
-
-		}else if(org.equalsIgnoreCase("jkc")) {
+		 if(org.equalsIgnoreCase("jkc")) {
 
 			lp.loginToApplication(JkcAdminUserName, JkcAdminPassword);
 
+		}else if(org.equalsIgnoreCase("AutoLiv")) {
+
+			lp.loginToApplication(AutoLivAdminUserName, AutoLivAdminPassword);
+
 		}
+
 	}
 
 	@Test(priority=7)
-	public void openEmployeeViewAndEditPage() {
+	public void openEmployeeViewAndEditPage() throws InterruptedException {
 
 		ModulesPage mp=new ModulesPage();
 
@@ -420,8 +463,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 	}
 
 	@Test(priority=8)
-	@Parameters("status")
-	public void onboardedEmployeeStatus(String status) throws InterruptedException {
+	@Parameters({"status","org"})
+	public void onboardedEmployeeStatus(String status,String org) throws InterruptedException {
 
 		ExcelUtils ex=new ExcelUtils();
 
@@ -434,16 +477,38 @@ public class OfflineEmployeeCreation extends BaseClass{
 		evp.clickSearchButton(); 
 
 		driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+empNumber+"']")).click();
+
 		Thread.sleep(3500);
+
+		boolean elementPresent = isElementPresent("editBtn");
+
+		if(elementPresent) {
+
+			STLEmployeeViewAndEditpage sep=new STLEmployeeViewAndEditpage();
+
+			sep.clickEditButton();
+
+		}
 
 		if(status.equalsIgnoreCase("Approved")) {
 
 			evp.SelectEmployeeStatus(status);
 
+			if (org.equalsIgnoreCase("jkc")) {
+
+				JKCEmployeeViewAndEditPage jp=new JKCEmployeeViewAndEditPage();
+
+				jp.setEmployeeBiometricRefNumber(empNumber);
+
+			} 
+
 			evp.clickSubmit();
+			
+			if(isAlertPresent()) {
 
 			acceptAlert();
 			
+			}
 			Thread.sleep(1000);
 
 		}else if(status.equalsIgnoreCase("Terminated")) {
@@ -548,8 +613,8 @@ public class OfflineEmployeeCreation extends BaseClass{
 	}
 
 	@Test(priority=10)
-	@Parameters("status")
-	public void verifyEmployeeStatus(String status) throws InterruptedException {
+	@Parameters({"status", "org"})
+	public void verifyEmployeeStatus(String status,String org) throws InterruptedException {
 
 		ChrmsHomePage ch=new ChrmsHomePage();
 
@@ -573,11 +638,23 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		Thread.sleep(1500);
 
-		WebElement ele = driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+employeeNumber+"']/parent::td/following-sibling::td[5]"));
+		if (org.equalsIgnoreCase("Autoliv")) {
 
-		assertEquals(ele.getText(), status);
+			WebElement ele = driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+employeeNumber+"']/parent::td/following-sibling::td[6]"));
+			assertEquals(ele.getText(), status);
+
+		} else {
+
+			WebElement ele = driver.findElement(By.xpath("//table/tbody/tr/td/a[text()='"+employeeNumber+"']/parent::td/following-sibling::td[5]"));
+			assertEquals(ele.getText(), status);
+
+		}
+
+
+
+
 	}
-	
+
 	@Test(priority=11)
 
 	@Parameters({"status", "org"})
@@ -587,7 +664,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		ExcelUtils ex=new ExcelUtils();
 
-		lp.clickProfilelogoutCEMS();
+		lp.clickProfilelogoutCEMSSTL();
 
 		loginAsAdmin(org);
 
@@ -595,22 +672,39 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		mp.selectModule("eattendance");
 
-		EattendanceHomePage eh=new EattendanceHomePage();
-
-		eh.clickSettingDropdown();
-
-		eh.clickEmployeeDataDropdown();
-
-		eh.clickEmployees();
-
 		String employeeNumber = ex.getCellData("BTID", "BTID", 2);
-		Thread.sleep(3000);
-		eh.searchEmployee(employeeNumber);
+
+		if (org.equalsIgnoreCase("Autoliv")) {
+
+			AutoLivEattendanceHomePage eh=new AutoLivEattendanceHomePage();
+
+			eh.clickSettingDropdown();
+
+			eh.clickEmployees();
+
+			Thread.sleep(9000);
+
+			eh.searchEmployee(employeeNumber);
+
+		} else {
+
+			EattendanceHomePage eh=new EattendanceHomePage();
+
+			eh.clickSettingDropdown();
+
+			eh.clickEmployeeDataDropdown();
+
+			eh.clickEmployees();
+
+			Thread.sleep(10000);
+
+			eh.searchEmployee(employeeNumber);
+			
+
+		}
 
 		Thread.sleep(3000);
 		List<WebElement> empcount = driver.findElements(By.xpath("//table/tbody/tr/td[2]"));
-
-
 
 		if (status.equalsIgnoreCase("Approved")) {
 
@@ -684,7 +778,7 @@ public class OfflineEmployeeCreation extends BaseClass{
 
 		openEmployeeViewAndEditPage();
 
-		onboardedEmployeeStatus("approve");
+		onboardedEmployeeStatus("approve",org);
 
 	}
 

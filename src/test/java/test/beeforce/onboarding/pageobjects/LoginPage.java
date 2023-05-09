@@ -15,10 +15,10 @@ public class LoginPage extends BaseClass {
 
 	}
 
-	@FindBy(id ="userName")
+	@FindBy(xpath="//label[text()='Username']/following-sibling::input")
 	WebElement txtuserName;
 
-	@FindBy(id="password")
+	@FindBy(xpath="//label[text()='Password']/following-sibling::div/input")
 	WebElement txtpassword;
 
 	@FindBy(xpath="//button[text()='Login']")
@@ -27,16 +27,17 @@ public class LoginPage extends BaseClass {
 	@FindBy(id="userSilhouette")
 	WebElement profile;
 
-	@FindBy(xpath="//a[@href='/onboarding/logout']")
+	@FindBy(xpath="//a[@href='/onboarding/logout' and @class='dropdown-item notify-item']")
 	WebElement btnlogoutonboarding;
 
 	@FindBy(xpath="//img[@alt='user-image']")
 	WebElement profile1;
 
-	@FindBy(xpath="//a[@href='/CEMS/j_spring_security_logout']")
+	@FindBy(xpath="//a/child::span[text()='Logout']")
 	WebElement btnlogout;
-	
 
+	@FindBy(xpath="//button[@class='dropdown-item notify-item']/span[text()='Logout']")
+	WebElement btnlogoutstl;
 
 	public void setUserName(String username) {
 
@@ -64,8 +65,8 @@ public class LoginPage extends BaseClass {
 		setUserName(username);
 
 		setPassword(password);
-		
-//		handelCapcha("captchaImage", "jcaptcha");
+
+		//		handelCapcha("captchaImage", "jcaptcha");
 
 		clickLoginButton();
 
@@ -80,10 +81,12 @@ public class LoginPage extends BaseClass {
 
 	}
 
-	public void clicklogoutCEMS() {
+	public void clicklogoutCEMS() throws InterruptedException {
 
 		profile1.click();
-
+		
+		Thread.sleep(1000);
+		
 		btnlogout.click();
 
 	}
@@ -93,6 +96,14 @@ public class LoginPage extends BaseClass {
 		profile.click();
 
 		btnlogout.click();
+
+	}
+	
+	public void clickProfilelogoutCEMSSTL() {
+
+		profile.click();
+
+		btnlogoutstl.click();
 
 	}
 

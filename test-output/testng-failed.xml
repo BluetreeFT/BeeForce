@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
-=======
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="test.beeforce.utilities.TestListeners"/>
-  </listeners>
-  <test thread-count="5" name="Logintest(failed)">
-    <parameter name="org" value="titan"/>
->>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="org" value="STL"/>
     <parameter name="browser" value="chrome"/>
+    <parameter name="Module" value="onboarding"/>
+    <parameter name="status" value="Approved"/>
     <classes>
-      <class name="test.beeforce.testcases.FlipkartEAttendanceVendorSpoc">
+      <class name="test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL">
         <methods>
-<<<<<<< HEAD
+          <include name="cleanFolder"/>
           <include name="browserSetup"/>
           <include name="teardown"/>
-          <include name="loginAsFTC"/>
-=======
           <include name="verifyDetailsInEattendance" invocation-numbers="0"/>
-          <include name="fillEmployeeDetailsCorporate" invocation-numbers="0"/>
-          <include name="offlineEmployeeupload"/>
-          <include name="verifyDetailsInCems"/>
-          <include name="browserSetup"/>
-          <include name="teardown"/>
-          <include name="OnboardedEmployeeStatus" invocation-numbers="0"/>
-          <include name="verifyEmployeeStatus" invocation-numbers="0"/>
->>>>>>> b6a88556179c476c61b5c4dff3038412f5782485
         </methods>
-      </class> <!-- test.beeforce.testcases.FlipkartEAttendanceVendorSpoc -->
+      </class> <!-- test.beeforce.testcases.EmployeeCreationThroughBudgetingAndSourcingSTL -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -130,5 +130,82 @@ public String getVendorPassword() {
 	String password=pro.getProperty("FlipkartVendorSpocPassword");
 	return password;
 }
+
+public String getSTLContractorPassword() {
+	String password=pro.getProperty("STLContractorPassword");
+	return password;
+}
+
+public String getSTLAdminPassword() {
+	String password=pro.getProperty("STLAdminPassWord");
+	return password;
+}
+public String getSTLAdminUsername() {
+	
+	String username=pro.getProperty("STLAdminUsername");
+	
+	return username;
+}
+public String getSTLContractorUsername() {
+	
+	String username=pro.getProperty("STLContractorUserName");
+	
+	return username;
+}
+
+public String getAutoLivContractorUsername() {
+	
+	String username=pro.getProperty("AutoLivContractorUserName");
+	
+	return username;
+}
+
+public String getAutoLivAdminUsername() {
+	
+	String username=pro.getProperty("AutoLivAdminUserName");
+	
+	return username;
+}
+
+public String getAutoLivAdminPassword() {
+	
+	String username=pro.getProperty("AutoLivAdminPassword");
+	
+	return username;
+}
+
+public String getAutoLivContractorPassword() {
+	
+	String username=pro.getProperty("AutoLivContractorPassword");
+	
+	return username;
+	
+}
+
+public String getJKCBudgetCreaterUserName() {
+	
+	String username=pro.getProperty("JkcBudgetCreaterUserName");
+	
+	return username;
+	
+}
+
+public String getJKCBudgetReviewerUserName() {
+	
+	String username=pro.getProperty("JkcBudgetReviewerUserName");
+	
+	return username;
+	
+}
+
+public String getJKCPayrollAdminUserName() {
+	
+	String username=pro.getProperty("JkcPayrollAdmin");
+	
+	return username;
+	
+}
+
+
 }
 

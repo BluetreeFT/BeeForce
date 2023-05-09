@@ -18,10 +18,10 @@ public class EattendanceHomePage extends BaseClass {
 	@FindBy(xpath="//span[text()='Settings']")
 	WebElement settings;
 
-	@FindBy(xpath="//span[text()='Employee Data']")
+	@FindBy(xpath="//span[text()='Employee Data' or text()='Associate Data' ]")
 	WebElement employeeData;
 
-	@FindBy(xpath="//div[@id='empData']/child::ul/li/a[text()='Employees']")
+	@FindBy(xpath="//div[@id='empData']/child::ul/li/a[text()='Employees' or text()='Associates']")
 	WebElement employees;
 
 	@FindBy(id="wdt-search-input")
@@ -32,20 +32,21 @@ public class EattendanceHomePage extends BaseClass {
 
 
 
-	public void clickSettingDropdown() {
+	public void clickSettingDropdown() throws InterruptedException {
 
+		Thread.sleep(2000);
 		settings.click();
 
 	}
 
-	public void clickEmployeeDataDropdown() {
-
+	public void clickEmployeeDataDropdown() throws InterruptedException {
+Thread.sleep(1000);
 		employeeData.click();
 
 	}
 
-	public void clickEmployees() {
-
+	public void clickEmployees() throws InterruptedException {
+Thread.sleep(1000);
 		employees.click();
 
 	}

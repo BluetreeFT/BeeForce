@@ -1,8 +1,12 @@
 package test.beeforce.cems.pageObjects;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import test.beeforce.base.BaseClass;
 
@@ -17,7 +21,7 @@ public class EmployeeFieldUpdatePage extends BaseClass {
 	@FindBy(id="employeeNumber")
 	WebElement employeeNumber;
 
-	@FindBy(id="sassFiledType")
+	@FindBy(id="sassFiledType-selectized")
 	WebElement fieldType;
 
 	@FindBy(id="submitId")
@@ -52,8 +56,23 @@ public class EmployeeFieldUpdatePage extends BaseClass {
 	}
 
 	public void selectFiedType(String fieldtype) {
+		
+		fieldType.click();
+		
+		List<WebElement> options = driver.findElements(By.xpath("//div[@class='option']"));
+		
+		for (WebElement option : options) {
 
-		selectDropdownOption(fieldType, fieldtype);
+			System.out.println( option.getText());
+			
+			if (option.getText().equalsIgnoreCase(fieldtype)) {
+				
+				option.click();
+				
+				break;
+			}
+			
+		}
 
 	}
 
@@ -76,7 +95,8 @@ public class EmployeeFieldUpdatePage extends BaseClass {
 
 	public void clickApproveButton() {
 
-		btnApprove.click();
+		javaScriptExecutorClick(btnApprove);
+		
 	}
 
 	public void clickRejectButton() {

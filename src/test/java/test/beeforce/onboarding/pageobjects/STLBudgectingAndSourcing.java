@@ -19,10 +19,10 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 	@FindBy(xpath="//button[contains(text(),'Create')]")
 	WebElement btnCreate;
 
-	@FindBy(xpath="//label[contains(text(),'BU')]/following-sibling::div/select")
+	@FindBy(xpath="//label[contains(text(),'BU') or contains(text(),'Business Unit')]/following-sibling::div/select")
 	WebElement businessUnit;
 
-	@FindBy(xpath="//label[contains(text(),'OU')]/following-sibling::div/select")
+	@FindBy(xpath="//label[contains(text(),'OU') or contains(text(),'Organization Unit')]/following-sibling::div/select")
 	WebElement organizationUnit;
 
 	@FindBy(xpath="//label[contains(text(),'Location')]/following-sibling::div/select")
@@ -55,8 +55,8 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 	@FindBy(id="details0amount")
 	WebElement budgetAmount;
 
-	@FindBy(xpath="//button[@title='Create Budget']")
-	WebElement btnSubmit; 
+	@FindBy(xpath="//button[@title='Create Budget']")//Create Sourcing Request
+	WebElement btnBudgetSubmit; 
 
 	@FindBy(xpath="//button[text()='Ok']")
 	WebElement btnOK; 
@@ -78,6 +78,9 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 	@FindBy(id="expectedDOJ")
 	WebElement expectedDOJ;
 
+	@FindBy(xpath="//button[@title='Create Sourcing Request']")
+	WebElement btnSourcingRequestSubmit; 
+
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement btnSearch;
 
@@ -93,28 +96,38 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 	@FindBy(id="saveCandidates")
 	WebElement saveCandidates;
 
-	@FindBy(id="btnSelect0")
-	WebElement selectCandidates;
+	@FindBy(xpath="//button[text()='Select']")
+	WebElement selectCandidate;
 
-	@FindBy(id="nth0")
+	@FindBy(xpath="//button[text()='Selected']/parent::td/following-sibling::td/input[contains(@id,'nth')]")
 	WebElement nth;
 
 	@FindBy(xpath="//button[text()='Update']")
 	WebElement update;
+	
+	@FindBy(xpath="//button[text()=' Search' or @id='searchBtn']")
+	WebElement btnsearch;
 
 	private void clickCreateButton() {
 
 		btnCreate.click();
 
 	}
+	
+	private void clickSearchButton() {
 
-	private void selectBU(String BU) {
+		btnsearch.click();
+
+	}
+
+
+	private void selectBusinessUnit(String BU) {
 
 		selectDropdownOption(businessUnit, BU);
 
 	}
 
-	private void selectOU(String OU) {
+	private void selectOrganizationUnit(String OU) {
 
 		selectDropdownOption(organizationUnit, OU);
 
@@ -180,24 +193,87 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 
 	private void clickCreateBudget() {
 
-		btnSubmit.click();
+		javaScriptExecutorClick(btnBudgetSubmit);
+
 
 	}
 
-	private void clickOKButton() {
+	public void clickOKButton() {
 
 		btnOK.click();
 
 	}
 
+	public void clickApproveBudgetButton() {
 
+		btnApprove.click();
+
+	}
+
+	private void selectSkills(String skill ) {
+
+		selectDropdownOption(skills, skill);
+
+	}
+	private void selectVendor(String Vendor ) {
+
+		selectDropdownOption(vendors, Vendor);
+
+	}
+
+	private void setExpectedDOJ(String DOJ) {
+
+		expectedDOJ.sendKeys(DOJ);
+
+	}
+	private void submitSourcingRequest() {
+
+		
+		javaScriptExecutorClick(btnSourcingRequestSubmit);
+
+	}
+	
+	private void clickViewButton() {
+		
+		btnView.click();
+
+	}
+	
+	private void uploadCandaidate(String path) {
+		
+		uploadFile(fileUpload, path);
+
+	}
+	
+private void clickUploadCandaidateButton() {
+		
+	BtnUpload.click();
+
+	}
+
+private void saveUploadedCandaidate() {
+	
+	javaScriptExecutorClick(saveCandidates);
+
+	}
+
+private void submitUploadedCandaidate(String NTH) throws InterruptedException {
+	
+	javaScriptExecutorClick(selectCandidate);
+	javaScriptExecutorSendKeys(NTH, nth);
+	javaScriptExecutorClick(update);
+	Thread.sleep(1000);
+	clickOKButton();
+	
+}
 
 	public void CreateBudget(String BU,String OU,String Location,String Month,String CostCenter,String AssociateType,String Name,
-			String Comments,String HeadCount,String BudgetAmount) {
+			String Comments,String HeadCount,String BudgetAmount) throws InterruptedException {
 
-		clickCreateBudget();
-		selectBU(BU);
-		selectOU(OU);
+		clickCreateButton();
+		Thread.sleep(1500);
+		selectBusinessUnit(BU);
+		selectOrganizationUnit(OU);
 		selectLocation(Location);
 		selectMonth(Month);
 		selectCostCenter(CostCenter);
@@ -211,14 +287,61 @@ public class STLBudgectingAndSourcing extends BaseClass  {
 		clickOKButton();	
 
 	}
+
+
+	public void createSourcingRequest(String BU,String OU,String Month,String Location,String CostCenter,String AssociateType,String skill,
+			String Vendor,String DOJ,String Name,String HeadCount ) throws InterruptedException {
+
+		
+		Thread.sleep(2000);
+		
+		selectBusinessUnit(BU);
+		selectOrganizationUnit(OU);
+		selectMonth(Month);
+		clickCreateButton();
+		selectLocation(Location);
+		selectCostCenter(CostCenter);
+		selectAssociatetype(AssociateType);
+		selectSkills(skill);
+		selectVendor(Vendor);
+		setExpectedDOJ(DOJ);
+		setName(Name);
+		clickGenerateButton();
+		SetHeadCount(HeadCount);
+		submitSourcingRequest();
+		clickOKButton();
+	}
 	
-	public void ApproveBudget() {
+	public void searchRequest(String BU,String OU,String Month) throws InterruptedException {
 		
+		Thread.sleep(1000);
+		selectBusinessUnit(BU);
+		selectOrganizationUnit(OU);
+		selectMonth(Month);
+		clickSearchButton();
+	}
+	
+	public void uploadCandiadteDetails(String path,String NTH) throws InterruptedException {
 		
+		clickSearchButton();
+		
+		clickViewButton();
+		
+		uploadCandaidate(path);
+		
+		clickUploadCandaidateButton();
+		
+		saveUploadedCandaidate();
+		
+		Thread.sleep(2000);	
+		
+		submitUploadedCandaidate(NTH);
 		
 
 	}
-
+	
+	
+	
 
 
 
